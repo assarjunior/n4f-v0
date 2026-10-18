@@ -1,26 +1,381 @@
+/* ============================================================
+   NINETY 4 FILM
+   GLOBAL STYLESHEET
+
+   Framework: Next.js + Tailwind CSS v4
+   Components: shadcn/ui
+   Theme: TweakCN — Ninety 4 Film
+   Typography: Manrope + Aquifer Regular
+   ============================================================ */
+
+/* ============================================================
+   01. IMPORTS
+   ============================================================ */
+
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* ============================================================
+   02. DESIGN TOKENS
+   ============================================================ */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ----------------------------------------------------------
+     OFFICIAL BRAND COLORS
+     ---------------------------------------------------------- */
+
+  --brand-maroon: #611512;
+  --brand-beige: #fcd6b4;
+  --brand-orange: #d68340;
+
+  /* ----------------------------------------------------------
+     SHADCN / TWEAKCN SEMANTIC COLORS
+     ---------------------------------------------------------- */
+
+  /* Main surfaces */
+
+  --background: var(--brand-maroon);
+  --foreground: var(--brand-beige);
+
+  /* Cards */
+
+  --card: var(--brand-maroon);
+  --card-foreground: var(--brand-beige);
+
+  /* Popovers */
+
+  --popover: oklch(0.2774 0.089 26.7201);
+  --popover-foreground: var(--brand-beige);
+
+  /* Primary */
+
+  --primary: var(--brand-beige);
+  --primary-foreground: var(--brand-maroon);
+
+  /* Secondary */
+
+  --secondary: oklch(0.3971 0.102 28.9004);
+  --secondary-foreground: var(--brand-beige);
+
+  /* Muted */
+
+  --muted: oklch(0.3971 0.102 28.9004);
+  --muted-foreground: oklch(0.8077 0.06 56.7248);
+
+  /* Accent */
+
+  --accent: var(--brand-orange);
+  --accent-foreground: oklch(0.2276 0.0558 25.8368);
+
+  /* Destructive */
+
+  --destructive: oklch(0.8077 0.1035 19.5706);
+  --destructive-foreground: var(--brand-maroon);
+
+  /* Borders and inputs */
+
+  --border: oklch(0.4886 0.0906 31.5673);
+  --input: oklch(0.6912 0.0757 44.5353);
+
+  /* Focus ring */
+
+  --ring: var(--brand-beige);
+
+  /* ----------------------------------------------------------
+     CHART COLORS
+     Retained for shadcn compatibility.
+     ---------------------------------------------------------- */
+
+  --chart-1: var(--brand-beige);
+  --chart-2: var(--brand-orange);
+  --chart-3: oklch(0.3971 0.102 28.9004);
+  --chart-4: oklch(0.6912 0.0757 44.5353);
+  --chart-5: oklch(0.4886 0.0906 31.5673);
+
+  /* ----------------------------------------------------------
+     SIDEBAR COLORS
+     Retained for shadcn compatibility.
+     ---------------------------------------------------------- */
+
+  --sidebar: var(--brand-maroon);
+  --sidebar-foreground: var(--brand-beige);
+
+  --sidebar-primary: var(--brand-beige);
+  --sidebar-primary-foreground: var(--brand-maroon);
+
+  --sidebar-accent: var(--brand-orange);
+  --sidebar-accent-foreground: oklch(0.2276 0.0558 25.8368);
+
+  --sidebar-border: oklch(0.4886 0.0906 31.5673);
+  --sidebar-ring: var(--brand-beige);
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+     Minimal editorial styling.
+     ---------------------------------------------------------- */
+
+  --radius: 0.25rem;
+
+  /* ----------------------------------------------------------
+     SHADOWS
+     No decorative shadows in the approved design system.
+     ---------------------------------------------------------- */
+
+  --shadow-2xs: 0 0 #0000;
+  --shadow-xs: 0 0 #0000;
+  --shadow-sm: 0 0 #0000;
+  --shadow: 0 0 #0000;
+  --shadow-md: 0 0 #0000;
+  --shadow-lg: 0 0 #0000;
+  --shadow-xl: 0 0 #0000;
+  --shadow-2xl: 0 0 #0000;
 }
+
+/* ============================================================
+   03. TAILWIND THEME MAPPINGS
+   ============================================================ */
 
 @theme inline {
+  /* ----------------------------------------------------------
+     OFFICIAL BRAND COLORS
+     ---------------------------------------------------------- */
+
+  --color-brand-maroon: var(--brand-maroon);
+  --color-brand-beige: var(--brand-beige);
+  --color-brand-orange: var(--brand-orange);
+
+  /* ----------------------------------------------------------
+     SEMANTIC COLORS
+     ---------------------------------------------------------- */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* ----------------------------------------------------------
+     CHART COLORS
+     ---------------------------------------------------------- */
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* ----------------------------------------------------------
+     SIDEBAR COLORS
+     ---------------------------------------------------------- */
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+
+     Fonts are loaded through next/font in layout.tsx.
+
+     Manrope:
+       --font-manrope
+
+     Aquifer:
+       --font-aquifer
+     ---------------------------------------------------------- */
+
+  --font-sans: var(--font-manrope), sans-serif;
+
+  --font-display: var(--font-aquifer), var(--font-manrope), sans-serif;
+
+  --font-serif: Georgia, serif;
+
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+     ---------------------------------------------------------- */
+
+  --radius-sm: max(0px, calc(var(--radius) - 4px));
+  --radius-md: max(0px, calc(var(--radius) - 2px));
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================================
+   04. GLOBAL BASE STYLES
+   ============================================================ */
+
+@layer base {
+  /* ----------------------------------------------------------
+     GLOBAL ELEMENT DEFAULTS
+     ---------------------------------------------------------- */
+
+  * {
+    @apply border-border;
+  }
+
+  /* ----------------------------------------------------------
+     DOCUMENT
+     ---------------------------------------------------------- */
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--brand-maroon);
+  }
+
+  /* ----------------------------------------------------------
+     BODY
+     ---------------------------------------------------------- */
+
+  body {
+    @apply bg-background text-foreground font-sans;
+
+    min-height: 100vh;
+
+    font-synthesis: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------------------------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* ----------------------------------------------------------
+     MEDIA
+     ---------------------------------------------------------- */
+
+  img,
+  video,
+  picture,
+  svg {
+    max-width: 100%;
+  }
+
+  /* ----------------------------------------------------------
+     TEXT SELECTION
+     ---------------------------------------------------------- */
+
+  ::selection {
+    background-color: var(--brand-orange);
+    color: var(--brand-maroon);
+  }
+
+  /* ----------------------------------------------------------
+     KEYBOARD ACCESSIBILITY
+     ---------------------------------------------------------- */
+
+  :focus-visible {
+    outline: 2px solid var(--brand-beige);
+    outline-offset: 3px;
+  }
+
+  /* ----------------------------------------------------------
+     REDUCED MOTION
+     ---------------------------------------------------------- */
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   05. GLOBAL UTILITIES
+   ============================================================ */
+
+@layer utilities {
+  /* ----------------------------------------------------------
+     DISPLAY TYPOGRAPHY
+     ---------------------------------------------------------- */
+
+  .font-display {
+    font-family: var(--font-aquifer), var(--font-manrope), sans-serif;
+    font-weight: 400;
+  }
+
+  /* ----------------------------------------------------------
+     EDITORIAL CONTAINER
+
+     Maximum width: 1440px
+     Responsive horizontal padding.
+     ---------------------------------------------------------- */
+
+  .container-editorial {
+    width: 100%;
+    max-width: 1440px;
+
+    margin-inline: auto;
+
+    padding-inline: clamp(1.25rem, 4vw, 5rem);
+  }
+
+  /* ----------------------------------------------------------
+     SCREEN READER ACCESSIBILITY
+     ---------------------------------------------------------- */
+
+  .visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+  }
 }
