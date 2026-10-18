@@ -25,7 +25,7 @@ const aquifer = localFont({
 // 02. SITE CONFIGURATION
 // ============================================================
 
-const siteURL = "https://www.ninety4film.com";
+const siteURL = process.env.NEXT_SITE_URL ?? "https://www.ninety4film.com";
 
 const siteName = "Ninety 4 Film";
 
