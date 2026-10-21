@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 // ============================================================
 // 01. FONTS
@@ -157,13 +158,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to main content
         </a>
 
-        {/* Global Header will be added here */}
-
+        {/* Header Link */}
         <Header />
 
-        {children}
+        <div className="flex flex-1 flex-col">{children}</div>
 
-        {/* Global Footer will be added here */}
+        {/* Footer Link */}
+        <Footer />
       </body>
     </html>
   );
