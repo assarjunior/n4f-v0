@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
 
 // ============================================================
 // 01. FONTS
@@ -157,6 +158,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
 
         {/* Global Header will be added here */}
+
+        <Header />
 
         {children}
 
