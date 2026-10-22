@@ -137,6 +137,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${manrope.variable} ${aquifer.variable} h-full`}
+      data-scroll-behavior="smooth"
     >
       <body className="flex min-h-screen flex-col antialiased">
         {/* Accessibility: Skip Navigation */}

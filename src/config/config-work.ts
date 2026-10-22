@@ -8,6 +8,7 @@ export const work = [
     title: "1+1",
     type: "short-film",
     status: "released",
+    releaseYear: 2021,
 
     synopsis:
       "In the aftermath of a devastating war, a man and a woman from opposing sides are the last survivors in a ruined city. Forced to coexist, they must choose between continuing their conflict and finding a way to live in peace.",
@@ -38,6 +39,7 @@ export const work = [
     originalTitle: "مين يصدق",
     type: "feature-film",
     status: "released",
+    releaseYear: 2024,
 
     synopsis:
       "Nadine, a young woman from a wealthy family, falls for Basem, only to discover that he has deceived her. Despite his betrayal, she joins him in a series of schemes targeting the rich to help the poor.",

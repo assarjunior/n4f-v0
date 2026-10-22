@@ -6,6 +6,8 @@ export const WORK_TYPES = [
   "commercial",
   "music-video",
   "other",
+  "event",
+  "media-coverage",
 ] as const;
 
 export type WorkType = (typeof WORK_TYPES)[number];
