@@ -67,6 +67,7 @@ export function getPublishedWork(): readonly WorkEntry[] {
   return workEntries.filter((entry) => entry.published);
 }
 
+export const MAX_FEATURED_WORK = 4;
 //! Homepage featured work
 export function getFeaturedWork(): readonly WorkEntry[] {
   return workEntries
@@ -75,7 +76,8 @@ export function getFeaturedWork(): readonly WorkEntry[] {
       (a, b) =>
         (a.featuredOrder ?? Number.MAX_SAFE_INTEGER) -
         (b.featuredOrder ?? Number.MAX_SAFE_INTEGER),
-    );
+    )
+    .slice(0, MAX_FEATURED_WORK);
 }
 
 //! Individual Project pages
