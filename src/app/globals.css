@@ -444,7 +444,7 @@
 }
 
 /* =========================================
-   BRAND STAMP — FIXED LOGO + ROTATING RING
+   BRAND STAMP —  LOGO + ROTATING RING
    ========================================= */
 
 .who-we-are__stamp {
@@ -632,7 +632,7 @@
     user-select: none;
   }
 
-  /* CENTER LOGO — FIXED */
+  /* CENTER LOGO */
 
   .who-we-are__stamp-logo {
     position: absolute;
