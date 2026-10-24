@@ -96,7 +96,7 @@ export function WhatWeProduce() {
     >
       <div className="container-editorial">
         {/* Section Intro */}
-        <div className="mb-14 max-w-5xl">
+        <div className="mb-14">
           <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
             What We Produce
           </p>
@@ -132,7 +132,7 @@ export function WhatWeProduce() {
                   >
                     <Link
                       href={"/contact"}
-                      aria-labelledby={`Discuss ${service.title} with Ninety 4 Film`}
+                      aria-label={`Discuss ${service.title} with Ninety 4 Film`}
                       className="group relative isolate flex min-h-72.5 flex-col justify-between overflow-hidden border border-brand-beige/15 bg-[#37110E] p-6 text-brand-beige transition-colors duration-500 hover:border-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange md:min-h-85 md:p-8 motion-reduce:transition-none"
                     >
                       <Image

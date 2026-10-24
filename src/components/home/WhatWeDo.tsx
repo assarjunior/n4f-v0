@@ -5,7 +5,7 @@ import Link from "next/link";
 const capabilities = [
   {
     number: "01",
-    title: "Film & Series",
+    title: "Narrative & Documentary",
     featured: false,
     image: "/capabilities/film-series.png",
     href: "/services/#film",
@@ -26,10 +26,10 @@ const capabilities = [
   },
   {
     number: "04",
-    title: "Short FIlms",
+    title: "Live & Factual",
     featured: false,
     image: "/capabilities/short-films.png",
-    href: "/services/#short-film",
+    href: "/services/#event",
   },
   {
     number: "05",
@@ -105,7 +105,7 @@ export function WhatWeDo() {
                 <span className="relative z-10 flex w-full items-end justify-between gap-4">
                   <span
                     className={[
-                      "max-w-[26ch] font-sans text-base font-bold uppercase",
+                      "max-w-xl font-sans text-base font-bold uppercase",
                       "leading-[1.2] tracking-[0.06em] text-brand-beige",
                       "transition-colors duration-500",
                       "group-hover:text-brand-maroon group-focus-visible:text-brand-maroon",
