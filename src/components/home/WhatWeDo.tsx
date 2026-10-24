@@ -69,7 +69,7 @@ export function WhatWeDo() {
               className={item.featured ? "sm:col-span-2" : ""}
             >
               <Link
-                href={"/services"}
+                href={item.href}
                 aria-label={`Explore ${item.title}`}
                 className={[
                   "group relative isolate flex w-full flex-col justify-end overflow-hidden",

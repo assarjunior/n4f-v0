@@ -1,7 +1,9 @@
-export default function Services() {
+import { WhatWeProduce } from "./_components/WhatWeProduce";
+
+export default function ServicePage() {
   return (
-    <div>
-      <h1>Services Page</h1>
-    </div>
+    <main id="main-content" className="flex-1">
+      <WhatWeProduce />
+    </main>
   );
 }
