@@ -1,5 +1,7 @@
+import { ContactSection } from "@/components/home/ContactSection";
 import { Hero } from "@/components/home/Hero";
 import { SelectedWorkSection } from "@/components/home/selected-work";
+import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { WhoWeAre } from "@/components/home/WhoWeAre";
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <SelectedWorkSection />
       <WhoWeAre />
+      <WhatWeDo />
+      <ContactSection />
     </main>
   );
 }
