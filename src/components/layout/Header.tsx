@@ -107,7 +107,7 @@ export function Header() {
         p-1
         shadow-none
         hover:bg-transparent
-        focus-variable:ring-2
+        focus-visible:ring-2
         focus-visible:ring-brand-beige
         md:hidden"
         >
