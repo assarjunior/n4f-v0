@@ -1,3 +1,4 @@
+import { ProductionProcess } from "./_components/ProductionProcess";
 import { ProductionServices } from "./_components/ProductionServices";
 import { ServicesHero } from "./_components/ServiceHero";
 import { ServicesCTA } from "./_components/ServicesCTA";
@@ -9,6 +10,7 @@ export default function ServicePage() {
       <ServicesHero />
       <WhatWeProduce />
       <ProductionServices />
+      <ProductionProcess />
       <ServicesCTA />
     </main>
   );
