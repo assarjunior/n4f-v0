@@ -40,8 +40,6 @@ export const team = [
       alt: "Portrait of Ahmed Ehab Elsaeed",
     },
 
-    //! Structured credits will be added after verification
-
     credits: [
       {
         title: "Meen Yesadaq",
@@ -58,6 +56,8 @@ export const team = [
         title: "1+1",
         role: "Executive Producer",
         year: "2021",
+        source: "IMDB",
+        url: "https://www.imdb.com/title/tt27720812/",
         artwork: {
           src: "/posters/1+1-poster.png",
           alt: "Official poster for 1+1",
@@ -66,19 +66,44 @@ export const team = [
       {
         title: "Ansaf Maganeen",
         role: "Executive Producer",
+        year: "2021",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2067079/",
+        artwork: {
+          src: "/posters/ansaf-maganen.jpg",
+          alt: "Official poster for ansaf maganen",
+        },
       },
       {
         title: "44th Cairo International Film Festival",
         role: "Media Coverage",
+        year: "22",
+        artwork: {
+          src: "/posters/cairo-int-film.jpeg",
+          alt: "Official poster for cairo international film festival",
+        },
       },
       {
         title: "74th Police Day Celebrations",
         year: "2026",
+        role: "BOB hay2olena",
+        source: "YouTube",
+        url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
+        artwork: {
+          src: "/posters/polica-event.webp",
+          alt: "police event official poster",
+        },
       },
       {
-        title: "National Bank of Egypt — Ramadan Advertisement",
+        title: "National Bank of Egypt — TVC",
         year: "2025",
         role: "Executive Producer",
+        source: "YouTube",
+        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
+        artwork: {
+          src: "/posters/bank-ahly.jpeg",
+          alt: "Official poster for bank ahly Add",
+        },
       },
     ],
 
@@ -202,7 +227,79 @@ export const team = [
   },
 
   // =========================================================
-  // 03 — ADHAM HAMED
+  // 03 — AHMED EL-GANZORY
+  // =========================================================
+  {
+    id: "n4f-team-003",
+    slug: "ahmed-ganzory",
+
+    name: "Ahmed El-Ganzory",
+    role: "Co-Founder / Producer",
+    titleStatus: "provisional",
+
+    shortBio:
+      "Ahmed El-Ganzory is a film and television production professional with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on the operational side of storytelling.",
+
+    biography: [
+      "Ahmed El-Ganzory is a film and television production professional whose experience spans scripted series, short-form cinema, and major film industry events.",
+
+      "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
+
+      "His professional credits include Ansaf Maganen (Parts 1 and 2), produced for VIU, and the Netflix production Love, Life & Everything in Between, where he worked as a Production Assistant on Episode 5, National Day of Mourning in Mexico.",
+
+      "He also served as Line Producer on the short film 1+1 and Unit Production Manager for the 2020 Cairo International Film Festival.",
+
+      "Through his work, Ahmed brings experience in coordinating production requirements across different formats, supporting the relationship between creative objectives and practical execution.",
+    ],
+
+    expertise: [
+      "Film & Television Production",
+      "Line Production",
+      "Unit Production Management",
+      "Production Coordination",
+      "Production Logistics",
+    ],
+
+    quote:
+      "The strength of a production lies in the details no one sees, but everyone feels.",
+
+    portrait: {
+      src: "/team/ahmed-ganzory.jpeg",
+      alt: "Portrait of Ahmed El-Ganzory",
+    },
+
+    credits: [
+      {
+        title: "Ansaf Maganen — Parts 1 & 2",
+      },
+      {
+        title: "Love, Life & Everything in Between — Episode 5",
+        role: "Production Assistant",
+      },
+      {
+        title: "1+1",
+        year: "2021",
+        role: "Line Producer",
+        artwork: {
+          src: "/posters/1+1-poster.png",
+          alt: "Official poster for 1+1",
+        },
+      },
+      {
+        title: "Cairo International Film Festival",
+        year: "2020",
+        role: "Unit Production Manager",
+      },
+    ],
+
+    links: [],
+
+    order: 3,
+    published: true,
+  },
+
+  // =========================================================
+  // 04 — ADHAM HAMED
   // =========================================================
   {
     id: "n4f-team-004",
@@ -295,78 +392,6 @@ export const team = [
         url: "https://elcinema.com/person/2084192",
       },
     ],
-
-    order: 3,
-    published: true,
-  },
-
-  // =========================================================
-  // 04 — AHMED EL-GANZORY
-  // =========================================================
-  {
-    id: "n4f-team-003",
-    slug: "ahmed-ganzory",
-
-    name: "Ahmed El-Ganzory",
-    role: "Producer",
-    titleStatus: "provisional",
-
-    shortBio:
-      "Ahmed El-Ganzory is a film and television production professional with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on the operational side of storytelling.",
-
-    biography: [
-      "Ahmed El-Ganzory is a film and television production professional whose experience spans scripted series, short-form cinema, and major film industry events.",
-
-      "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
-
-      "His professional credits include Ansaf Maganen (Parts 1 and 2), produced for VIU, and the Netflix production Love, Life & Everything in Between, where he worked as a Production Assistant on Episode 5, National Day of Mourning in Mexico.",
-
-      "He also served as Line Producer on the short film 1+1 and Unit Production Manager for the 2020 Cairo International Film Festival.",
-
-      "Through his work, Ahmed brings experience in coordinating production requirements across different formats, supporting the relationship between creative objectives and practical execution.",
-    ],
-
-    expertise: [
-      "Film & Television Production",
-      "Line Production",
-      "Unit Production Management",
-      "Production Coordination",
-      "Production Logistics",
-    ],
-
-    quote:
-      "The strength of a production lies in the details no one sees, but everyone feels.",
-
-    portrait: {
-      src: "/team/ahmed-ganzory.jpeg",
-      alt: "Portrait of Ahmed El-Ganzory",
-    },
-
-    credits: [
-      {
-        title: "Ansaf Maganen — Parts 1 & 2",
-      },
-      {
-        title: "Love, Life & Everything in Between — Episode 5",
-        role: "Production Assistant",
-      },
-      {
-        title: "1+1",
-        year: "2021",
-        role: "Line Producer",
-        artwork: {
-          src: "/posters/1+1-poster.png",
-          alt: "Official poster for 1+1",
-        },
-      },
-      {
-        title: "Cairo International Film Festival",
-        year: "2020",
-        role: "Unit Production Manager",
-      },
-    ],
-
-    links: [],
 
     order: 4,
     published: true,
