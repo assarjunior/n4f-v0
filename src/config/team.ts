@@ -47,11 +47,21 @@ export const team = [
         title: "Meen Yesadaq",
         role: "Executive Producer",
         year: "2024",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2090320/",
+        artwork: {
+          src: "/posters/meen-yesdak-poster.png",
+          alt: "Official Poster for meen yesadak",
+        },
       },
       {
         title: "1+1",
         role: "Executive Producer",
         year: "2021",
+        artwork: {
+          src: "/posters/1+1-poster.png",
+          alt: "Official poster for 1+1",
+        },
       },
       {
         title: "Ansaf Maganeen",
@@ -144,6 +154,10 @@ export const team = [
         role: "Executive Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2090320/",
+        artwork: {
+          src: "/posters/meen-yesdak-poster.png",
+          alt: "Official Poster for meen yesadak",
+        },
       },
       {
         title: "Ala Nesbet Moshahda",
@@ -340,6 +354,10 @@ export const team = [
         title: "1+1",
         year: "2021",
         role: "Line Producer",
+        artwork: {
+          src: "/posters/1+1-poster.png",
+          alt: "Official poster for 1+1",
+        },
       },
       {
         title: "Cairo International Film Festival",

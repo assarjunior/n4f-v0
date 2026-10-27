@@ -212,7 +212,7 @@ export function MeetTheTeam() {
 
                     <p
                       className="
-                        mt-5 font-sans text-sm
+                        font-sans text-sm
                         leading-[1.8]
                         text-brand-beige/75
                       "

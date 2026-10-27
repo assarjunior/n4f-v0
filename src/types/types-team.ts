@@ -44,10 +44,11 @@ export type TeamCredit = {
   title: string;
   year?: string;
   role?: string;
-
-  // External reference is optional
   source?: TeamCreditSource;
   url?: string;
+
+  //! Poster, key art, event artwork, or production still
+  artwork?: TeamImage;
 };
 
 export type TeamMember = {
