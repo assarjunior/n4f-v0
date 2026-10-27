@@ -1,4 +1,5 @@
 import { CompanyHero } from "./_components/CompanyHero";
+import { MeetTheTeam } from "./_components/MeetTheTeam";
 import { OurPhilosophy } from "./_components/OurPhilosophy";
 import { OurStory } from "./_components/OurStory";
 
@@ -8,6 +9,7 @@ export default function CompanyPage() {
       <CompanyHero />
       <OurStory />
       <OurPhilosophy />
+      <MeetTheTeam />
     </main>
   );
 }

@@ -67,7 +67,7 @@ export function OurPhilosophy() {
             >
               WHAT WE BELIEVE
               <br />
-              SHOWS IN
+              <span className="text-brand-orange">SHOWS IN</span>
               <br />
               THE WORK
               <span className="text-brand-orange">.</span>
@@ -138,7 +138,7 @@ export function OurPhilosophy() {
                     max-w-2xl font-display
                     text-[clamp(2rem,3.5vw,4.2rem)]
                     leading-[1.08]
-                    tracking-[-0.025em]
+                    tracking-tight
                   "
                 >
                   {principle.title}
