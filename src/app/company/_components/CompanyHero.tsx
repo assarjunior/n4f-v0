@@ -60,7 +60,7 @@ export function CompanyHero() {
               alt=""
               fill
               sizes="(max-width: 1023px) 384px, 30vw"
-              className="object-contain"
+              className="object-contain animate-spin animation-duration-[25s]"
             />
 
             <Image

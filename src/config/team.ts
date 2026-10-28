@@ -10,7 +10,6 @@ export const team = [
 
     name: "Ahmed Ehab EL-Saeed",
     role: "Executive Producer",
-    titleStatus: "provisional",
 
     shortBio:
       "Ahmed Ehab is a film and television producer and CEO of Ninety 4 Film. Working in production since 2019, he specializes in production execution, project management, and coordinating the people and processes that bring screen projects to life.",
@@ -77,7 +76,7 @@ export const team = [
       {
         title: "44th Cairo International Film Festival",
         role: "Media Coverage",
-        year: "22",
+        year: "2022",
         artwork: {
           src: "/posters/cairo-int-film.jpeg",
           alt: "Official poster for cairo international film festival",
@@ -123,7 +122,6 @@ export const team = [
 
     name: "Omar Assar",
     role: "Director",
-    titleStatus: "provisional",
 
     shortBio:
       "Omar Assar is an Egyptian film director and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
@@ -235,7 +233,6 @@ export const team = [
 
     name: "Ahmed El-Ganzory",
     role: "Producer",
-    titleStatus: "provisional",
 
     shortBio:
       "Ahmed El-Ganzory is a film and television production professional with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on the operational side of storytelling.",
@@ -306,10 +303,8 @@ export const team = [
     slug: "adham-hamed",
 
     name: "Adham Hamed",
-    fullName: "Adham Ehab Hamed",
 
     role: "Head of Post-Production",
-    titleStatus: "provisional",
 
     shortBio:
       "Adham Hamed is Head of Post-Production at Ninety 4 Film, bringing 14 years of cinematography experience across television, feature films, commercials, and digital media. His expertise spans editing, color grading, HDR and Dolby Vision workflows, and post-production supervision, connecting creative storytelling with the technical demands of finishing.",

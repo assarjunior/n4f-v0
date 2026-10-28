@@ -16,7 +16,7 @@ type TeamProfileProps = {
 };
 
 export function TeamProfile({ member, nextMember }: TeamProfileProps) {
-  const image = member.heroImage ?? member.portrait;
+  const image = member.portrait;
 
   return (
     <main id="main-content" className="flex-1 bg-brand-maroon">

@@ -1,7 +1,3 @@
-export const TEAM_TITLE_STATUS = ["provisional", "final"] as const;
-
-export type TeamTitleStatus = (typeof TEAM_TITLE_STATUS)[number];
-
 export const TEAM_LINK_PLATFORMS = [
   "IMDb",
   "ElCinema",
@@ -56,11 +52,9 @@ export type TeamMember = {
   id: string;
   slug: string;
   name: string;
-  fullName?: string;
 
   //? Professional Role
   role: string;
-  titleStatus: TeamTitleStatus;
 
   //? Editorial Content
   shortBio: string;
@@ -72,7 +66,6 @@ export type TeamMember = {
 
   //? Photography
   portrait: TeamImage;
-  heroImage?: TeamImage;
 
   //? Professional Career
   credits: readonly TeamCredit[];
