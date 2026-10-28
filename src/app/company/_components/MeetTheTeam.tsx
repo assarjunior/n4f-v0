@@ -184,7 +184,7 @@ export function MeetTheTeam() {
                       id={nameId}
                       className="
                         font-display
-                        text-[clamp(1.8rem,2.25vw,2.6rem)]
+                        text-4xl
                         leading-[1.08]
                         tracking-[-0.02em]
                         text-brand-beige

@@ -8,8 +8,8 @@ export const team = [
     id: "n4f-team-001",
     slug: "ahmed-ehab",
 
-    name: "Ahmed Ehab",
-    role: "Founder & CEO / Executive Producer",
+    name: "Ahmed Ehab EL-Saeed",
+    role: "Executive Producer",
     titleStatus: "provisional",
 
     shortBio:
@@ -122,7 +122,7 @@ export const team = [
     slug: "omar-assar",
 
     name: "Omar Assar",
-    role: "Co-Founder & Director",
+    role: "Director",
     titleStatus: "provisional",
 
     shortBio:
@@ -234,7 +234,7 @@ export const team = [
     slug: "ahmed-ganzory",
 
     name: "Ahmed El-Ganzory",
-    role: "Co-Founder / Producer",
+    role: "Producer",
     titleStatus: "provisional",
 
     shortBio:
