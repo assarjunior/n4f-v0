@@ -1,9 +1,16 @@
-import { getWorkBySlug, getWorkSlugs } from "@/config/config-work";
 import { notFound } from "next/navigation";
+
+import {
+  getPublishedWork,
+  getWorkBySlug,
+  getWorkSlugs,
+} from "@/config/config-work";
+
+import { ProjectDetail } from "../_components/ProjectDetail";
 
 export const instant = false;
 
-type workDetailPageProps = {
+type WorkDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
@@ -13,21 +20,27 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function WorkDetailPage({ params }: workDetailPageProps) {
+export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
   const { slug } = await params;
-  const film = getWorkBySlug(slug);
 
-  if (!film) {
+  const project = getWorkBySlug(slug);
+
+  if (!project) {
     notFound();
   }
 
-  return (
-    <main className="container-editorial min-h-screen py-24 text-brand-beige">
-      <h1 className="font-display text-5xl md:text-7xl">{film.title}</h1>
-
-      <p className="mt-8 max-w-2xl font-sans text-base leading-relaxed md:text-lg">
-        {film.synopsis}
-      </p>
-    </main>
+  const projects = [...getPublishedWork()].sort(
+    (a, b) => (b.releaseYear ?? 0) - (a.releaseYear ?? 0),
   );
+
+  const currentIndex = projects.findIndex(
+    (entry) => entry.slug === project.slug,
+  );
+
+  const nextProject =
+    currentIndex >= 0 && projects.length > 1
+      ? projects[(currentIndex + 1) % projects.length]
+      : undefined;
+
+  return <ProjectDetail project={project} nextProject={nextProject} />;
 }

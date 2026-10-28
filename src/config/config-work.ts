@@ -17,6 +17,8 @@ export const work = [
       "Two survivors from opposing sides of a devastating war must choose between continuing their conflict and finding a way to live in peace.",
 
     companyRoles: ["Executive Producer"],
+    companyRoleDescription:
+      "Handling the project from development to the final delivery getting the crew all together and step by step oversight over the entire project",
 
     poster: {
       src: "/posters/1+1-poster.png",
@@ -40,7 +42,26 @@ export const work = [
     type: "feature-film",
     status: "released",
     releaseYear: 2024,
-
+    director: "Zena Abd El-Baky",
+    writer: ["Zena Abd El-Baky", "Moustafa Bahgat", "Moustafa Askar"],
+    runtimeMinutes: 124,
+    countries: ["Egypt"],
+    cast: [
+      "Youssef Omar",
+      "Jayda Mansour",
+      "Ashraf Abd El-Baky",
+      "Sherif Moneer",
+    ],
+    genres: ["Romance"],
+    festivals: ["Cairo International Film Festival"],
+    links: [
+      { label: "El Cinema", url: "https://elcinema.com/work/2090320" },
+      { label: "IMDB", url: "https://www.imdb.com/title/tt34823082/" },
+      {
+        label: "Cairo International Film Festival",
+        url: "https://www.ciff.org.eg/ar/program/films/whod-believe-it",
+      },
+    ],
     synopsis:
       "Nadine, a young woman from a wealthy family, falls for Basem, only to discover that he has deceived her. Despite his betrayal, she joins him in a series of schemes targeting the rich to help the poor.",
 
@@ -48,6 +69,8 @@ export const work = [
       "After falling for a young con artist, Nadine joins him in a series of schemes targeting the wealthy to help the poor.",
 
     companyRoles: ["Executive Producer"],
+    companyRoleDescription:
+      "Handling the project from development to the final delivery getting the crew all together and step by step oversight over the entire project",
 
     poster: {
       src: "/posters/meen-yesdak-poster.png",
@@ -55,7 +78,43 @@ export const work = [
       width: 1600,
       height: 2139,
     },
+    gallery: [
+      {
+        src: "/meen-yesdak/1.JPEG",
+        alt: "meen yesdak BTS",
+        height: 6000,
+        width: 3000,
+      },
+      {
+        src: "/meen-yesdak/2.JPEG",
+        alt: "meen yesdak BTS",
+        height: 5596,
+        width: 3731,
+      },
+      {
+        src: "/meen-yesdak/3.JPEG",
+        alt: "meen yesdak BTS",
+        height: 4000,
+        width: 6000,
+      },
+      {
+        src: "/meen-yesdak/4.JPEG",
+        alt: "meen yesdak BTS",
+        height: 5875,
+        width: 3917,
+      },
+    ],
 
+    credits: [
+      { name: "Omar Assar", role: "First Assistant Director" },
+      { name: "Ahmed Ehab El Saed", role: "Executive Producer" },
+      { name: "Moustafa Bahgat", role: "Executive Producer" },
+      { name: "Mohamed Soliman", role: "Editor" },
+    ],
+
+    languages: ["Arabic"],
+
+    awards: ["Premiere "],
     featured: true,
     featuredOrder: 2,
     published: true,
