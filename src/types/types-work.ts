@@ -52,6 +52,12 @@ export type WorkLink = {
   url: string;
 };
 
+export type WorkVideo = {
+  kind: "Trailer" | "Teaser";
+  title: string;
+  youtubeUrl: string;
+};
+
 export type WorkEntry = {
   //? Identity
   id: string;
@@ -72,16 +78,17 @@ export type WorkEntry = {
   companyRoles: readonly ProductionRole[];
   companyRoleDescription?: string;
 
-  //? Artwork
+  //? Artwork and video
   poster: WorkImage;
   heroImage?: WorkImage;
-  gallery?: readonly WorkImage[];
+  videos?: readonly WorkVideo[];
 
   //? Production information
   director?: string;
   writer?: readonly string[];
   cast?: readonly string[];
   credits?: readonly WorkCredit[];
+  executiveProducer?: string;
 
   //? Additional Information
   runtimeMinutes?: number;

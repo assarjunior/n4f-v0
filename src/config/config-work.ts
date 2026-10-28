@@ -44,6 +44,7 @@ export const work = [
     releaseYear: 2024,
     director: "Zena Abd El-Baky",
     writer: ["Zena Abd El-Baky", "Moustafa Bahgat", "Moustafa Askar"],
+    executiveProducer: "Mohamed Abd El-Wahab",
     runtimeMinutes: 124,
     countries: ["Egypt"],
     cast: [
@@ -53,7 +54,6 @@ export const work = [
       "Sherif Moneer",
     ],
     genres: ["Romance"],
-    festivals: ["Cairo International Film Festival"],
     links: [
       { label: "El Cinema", url: "https://elcinema.com/work/2090320" },
       { label: "IMDB", url: "https://www.imdb.com/title/tt34823082/" },
@@ -78,43 +78,26 @@ export const work = [
       width: 1600,
       height: 2139,
     },
-    gallery: [
+
+    videos: [
       {
-        src: "/meen-yesdak/1.JPEG",
-        alt: "meen yesdak BTS",
-        height: 6000,
-        width: 3000,
-      },
-      {
-        src: "/meen-yesdak/2.JPEG",
-        alt: "meen yesdak BTS",
-        height: 5596,
-        width: 3731,
-      },
-      {
-        src: "/meen-yesdak/3.JPEG",
-        alt: "meen yesdak BTS",
-        height: 4000,
-        width: 6000,
-      },
-      {
-        src: "/meen-yesdak/4.JPEG",
-        alt: "meen yesdak BTS",
-        height: 5875,
-        width: 3917,
+        kind: "Trailer",
+        title: "Official Theatrical Trailer",
+        youtubeUrl: "https://youtu.be/uRJb9VtCmTY?si=Sr2lGC3rWCc0gXJU",
       },
     ],
 
     credits: [
-      { name: "Omar Assar", role: "First Assistant Director" },
-      { name: "Ahmed Ehab El Saed", role: "Executive Producer" },
-      { name: "Moustafa Bahgat", role: "Executive Producer" },
+      { name: "Ahmed Ehab, Moustafa Bahgat", role: "Producer" },
+      { name: "Abd El-Rahman ISO", role: "Cinematographer" },
+      { name: "Nada Abd El-Hameed", role: "Production Designer" },
       { name: "Mohamed Soliman", role: "Editor" },
+      { name: "Bassem Gamal", role: "Sound Engineer" },
+      { name: "Omar Assar", role: "First Assistant Director" },
     ],
 
     languages: ["Arabic"],
 
-    awards: ["Premiere "],
     featured: true,
     featuredOrder: 2,
     published: true,

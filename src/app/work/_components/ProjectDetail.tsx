@@ -6,7 +6,7 @@ import { cn } from "cn";
 import { buttonVariants } from "@/components/ui/button";
 import type { WorkEntry } from "@/types/types-work";
 
-import { ProjectGalleryCarousel } from "./ProjectGalleryCarousel";
+import { ProjectVideoPlayer } from "./ProjectVideoPlayer";
 
 type ProjectDetailProps = {
   project: WorkEntry;
@@ -33,6 +33,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
     {
       label: "Director",
       value: project.director,
+    },
+    {
+      label: "Executive Producer",
+      value: project.executiveProducer,
     },
     {
       label: "Writer",
@@ -261,8 +265,12 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
       </section>
 
       {/* 04 / PROJECT GALLERY CAROUSEL */}
-      {project.gallery && project.gallery.length > 0 && (
-        <ProjectGalleryCarousel images={project.gallery} />
+      {project.videos && project.videos.length > 0 && (
+        <ProjectVideoPlayer
+          key={project.slug}
+          projectTitle={project.title}
+          videos={project.videos}
+        />
       )}
 
       {/*  05 / ADDITIONAL PRODUCTION CREDITS */}
