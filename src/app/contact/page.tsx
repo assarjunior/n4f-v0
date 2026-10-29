@@ -5,9 +5,7 @@ import { company } from "@/config/company";
 export default function ContactPage() {
   return (
     <main id="main-content" className="flex-1 bg-brand-maroon">
-      {/* =====================================================
-          01 / CONTACT HERO
-          ===================================================== */}
+      {/* 01 / CONTACT HERO */}
       <section
         aria-labelledby="contact-hero-heading"
         className="bg-brand-beige text-brand-maroon"
@@ -34,9 +32,7 @@ export default function ContactPage() {
               xl:gap-20
             "
           >
-            {/* ===============================================
-                LEFT — MAIN STATEMENT
-                =============================================== */}
+            {/*  LEFT — MAIN STATEMENT */}
             <div className="flex min-w-0 flex-col">
               {/* EYEBROW */}
               <p className="mb-8 font-sans text-xs font-bold uppercase tracking-[0.2em] text-brand-maroon/75">
@@ -77,9 +73,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ===============================================
-                RIGHT — BUSINESS CARD
-                =============================================== */}
+            {/* RIGHT — BUSINESS CARD */}
             <div className="flex min-w-0 items-center justify-center px-3 py-6 lg:justify-end lg:px-0 lg:py-0">
               <div className="relative mx-auto w-full max-w-140 lg:mx-0">
                 {/* OFFSET CARD OUTLINE */}

@@ -4,30 +4,79 @@ export const work = [
   {
     id: "n4f-001",
     slug: "1-plus-1",
-
     title: "1+1",
     type: "short-film",
     status: "released",
     releaseYear: 2021,
-
     synopsis:
       "In the aftermath of a devastating war, a man and a woman from opposing sides are the last survivors in a ruined city. Forced to coexist, they must choose between continuing their conflict and finding a way to live in peace.",
-
     shortSynopsis:
       "Two survivors from opposing sides of a devastating war must choose between continuing their conflict and finding a way to live in peace.",
-
     companyRoles: ["Executive Producer"],
     companyRoleDescription:
       "Handling the project from development to the final delivery getting the crew all together and step by step oversight over the entire project",
-
     poster: {
       src: "/posters/1+1-poster.png",
       alt: "Official poster for 1+1",
-      width: 750,
+      width: 749,
       height: 1000,
     },
-
+    videos: [
+      {
+        kind: "Trailer",
+        title: "1+1 (2022) | Official Trailer",
+        youtubeUrl: "https://youtu.be/o-ZrkHXCBcY?si=F5eHSTUnbAIQyOiz",
+      },
+    ],
     director: "Alaa Mahmoud",
+    writer: ["Alaa Mahmoud"],
+    cast: ["Amir El-Masry", "Sarah Abd El-Rahman"],
+    credits: [
+      {
+        role: "Cinematographer",
+        name: "Mario Ghaly",
+      },
+      {
+        role: "Editor",
+        name: "Heba Othman",
+      },
+      {
+        role: "Production Design",
+        name: "Mai Gamal",
+      },
+      {
+        role: "Line Producer",
+        name: "Ahmed El-Ganzory",
+      },
+      {
+        role: "Costume Designer",
+        name: "Reem El-Adl",
+      },
+      {
+        role: "Music Sound Design",
+        name: "Hany Adel",
+      },
+    ],
+    executiveProducer: "Ahmed Ehab El-Saeed, Moustafa Bahgat",
+    runtimeMinutes: 13,
+    languages: ["Arabic"],
+    countries: ["Egypt"],
+    festivals: [
+      "Aswan International Women's Film Festival, Egypt",
+      "Meta Film Festival, UAE",
+      "Tripoli Film Festival, Lebanon",
+      "Bahrain Film Festival",
+      "Festival Mon Premier Film,France",
+      "Sharm El-Sheikh Film Festival, Egypt",
+      "Lavazza Inclucity Festival, Canansa",
+      "Cairo International Short Film Festival, Egypt",
+    ],
+    links: [
+      {
+        label: "IMDB",
+        url: "https://www.imdb.com/title/tt27720812/",
+      },
+    ],
     featured: true,
     featuredOrder: 1,
     published: true,

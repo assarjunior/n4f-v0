@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowDownRight,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowDownRight, ArrowLeft, ArrowRight } from "lucide-react";
 
 import type { TeamMember } from "@/types/types-team";
 import { TeamCreditsGrid } from "./TeamCreditsGrid";
@@ -194,9 +189,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
         </div>
       </section>
 
-      {/* ======================================================
-          02 / BIOGRAPHY & EXPERTISE
-          */}
+      {/* 02 / BIOGRAPHY & EXPERTISE */}
       <section
         id="biography"
         aria-labelledby="biography-heading"
@@ -460,95 +453,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
             </p>
           )}
 
-          {/* 05 / PROFESSIONAL PROFILES  */}
-          {member.links.length > 0 && (
-            <div
-              className="
-                mt-20 grid gap-8
-                border-t border-brand-beige/25 pt-10
-                md:mt-24 md:pt-12
-                lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]
-                lg:gap-16
-              "
-            >
-              <div>
-                <p
-                  className="
-                    mb-5 font-sans text-xs
-                    font-semibold uppercase
-                    tracking-[0.22em]
-                    text-brand-beige
-                  "
-                >
-                  05 / External Profiles
-                </p>
-
-                <h2
-                  id="professional-profiles-heading"
-                  className="
-                    font-display
-                    text-[clamp(2rem,3.4vw,4rem)]
-                    leading-[1.08]
-                  "
-                >
-                  FIND OUT
-                  <br />
-                  MORE
-                  <span className="text-brand-orange">.</span>
-                </h2>
-              </div>
-
-              <ul
-                aria-labelledby="professional-profiles-heading"
-                className="list-none"
-              >
-                {member.links.map((link) => (
-                  <li
-                    key={`${link.platform}-${link.url}`}
-                    className="
-                      border-b border-brand-beige/25
-                    "
-                  >
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="
-                        group flex items-center
-                        justify-between gap-4
-                        py-5
-                        font-sans text-base font-semibold
-                        transition-colors duration-300
-                        hover:text-brand-orange
-                        focus-visible:outline-2
-                        focus-visible:outline-offset-4
-                        focus-visible:outline-brand-orange
-                        motion-reduce:transition-none
-                      "
-                    >
-                      <span>{link.platform}</span>
-
-                      <ArrowUpRight
-                        aria-hidden="true"
-                        strokeWidth={1.5}
-                        className="
-                          size-5 shrink-0
-                          transition-transform duration-300
-                          group-hover:-translate-y-1
-                          group-hover:translate-x-1
-                          motion-reduce:transition-none
-                        "
-                      />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* ==================================================
-              PROFILE NAVIGATION
-              ================================================== */}
+          {/* PROFILE NAVIGATION */}
           <nav
             aria-label="Team profile navigation"
             className="

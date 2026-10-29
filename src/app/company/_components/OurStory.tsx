@@ -75,7 +75,7 @@ export function OurStory() {
 
         {/* CLOSING PHILOSOPHY STATEMENT */}
         <div className="mt-20 border-t border-brand-beige/25 pt-8 md:mt-28 md:pt-10">
-          <p className="max-w-5xl font-display text-[clamp(1.8rem,3.3vw,3.7rem)] leading-[1.15]">
+          <p className="max-w-7xl font-display text-[clamp(1.8rem,3.3vw,3.7rem)] leading-[1.15]">
             WE THINK LIKE STORYTELLERS.
             <br />
             <span className="text-brand-orange">WE WORK LIKE PRODUCERS</span>

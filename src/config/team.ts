@@ -1,9 +1,8 @@
 import type { TeamMember } from "@/types/types-team";
 
 export const team = [
-  // =========================================================
-  // 01 — AHMED EHAB ELSAEED
-  // =========================================================
+  //! 01 — AHMED EHAB ELSAEED
+
   {
     id: "n4f-team-001",
     slug: "ahmed-ehab",
@@ -85,7 +84,7 @@ export const team = [
       {
         title: "74th Police Day Celebrations",
         year: "2026",
-        role: "BOB hay2olena",
+        role: "Line Producer",
         source: "YouTube",
         url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
         artwork: {
@@ -96,7 +95,7 @@ export const team = [
       {
         title: "National Bank of Egypt — TVC",
         year: "2025",
-        role: "Executive Producer",
+        role: "Line Producer",
         source: "YouTube",
         url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
         artwork: {
@@ -113,29 +112,21 @@ export const team = [
     published: true,
   },
 
-  // =========================================================
-  // 02 — OMAR ASSAR
-  // =========================================================
+  //! 02 — OMAR ASSAR
+
   {
     id: "n4f-team-002",
     slug: "omar-assar",
-
     name: "Omar Assar",
     role: "Director",
-
     shortBio:
       "Omar Assar is an Egyptian film director and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
-
     biography: [
       "Omar Assar is an Egyptian film director and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, he has developed a career spanning feature films, television series, commercials, music videos, and theatrical productions.",
-
       "His experience as a First Assistant Director includes Al Frensawy (2026), Walad Bent Shayeb (2025), Ala Nesbet Moshahda (2024), and Wesh W Dahr (2022). He also served as Executive Director on the feature film Meen Yesadaq (2024). These experiences have strengthened his understanding of the relationship between creative direction, performance, and the practical demands of production.",
-
       "Alongside his work on larger productions, Omar has directed independent short films, music videos, and theatrical performances, including Louder Than Shame (2026).",
-
       "His approach to filmmaking brings together visual storytelling, performance-driven direction, and an understanding of both the artistic and technical sides of the filmmaking process. Through Ninety 4 Film, he contributes to the company's creative development, directing approach, and the process of translating ideas into screen productions.",
     ],
-
     expertise: [
       "Film Directing",
       "Visual Storytelling",
@@ -144,25 +135,32 @@ export const team = [
       "Assistant Directing",
       "Production Planning",
     ],
-
     quote:
       "Every frame should make you feel something. Every decision behind it should help make that feeling possible.",
-
     portrait: {
-      src: "/team/omar-assar.jpeg",
-      alt: "Portrait of Omar Assar",
+      src: "/media/f81cd794-ed55-4da7-9f75-5f76ac42933a.jpg",
+      alt: "omar assar cover photo",
     },
-
     credits: [
       {
-        title: "Al Frensawy",
+        title: "Al-Francawy",
         year: "2026",
         role: "First Assistant Director",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2098504",
+        artwork: {
+          src: "/media/67fdb4b4-aae1-4c38-8abc-70701441e733.jpg",
+          alt: "el fransawy official poster",
+        },
       },
       {
         title: "Louder Than Shame",
         year: "2026",
         role: "Director",
+        artwork: {
+          src: "/media/eafeed55-a4d6-4b23-ad74-32b346626ebd.jpg",
+          alt: "louader than shame official poster",
+        },
       },
       {
         title: "Walad Bent Shayeb",
@@ -170,6 +168,10 @@ export const team = [
         role: "First Assistant Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2095533/",
+        artwork: {
+          src: "/media/f720df87-f97e-4fda-b6ee-5ad9bbe2fd43.jpg",
+          alt: "walad bent shayeb official poster",
+        },
       },
       {
         title: "Meen Yesadaq",
@@ -178,8 +180,8 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2090320/",
         artwork: {
-          src: "/posters/meen-yesdak-poster.png",
-          alt: "Official Poster for meen yesadak",
+          src: "/media/762e9581-305c-425d-8eae-345dd30e5bcd.png",
+          alt: "meen yesdak official poster",
         },
       },
       {
@@ -188,6 +190,10 @@ export const team = [
         role: "First Assistant Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2083749/",
+        artwork: {
+          src: "/media/cc1a895d-82ca-4deb-adbb-3b15bd231854.jpg",
+          alt: "ala nesbet moshahda official poster",
+        },
       },
       {
         title: "Taghyeer Gaw",
@@ -195,6 +201,10 @@ export const team = [
         role: "First Assistant Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2077515/",
+        artwork: {
+          src: "/media/e1732c48-80d1-4153-bcec-ac68ab18d3b6.jpg",
+          alt: "offial poster for taghyer gaw",
+        },
       },
       {
         title: "Wesh W Dahr",
@@ -202,9 +212,12 @@ export const team = [
         role: "First Assistant Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2074439/",
+        artwork: {
+          src: "/media/9c909f83-a192-44cd-9ad4-40cf3bf6c2e5.jpg",
+          alt: "tahgyer gaw official poster",
+        },
       },
     ],
-
     links: [
       {
         platform: "IMDb",
@@ -219,14 +232,12 @@ export const team = [
         url: "https://vimeo.com/theomarassar",
       },
     ],
-
     order: 2,
     published: true,
   },
 
-  // =========================================================
-  // 03 — AHMED EL-GANZORY
-  // =========================================================
+  //! 03 — AHMED EL-GANZORY
+
   {
     id: "n4f-team-003",
     slug: "ahmed-ganzory",
@@ -295,9 +306,8 @@ export const team = [
     published: true,
   },
 
-  // =========================================================
-  // 04 — ADHAM HAMED
-  // =========================================================
+  //! 04 — ADHAM HAMED
+
   {
     id: "n4f-team-004",
     slug: "adham-hamed",
@@ -393,15 +403,11 @@ export const team = [
   },
 ] as const satisfies readonly TeamMember[];
 
-// ===========================================================
-// TYPED DATA SOURCE
-// ===========================================================
+//! TYPED DATA SOURCE
 
 const teamEntries: readonly TeamMember[] = team;
 
-// ===========================================================
-// PUBLIC TEAM DIRECTORY
-// ===========================================================
+//! PUBLIC TEAM DIRECTORY
 
 export function getPublishedTeam(): readonly TeamMember[] {
   return teamEntries
@@ -409,17 +415,13 @@ export function getPublishedTeam(): readonly TeamMember[] {
     .sort((a, b) => a.order - b.order);
 }
 
-// ===========================================================
-// INDIVIDUAL TEAM PROFILE
-// ===========================================================
+//! INDIVIDUAL TEAM PROFILE
 
 export function getTeamMemberBySlug(slug: string): TeamMember | undefined {
   return teamEntries.find((member) => member.slug === slug && member.published);
 }
 
-// ===========================================================
-// NEXT.JS STATIC PARAMETER GENERATION
-// ===========================================================
+//! NEXT.JS STATIC PARAMETER GENERATION
 
 export function getTeamSlugs(): string[] {
   return getPublishedTeam().map((member) => member.slug);

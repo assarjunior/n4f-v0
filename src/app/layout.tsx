@@ -5,9 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// ============================================================
-// 01. FONTS
-// ============================================================
+// !01. FONTS
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -23,9 +21,7 @@ const aquifer = localFont({
   style: "normal",
 });
 
-// ============================================================
-// 02. SITE CONFIGURATION
-// ============================================================
+//! 02. SITE CONFIGURATION
 
 const siteURL = process.env.NEXT_SITE_URL ?? "https://www.ninety4film.com";
 
@@ -38,14 +34,10 @@ const siteDescription =
 
 const openGraphImage = "/openGraph.png";
 
-// ============================================================
-// 03. SEO METADATA
-// ============================================================
+//! 03. SEO METADATA
 
 export const metadata: Metadata = {
-  // ----------------------------------------------------------
-  // GENERAL
-  // ----------------------------------------------------------
+  //! GENERAL
 
   metadataBase: new URL(siteURL),
 
@@ -58,9 +50,7 @@ export const metadata: Metadata = {
 
   applicationName: siteName,
 
-  // ----------------------------------------------------------
-  // OPEN GRAPH
-  // ----------------------------------------------------------
+  //! OPEN GRAPH
 
   openGraph: {
     type: "website",
@@ -83,9 +73,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  // ----------------------------------------------------------
-  // TWITTER / X
-  // ----------------------------------------------------------
+  //! TWITTER / X
 
   twitter: {
     card: "summary_large_image",
@@ -94,9 +82,7 @@ export const metadata: Metadata = {
     images: [openGraphImage],
   },
 
-  // ----------------------------------------------------------
-  // SEARCH ENGINE INDEXING
-  // ----------------------------------------------------------
+  //! SEARCH ENGINE INDEXING
 
   robots: {
     index: true,
@@ -111,16 +97,12 @@ export const metadata: Metadata = {
     },
   },
 
-  // ----------------------------------------------------------
-  // ADDITIONAL METADATA
-  // ----------------------------------------------------------
+  //! ADDITIONAL METADATA
 
   category: "Film & Television Production",
 };
 
-// ============================================================
-// 04. VIEWPORT
-// ============================================================
+//! 04. VIEWPORT
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -128,9 +110,7 @@ export const viewport: Viewport = {
   themeColor: "#611512",
 };
 
-// ============================================================
-// 05. ROOT LAYOUT
-// ============================================================
+//! 05. ROOT LAYOUT
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

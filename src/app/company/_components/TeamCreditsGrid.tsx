@@ -28,9 +28,7 @@ export function TeamCreditsGrid({ credits }: TeamCreditsGridProps) {
 
         const content = (
           <>
-            {/* ================================================
-                PROJECT ARTWORK
-                ================================================ */}
+            {/* PROJECT ARTWORK */}
             <div
               className={`
                 relative aspect-4/5
@@ -129,9 +127,7 @@ export function TeamCreditsGrid({ credits }: TeamCreditsGridProps) {
               )}
             </div>
 
-            {/* ================================================
-                PROJECT INFORMATION
-                ================================================ */}
+            {/*  PROJECT INFORMATION */}
             <div className="pt-3">
               {/* TITLE AND YEAR */}
               <div
