@@ -24,6 +24,7 @@ export function generateStaticParams() {
 }
 
 // Generate the approved metadata for each project.
+
 export async function generateMetadata({
   params,
 }: WorkDetailPageProps): Promise<Metadata> {
@@ -37,8 +38,6 @@ export async function generateMetadata({
 
   const approvedSeo = seoCopy.work[project.slug];
 
-  // A new project must receive SEO copy approval
-  // before it can pass the production build.
   if (!approvedSeo) {
     throw new Error(
       `Missing approved SEO metadata for project: ${project.slug}`,
@@ -50,6 +49,11 @@ export async function generateMetadata({
       absolute: approvedSeo.title,
     },
     description: approvedSeo.description,
+
+    // Canonical URL from the verified published project slug.
+    alternates: {
+      canonical: `/work/${project.slug}`,
+    },
   };
 }
 

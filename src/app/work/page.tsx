@@ -2,7 +2,7 @@ import { getPublishedWork } from "@/config/config-work";
 import { seoCopy } from "@/config/seo";
 import { WorkEntry, WorkType } from "@/types/types-work";
 import { ArrowUpRight } from "lucide-react";
-import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     absolute: seoCopy.pages.work.title,
   },
   description: seoCopy.pages.work.description,
+  alternates: {
+    canonical: "/work",
+  },
 };
 
 function ArchiveProjectCard({ project }: { project: WorkEntry }) {

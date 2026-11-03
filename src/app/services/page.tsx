@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     absolute: seoCopy.pages.services.title,
   },
   description: seoCopy.pages.services.description,
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicePage() {

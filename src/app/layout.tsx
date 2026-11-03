@@ -22,8 +22,9 @@ const aquifer = localFont({
 });
 
 //! 02. SITE CONFIGURATION
+const PRODUCTION_SITE_URL = "https://www.ninety4film.com";
 
-const siteURL = process.env.NEXT_SITE_URL ?? "https://www.ninety4film.com";
+const siteURL = process.env.NEXT_SITE_URL ?? PRODUCTION_SITE_URL;
 
 const siteName = "Ninety 4 Film";
 
@@ -39,7 +40,7 @@ const openGraphImage = "/openGraph.png";
 export const metadata: Metadata = {
   //! GENERAL
 
-  metadataBase: new URL(siteURL),
+  metadataBase: new URL(PRODUCTION_SITE_URL),
 
   title: {
     default: siteTitle,

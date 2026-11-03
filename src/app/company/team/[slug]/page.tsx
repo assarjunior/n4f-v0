@@ -24,6 +24,7 @@ export function generateStaticParams() {
 }
 
 // Generate approved metadata per team member.
+
 export async function generateMetadata({
   params,
 }: TeamMemberPageProps): Promise<Metadata> {
@@ -37,8 +38,6 @@ export async function generateMetadata({
 
   const approvedSeo = seoCopy.team[member.slug];
 
-  // Prevent new profiles from passing the build
-  // without separately approved SEO copy.
   if (!approvedSeo) {
     throw new Error(
       `Missing approved SEO metadata for team member: ${member.slug}`,
@@ -50,6 +49,11 @@ export async function generateMetadata({
       absolute: approvedSeo.title,
     },
     description: approvedSeo.description,
+
+    // Canonical URL from the verified published team slug.
+    alternates: {
+      canonical: `/company/team/${member.slug}`,
+    },
   };
 }
 

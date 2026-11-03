@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     absolute: seoCopy.pages.home.title,
   },
   description: seoCopy.pages.home.description,
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {

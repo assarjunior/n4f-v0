@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     absolute: seoCopy.pages.company.title,
   },
   description: seoCopy.pages.company.description,
+  alternates: {
+    canonical: "/company",
+  },
 };
 
 export default function CompanyPage() {

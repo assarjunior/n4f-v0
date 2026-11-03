@@ -1,6 +1,18 @@
 import Image from "next/image";
 
 import { company } from "@/config/company";
+import { seoCopy } from "@/config/seo";
+import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: seoCopy.pages.contact.title,
+  },
+  description: seoCopy.pages.contact.description,
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
