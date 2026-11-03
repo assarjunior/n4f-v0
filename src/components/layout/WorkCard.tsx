@@ -69,7 +69,7 @@ export function WorkCard({ film }: WorkCardProps) {
       {/* Company Role */}
       <div className="mt-5 lg:mt-auto lg:pt-5">
         <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-orange">
-          Ninety 4 Film&apos; Role
+          Ninety 4 Film&apos;s Role
         </p>
 
         <p className="mt-1.5 font-sans text-sm font-medium text-brand-beige">

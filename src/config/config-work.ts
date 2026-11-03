@@ -12,9 +12,9 @@ export const work = [
       "In the aftermath of a devastating war, a man and a woman from opposing sides are the last survivors in a ruined city. Forced to coexist, they must choose between continuing their conflict and finding a way to live in peace.",
     shortSynopsis:
       "Two survivors from opposing sides of a devastating war must choose between continuing their conflict and finding a way to live in peace.",
-    companyRoles: ["Executive Producer"],
+    companyRoles: ["Production Execution"],
     companyRoleDescription:
-      "Handling the project from development to the final delivery getting the crew all together and step by step oversight over the entire project",
+      "Ninety 4 Film handled on-set production execution in collaboration with the project's production partners.",
     poster: {
       src: "/posters/1+1-poster.png",
       alt: "Official poster for 1+1",
@@ -73,12 +73,12 @@ export const work = [
     ],
     links: [
       {
-        label: "IMDB",
+        label: "IMDb",
         url: "https://www.imdb.com/title/tt27720812/",
       },
     ],
     featured: true,
-    featuredOrder: 1,
+    featuredOrder: 2,
     published: true,
   },
 
@@ -105,7 +105,7 @@ export const work = [
     genres: ["Romance"],
     links: [
       { label: "El Cinema", url: "https://elcinema.com/work/2090320" },
-      { label: "IMDB", url: "https://www.imdb.com/title/tt34823082/" },
+      { label: "IMDb", url: "https://www.imdb.com/title/tt34823082/" },
       {
         label: "Cairo International Film Festival",
         url: "https://www.ciff.org.eg/ar/program/films/whod-believe-it",
@@ -117,9 +117,9 @@ export const work = [
     shortSynopsis:
       "After falling for a young con artist, Nadine joins him in a series of schemes targeting the wealthy to help the poor.",
 
-    companyRoles: ["Executive Producer"],
+    companyRoles: ["On-Set Production Execution"],
     companyRoleDescription:
-      "Handling the project from development to the final delivery getting the crew all together and step by step oversight over the entire project",
+      "Ninety 4 Film handled production budgeting, on-set execution, production team management, and delivery coordination.",
 
     poster: {
       src: "/posters/meen-yesdak-poster.png",
@@ -142,13 +142,13 @@ export const work = [
       { name: "Nada Abd El-Hameed", role: "Production Designer" },
       { name: "Mohamed Soliman", role: "Editor" },
       { name: "Bassem Gamal", role: "Sound Engineer" },
-      { name: "Omar Assar", role: "First Assistant Director" },
+      { name: "Omar Assar", role: "Executive Director" },
     ],
 
     languages: ["Arabic"],
 
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 1,
     published: true,
   },
 ] as const satisfies readonly WorkEntry[];

@@ -5,9 +5,9 @@ export const WORK_TYPES = [
   "documentary",
   "commercial",
   "music-video",
-  "other",
   "event",
   "media-coverage",
+  "other",
 ] as const;
 
 export type WorkType = (typeof WORK_TYPES)[number];
@@ -30,6 +30,8 @@ export const PRODUCTION_ROLES = [
   "Production Services",
   "Post-Production",
   "Creative Development",
+  "Production Execution",
+  "On-Set Production Execution",
   "Other",
 ] as const;
 

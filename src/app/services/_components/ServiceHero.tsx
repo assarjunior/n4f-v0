@@ -7,7 +7,7 @@ export function ServicesHero() {
       aria-labelledby="services-hero-heading"
       className="relative isolate overflow-hidden bg-brand-maroon text-brand-beige"
     >
-      <div className="container-editorial w-full py-20 md:py-28 lg:py-32">
+      <div className="container-editorial w-full py-20 md:py-28 lg:py-12">
         {/* EYEBROW */}
         <div className="mb-10 flex items-center gap-4 md:mb-14">
           <span aria-hidden="true" className="h-px w-10 bg-brand-orange" />
@@ -19,7 +19,7 @@ export function ServicesHero() {
         {/* MAIN HEADLINE */}
         <h1
           id="services-hero-heading"
-          className="max-w-[22ch] font-display text-[clamp(3rem,6.4vw,7.8rem)] leading-[0.98] tracking-[-0.04em]"
+          className="max-w-[30ch] font-display text-[clamp(3rem,6.4vw,7.8rem)] leading-[0.98] tracking-[-0.04em]"
         >
           <span className="block">THE VISION MATTERS.</span>
           <span className="mt-3 block text-brand-orange md:mt-4">

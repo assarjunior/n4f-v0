@@ -11,7 +11,7 @@ export function Hero() {
       {/* Background Photograph */}
       <Image
         src={HeroImage}
-        alt="Hero Image"
+        alt="production ongoing in Egypt"
         fill
         priority
         sizes="100vw"

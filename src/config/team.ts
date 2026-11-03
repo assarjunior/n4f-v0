@@ -8,7 +8,7 @@ export const team = [
     slug: "ahmed-ehab",
 
     name: "Ahmed Ehab EL-Saeed",
-    role: "Executive Producer",
+    role: "CEO / Executive Producer",
 
     shortBio:
       "Ahmed Ehab is a film and television producer and CEO of Ninety 4 Film. Working in production since 2019, he specializes in production execution, project management, and coordinating the people and processes that bring screen projects to life.",
@@ -34,7 +34,7 @@ export const team = [
       "The work behind the camera should give the story in front of it every chance to succeed.",
 
     portrait: {
-      src: "/team/ahmed-ehab.jpg",
+      src: "/team/ahmed-ehab.jpeg",
       alt: "Portrait of Ahmed Ehab Elsaeed",
     },
 
@@ -54,7 +54,7 @@ export const team = [
         title: "1+1",
         role: "Executive Producer",
         year: "2021",
-        source: "IMDB",
+        source: "IMDb",
         url: "https://www.imdb.com/title/tt27720812/",
         artwork: {
           src: "/posters/1+1-poster.png",
@@ -105,9 +105,6 @@ export const team = [
       },
     ],
 
-    // Professional links to be provided later
-    links: [],
-
     order: 1,
     published: true,
   },
@@ -138,19 +135,19 @@ export const team = [
     quote:
       "Every frame should make you feel something. Every decision behind it should help make that feeling possible.",
     portrait: {
-      src: "/media/f81cd794-ed55-4da7-9f75-5f76ac42933a.jpg",
-      alt: "omar assar cover photo",
+      src: "/media/497714934_10232050351896485_4138977675105830512_n.webp",
+      alt: "Omar Assar profile picture",
     },
     credits: [
       {
-        title: "Al-Francawy",
+        title: "Al Frensawy",
         year: "2026",
         role: "First Assistant Director",
         source: "ElCinema",
         url: "https://elcinema.com/work/2098504",
         artwork: {
-          src: "/media/67fdb4b4-aae1-4c38-8abc-70701441e733.jpg",
-          alt: "el fransawy official poster",
+          src: "/media/671975295_122125721517170344_8371973076470749313_n.webp",
+          alt: "el faransawy offical poster",
         },
       },
       {
@@ -158,8 +155,8 @@ export const team = [
         year: "2026",
         role: "Director",
         artwork: {
-          src: "/media/eafeed55-a4d6-4b23-ad74-32b346626ebd.jpg",
-          alt: "louader than shame official poster",
+          src: "/media/630855422_18552226714042080_6916410836148454564_n.webp",
+          alt: "louder than shame picture",
         },
       },
       {
@@ -169,8 +166,8 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2095533/",
         artwork: {
-          src: "/media/f720df87-f97e-4fda-b6ee-5ad9bbe2fd43.jpg",
-          alt: "walad bent shayeb official poster",
+          src: "/media/545698457_806923168365449_4829585139458908500_n.webp",
+          alt: "walad we bent we shayeb official poster",
         },
       },
       {
@@ -180,7 +177,7 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2090320/",
         artwork: {
-          src: "/media/762e9581-305c-425d-8eae-345dd30e5bcd.png",
+          src: "/media/meen-yesdak-poster.webp",
           alt: "meen yesdak official poster",
         },
       },
@@ -191,8 +188,8 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2083749/",
         artwork: {
-          src: "/media/cc1a895d-82ca-4deb-adbb-3b15bd231854.jpg",
-          alt: "ala nesbet moshahda official poster",
+          src: "/media/_-_-_-_.webp",
+          alt: "ala nesbet mosahda official poster",
         },
       },
       {
@@ -202,8 +199,8 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2077515/",
         artwork: {
-          src: "/media/e1732c48-80d1-4153-bcec-ac68ab18d3b6.jpg",
-          alt: "offial poster for taghyer gaw",
+          src: "/media/images.webp",
+          alt: "taghyer gaw official poster",
         },
       },
       {
@@ -213,23 +210,9 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2074439/",
         artwork: {
-          src: "/media/9c909f83-a192-44cd-9ad4-40cf3bf6c2e5.jpg",
-          alt: "tahgyer gaw official poster",
+          src: "/media/474618301_1152987096414808_2742276285382818859_n.webp",
+          alt: "wesh we dahr official poster",
         },
-      },
-    ],
-    links: [
-      {
-        platform: "IMDb",
-        url: "https://www.imdb.com/name/nm7120668/",
-      },
-      {
-        platform: "ElCinema",
-        url: "https://elcinema.com/person/2160038",
-      },
-      {
-        platform: "Vimeo",
-        url: "https://vimeo.com/theomarassar",
       },
     ],
     order: 2,
@@ -300,8 +283,6 @@ export const team = [
       },
     ],
 
-    links: [],
-
     order: 3,
     published: true,
   },
@@ -342,7 +323,7 @@ export const team = [
       "A story doesn't end when the camera stops rolling. Every decision in post-production is another opportunity to shape what the audience feels.",
 
     portrait: {
-      src: "/team/adham-hamed.JPG",
+      src: "/team/adham-hamed.png",
       alt: "Portrait of Adham Hamed",
     },
 
@@ -388,13 +369,6 @@ export const team = [
         role: "Camera Assistant",
         source: "ElCinema",
         url: "https://elcinema.com/work/2040991/",
-      },
-    ],
-
-    links: [
-      {
-        platform: "ElCinema",
-        url: "https://elcinema.com/person/2084192",
       },
     ],
 

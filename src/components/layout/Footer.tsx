@@ -88,13 +88,6 @@ export function Footer() {
               >
                 WhatsApp: {company.whatsapp.display}
               </a>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 transition-colors duration-300 hover:text-brand-orange focus-visible:text-brand-orange motion-reduce:transition-none"
-              >
-                Start a conversation
-              </Link>
             </div>
           </div>
 

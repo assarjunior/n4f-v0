@@ -1,15 +1,3 @@
-export const TEAM_LINK_PLATFORMS = [
-  "IMDb",
-  "ElCinema",
-  "Vimeo",
-  "LinkedIn",
-  "YouTube",
-  "Instagram",
-  "Website",
-] as const;
-
-export type TeamLinkPlatform = (typeof TEAM_LINK_PLATFORMS)[number];
-
 export type TeamImage = {
   src: string;
   alt: string;
@@ -18,13 +6,8 @@ export type TeamImage = {
   objectPosition?: string;
 };
 
-export type TeamProfessionalLink = {
-  platform: TeamLinkPlatform;
-  url: string;
-};
-
 export const TEAM_CREDIT_SOURCES = [
-  "IMDB",
+  "IMDb",
   "ElCinema",
   "YouTube",
   "Instagram",
@@ -69,7 +52,6 @@ export type TeamMember = {
 
   //? Professional Career
   credits: readonly TeamCredit[];
-  links: readonly TeamProfessionalLink[];
 
   //? Website Presentation
   order: number;

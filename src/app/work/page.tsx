@@ -26,7 +26,7 @@ function ArchiveProjectCard({ project }: { project: WorkEntry }) {
         <Link
           href={href}
           aria-label={`Explore ${project.title}`}
-          className="relative block aspect-3/4 overflow-hidden border border-brand-beige/20 bg-[#32110E] focus-visible::outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+          className="relative block aspect-3/4 overflow-hidden border border-brand-beige/20 bg-[#32110E] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
         >
           <Image
             src={project.poster.src}

@@ -45,7 +45,7 @@ export const company = {
       icon: FaYoutube,
     },
     {
-      label: "IMDB",
+      label: "IMDb",
       href: "https://www.imdb.com/name/nm7120668/",
       icon: FaImdb,
     },
