@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import {
@@ -6,20 +7,50 @@ import {
   getTeamSlugs,
 } from "@/config/team";
 
+import { seoCopy } from "@/config/seo";
 import { TeamProfile } from "../../_components/TeamProfile";
 
-//! Allow blocking navigation for this dynamic route
 export const instant = false;
 
 type TeamMemberPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-// Generate published team profile routes at build time
+// Generate published team profile routes.
 export function generateStaticParams() {
   return getTeamSlugs().map((slug) => ({
     slug,
   }));
+}
+
+// Generate approved metadata per team member.
+export async function generateMetadata({
+  params,
+}: TeamMemberPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const member = getTeamMemberBySlug(slug);
+
+  if (!member) {
+    notFound();
+  }
+
+  const approvedSeo = seoCopy.team[member.slug];
+
+  // Prevent new profiles from passing the build
+  // without separately approved SEO copy.
+  if (!approvedSeo) {
+    throw new Error(
+      `Missing approved SEO metadata for team member: ${member.slug}`,
+    );
+  }
+
+  return {
+    title: {
+      absolute: approvedSeo.title,
+    },
+    description: approvedSeo.description,
+  };
 }
 
 export default async function TeamMemberPage({ params }: TeamMemberPageProps) {

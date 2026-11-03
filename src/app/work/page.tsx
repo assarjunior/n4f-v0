@@ -1,6 +1,8 @@
 import { getPublishedWork } from "@/config/config-work";
+import { seoCopy } from "@/config/seo";
 import { WorkEntry, WorkType } from "@/types/types-work";
 import { ArrowUpRight } from "lucide-react";
+import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,6 +16,13 @@ const workTypeLabels: Record<WorkType, string> = {
   other: "Other",
   event: "Event",
   "media-coverage": "Media Coverage",
+};
+
+export const metadata: Metadata = {
+  title: {
+    absolute: seoCopy.pages.work.title,
+  },
+  description: seoCopy.pages.work.description,
 };
 
 function ArchiveProjectCard({ project }: { project: WorkEntry }) {
