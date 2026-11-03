@@ -10,22 +10,18 @@ export function WhoWeAre() {
       className="
         grid w-full grid-cols-1
         overflow-hidden
-        border-t border-brand-beige/20
-        bg-brand-maroon text-brand-beige
+        border-t border-brand-maroon/20
+        bg-brand-beige text-brand-maroon
         lg:grid-cols-[minmax(0,54%)_minmax(0,46%)]
       "
     >
-      {/* ========================================
-          LEFT SIDE — COMPLETE MANIFESTO
-      ======================================== */}
+      {/* LEFT — COMPLETE MANIFESTO */}
       <div
         className="
           container-editorial
           flex min-w-0 flex-col
-          justify-between
-          gap-12
-          py-16
-          sm:py-20
+          justify-between gap-12
+          py-16 sm:py-20
           lg:min-h-192 lg:py-24
           xl:py-28
         "
@@ -38,22 +34,31 @@ export function WhoWeAre() {
             text-[clamp(2.15rem,5.1vw,6.75rem)]
             leading-[1.02]
             tracking-[-0.035em]
+            text-brand-maroon
           "
         >
           <span className="block">IDEAS ARE</span>
 
-          <span className="block text-brand-orange">ONLY THE</span>
+          <span className="block">ONLY THE</span>
 
           <span className="block">
             BEGINNING
-            <span className="text-brand-orange">.</span>
+            <span aria-hidden="true" className="text-brand-orange">
+              .
+            </span>
           </span>
         </h2>
 
         {/* MANIFESTO CONTENT */}
         <div className="max-w-172">
           {/* BRAND ACCENT */}
-          <div aria-hidden="true" className="mb-8 h-0.5 w-12 bg-brand-orange" />
+          <div
+            aria-hidden="true"
+            className="
+              mb-8 h-0.5 w-12
+              bg-brand-orange
+            "
+          />
 
           {/* SUPPORTING STATEMENT */}
           <p
@@ -63,6 +68,7 @@ export function WhoWeAre() {
               font-semibold
               leading-[1.28]
               tracking-tight
+              text-brand-maroon
             "
           >
             A vision is only as strong as the work that brings it to life.
@@ -73,7 +79,7 @@ export function WhoWeAre() {
             className="
               mt-6 max-w-[62ch]
               text-base leading-[1.75]
-              text-brand-beige/90
+              text-brand-maroon/90
               sm:mt-8 sm:text-lg
             "
           >
@@ -83,24 +89,25 @@ export function WhoWeAre() {
             forward with purpose — from the first plan to the final frame.
           </p>
 
-          {/* COMPANY CTA */}
+          {/* SINGLE COMPANY CTA */}
           <Link
             href="/company"
             className="
               mt-10 inline-flex min-h-11
               items-center gap-3
-              border-b border-brand-beige pb-2
+              border-b border-brand-maroon
+              pb-2
               text-xs font-bold uppercase
               tracking-[0.16em]
-              text-brand-beige
+              text-brand-maroon
 
-              hover:border-brand-orange
-              hover:text-brand-orange
+              hover:border-brand-maroon/60
+              hover:text-brand-maroon/75
 
               focus-visible:rounded-sm
               focus-visible:outline-2
               focus-visible:outline-offset-4
-              focus-visible:outline-brand-orange
+              focus-visible:outline-brand-maroon
 
               sm:mt-12
             "
@@ -111,16 +118,16 @@ export function WhoWeAre() {
         </div>
       </div>
 
-      {/* ========================================
-          RIGHT SIDE — FULL HEIGHT ARTWORK
-      ======================================== */}
+      {/* RIGHT — FULL-HEIGHT ARTWORK */}
       <div
         className="
           relative w-full
-          md:mt-20
           min-h-104
+          md:mt-20
+          md:mb-20
+          rounded-xl
           overflow-hidden
-          bg-brand-beige/10
+          bg-brand-maroon/10
           sm:min-h-144
           lg:min-h-0
         "
