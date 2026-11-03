@@ -323,7 +323,7 @@ export const team = [
       "A story doesn't end when the camera stops rolling. Every decision in post-production is another opportunity to shape what the audience feels.",
 
     portrait: {
-      src: "/team/adham-hamed.png",
+      src: "/team/adham-hamed.jpg",
       alt: "Portrait of Adham Hamed",
     },
 
@@ -373,6 +373,80 @@ export const team = [
     ],
 
     order: 4,
+    published: true,
+  },
+
+  //! 05 - Farris Hanafy
+  {
+    id: "n4f-team-bf28585f",
+    slug: "farris-hanafy",
+    name: "Farris Hanafy",
+    role: "Production Coordinator",
+    shortBio:
+      "Farris Hanafy is a production coordinator and public relations professional whose work brings together project management, client relations, and creative production.",
+    biography: [
+      "Farris Hanafy is a production coordinator and public relations professional whose work brings together project management, client relations, and creative production. He coordinates production schedules, supports collaboration across teams, and manages communication with clients and partners. Alongside this work, Farris is a creative writer, voice actor, and voice-over artist working in English and Arabic. His experience on both the creative and operational sides of media gives him a well-rounded understanding of how to bring a production from concept to completion.",
+    ],
+    expertise: [
+      "Production Coordination between departments.",
+      "Production workflow and logistics optimization.",
+      "Client Relations.",
+      "Creative Conceptualization & Development.",
+    ],
+    quote:
+      "Some days you tell the story. Some days you help someone else tell theirs. Both matter.",
+    portrait: {
+      src: "/media/WhatsApp-Image-2026-11-03-at-21.58.02.webp",
+      alt: "farris hanafy public image",
+    },
+    credits: [
+      {
+        title: "#Gawwezni",
+        year: "2022",
+        role: "Executive Producer",
+        url: "https://elcinema.com/work/2076309/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-3.webp",
+          alt: "hashtag gawezny official poster",
+        },
+      },
+      {
+        title: "El Bata El Safra",
+        year: "2023",
+        role: "Post-Production Supervisor",
+        url: "https://elcinema.com/work/2077794/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00.webp",
+          alt: "el batta el safra official poster",
+        },
+      },
+      {
+        title: "Adel Mesh Adel",
+        year: "2024",
+        role: "Post-Production Supervisor",
+        url: "https://elcinema.com/work/2083197/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-1.webp",
+          alt: "adel mesh adel official poster",
+        },
+      },
+      {
+        title: "Dhibat El Mahal",
+        year: "2025",
+        role: "VO & Post-Production Supervisor",
+      },
+      {
+        title: "Fat El Ma'ad",
+        year: "2025",
+        role: "Post-Production Supervisor",
+        url: "https://elcinema.com/work/2093972/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-2.webp",
+          alt: "fat el maad official poster",
+        },
+      },
+    ],
+    order: 5,
     published: true,
   },
 ] as const satisfies readonly TeamMember[];

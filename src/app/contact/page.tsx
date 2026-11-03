@@ -3,6 +3,7 @@ import Image from "next/image";
 import { company } from "@/config/company";
 import { seoCopy } from "@/config/seo";
 import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
+import { createSocialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: {
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact",
   },
+  ...createSocialMetadata(
+    "/contact",
+    seoCopy.pages.contact,
+    "/og/company",
+    "Ninety 4 Film — Contact Our Production Team",
+  ),
 };
 
 export default function ContactPage() {

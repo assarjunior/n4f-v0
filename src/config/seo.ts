@@ -80,5 +80,10 @@ export const seoCopy: {
       description:
         "Meet Adham Hamed, Head of Post-Production at Ninety 4 Film, specializing in editing, color grading, finishing and production-to-post workflows.",
     },
+    "farris-hanafy": {
+      title: "Farris Hanafy — Production Coordinator | Ninety 4 Film",
+      description:
+        "Meet Farris Hanafy, Production Coordinator at Ninety 4 Film, with experience in project management, client relations, and creative production.",
+    },
   },
 };

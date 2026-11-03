@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SITE_ORIGIN } from "@/lib/social-metadata";
 
 // !01. FONTS
 
@@ -22,9 +23,8 @@ const aquifer = localFont({
 });
 
 //! 02. SITE CONFIGURATION
-const PRODUCTION_SITE_URL = "https://www.ninety4film.com";
 
-const siteURL = process.env.NEXT_SITE_URL ?? PRODUCTION_SITE_URL;
+const siteURL = SITE_ORIGIN;
 
 const siteName = "Ninety 4 Film";
 
@@ -40,7 +40,7 @@ const openGraphImage = "/openGraph.png";
 export const metadata: Metadata = {
   //! GENERAL
 
-  metadataBase: new URL(PRODUCTION_SITE_URL),
+  metadataBase: new URL(SITE_ORIGIN),
 
   title: {
     default: siteTitle,

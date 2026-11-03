@@ -9,6 +9,7 @@ import {
 
 import { seoCopy } from "@/config/seo";
 import { TeamProfile } from "../../_components/TeamProfile";
+import { createSocialMetadata } from "@/lib/social-metadata";
 
 export const instant = false;
 
@@ -54,6 +55,12 @@ export async function generateMetadata({
     alternates: {
       canonical: `/company/team/${member.slug}`,
     },
+    ...createSocialMetadata(
+      `/company/team/${member.slug}`,
+      approvedSeo,
+      `/og/team/${member.slug}`,
+      `${member.name} — ${member.role} at Ninety 4 Film`,
+    ),
   };
 }
 

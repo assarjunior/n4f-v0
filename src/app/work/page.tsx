@@ -1,5 +1,6 @@
 import { getPublishedWork } from "@/config/config-work";
 import { seoCopy } from "@/config/seo";
+import { createSocialMetadata } from "@/lib/social-metadata";
 import { WorkEntry, WorkType } from "@/types/types-work";
 import { ArrowUpRight } from "lucide-react";
 import { Metadata } from "next";
@@ -26,6 +27,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/work",
   },
+  ...createSocialMetadata(
+    "/work",
+    seoCopy.pages.work,
+    "/og/company",
+    "Ninety 4 Film — Selected Productions",
+  ),
 };
 
 function ArchiveProjectCard({ project }: { project: WorkEntry }) {

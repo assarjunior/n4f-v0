@@ -5,6 +5,7 @@ import { ServicesHero } from "./_components/ServiceHero";
 import { ServicesCTA } from "./_components/ServicesCTA";
 import { WhatWeProduce } from "./_components/WhatWeProduce";
 import { seoCopy } from "@/config/seo";
+import { createSocialMetadata } from "@/lib/social-metadata";
 
 export const metadata: Metadata = {
   title: {
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services",
   },
+  ...createSocialMetadata(
+    "/services",
+    seoCopy.pages.services,
+    "/og/company",
+    "Ninety 4 Film — Production Services",
+  ),
 };
 
 export default function ServicePage() {

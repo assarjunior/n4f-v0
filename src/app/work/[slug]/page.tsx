@@ -9,6 +9,7 @@ import {
 
 import { seoCopy } from "@/config/seo";
 import { ProjectDetail } from "../_components/ProjectDetail";
+import { createSocialMetadata } from "@/lib/social-metadata";
 
 export const instant = false;
 
@@ -54,6 +55,12 @@ export async function generateMetadata({
     alternates: {
       canonical: `/work/${project.slug}`,
     },
+    ...createSocialMetadata(
+      `/work/${project.slug}`,
+      approvedSeo,
+      `/og/work/${project.slug}`,
+      `${project.title} — Ninety 4 Film production portfolio`,
+    ),
   };
 }
 
