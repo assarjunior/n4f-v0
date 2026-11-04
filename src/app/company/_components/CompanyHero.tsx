@@ -8,15 +8,11 @@ export function CompanyHero() {
       aria-labelledby="company-hero-heading"
       className="relative isolate overflow-hidden bg-brand-beige text-brand-maroon"
     >
-      <div className="container-editorial py-16 md:py-24 lg:py-28">
-        {/* TOP EDITORIAL LABELS */}
-        <div className="flex items-center justify-between gap-4">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.22em]">
-            Ninety 4 Film / Company
-          </p>
-
-          <p className="hidden font-sans text-xs font-semibold uppercase tracking-[0.16em] sm:block">
-            Cairo, Egypt
+      <div className="container-editorial py-20 md:py-28 lg:py-12">
+        <div className="mb-10 flex items-center gap-4 md:mb-14">
+          <span aria-hidden="true" className="h-px w-10 bg-brand-maroon" />
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-maroon">
+            Ninety 4 Film / Our Company
           </p>
         </div>
 

@@ -143,10 +143,13 @@ export default function WorkPage() {
         aria-labelledby="work-heading"
         className="bg-brand-beige text-brand-maroon"
       >
-        <div className="container-editorial py-20 md:py-28 lg:py-32">
-          <p className="mb-7 font-sans text-xs font-bold uppercase tracking-[0.27em]">
-            Ninety 4 Film / Productions
-          </p>
+        <div className="container-editorial py-20 md:py-28 lg:py-12">
+          <div className="mb-10 flex items-center gap-4 md:mb-14">
+            <span aria-hidden="true" className="h-px w-10 bg-brand-maroon" />
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-maroon">
+              Ninety 4 Film / Our Work
+            </p>
+          </div>
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end lg:gap-16">
             <h1
