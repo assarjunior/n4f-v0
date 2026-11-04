@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
-import Paper from "../../../public/UI/Torn Paper_05 copy.webp";
+import Paper from "../../../public/UI/torn-paper-optimized.webp";
 import Link from "next/link";
 
 type TornPaperButtonProps = {
@@ -22,11 +22,11 @@ export function TornPaperButton({
 
       <Image
         src={Paper}
-        alt="paper torn"
+        alt=""
+        aria-hidden="true"
         fill
         sizes="(max-width: 640px) 220px, 260px"
         className="pointer-events-none select-none object-fill sepia-[2] brightness-[0.90] transition-transform duration-300 group-hover:scale-[1.04] motion-reduce:transition-none"
-        aria-hidden="true"
       />
 
       {/* Accessible button label */}

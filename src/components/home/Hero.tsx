@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroImage from "../../../public/hero.png";
+import HeroImage from "../../../public/hero-optimized.webp";
 import { TornPaperButton } from "../layout/torn-paper-button";
 
 export function Hero() {
@@ -13,7 +13,7 @@ export function Hero() {
         src={HeroImage}
         alt="production ongoing in Egypt"
         fill
-        priority
+        preload
         sizes="100vw"
         className="object-cover object-[65%_center] lg:object-center"
       />
