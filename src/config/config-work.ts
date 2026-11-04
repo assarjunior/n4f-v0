@@ -16,7 +16,7 @@ export const work = [
     companyRoleDescription:
       "Ninety 4 Film handled on-set production execution in collaboration with the project's production partners.",
     poster: {
-      src: "/posters/1+1-poster.png",
+      src: "/posters/1+1-poster-optimized.jpg",
       alt: "Official poster for 1+1",
       width: 749,
       height: 1000,
@@ -122,7 +122,7 @@ export const work = [
       "Ninety 4 Film handled production budgeting, on-set execution, production team management, and delivery coordination.",
 
     poster: {
-      src: "/posters/meen-yesdak-poster.png",
+      src: "/posters/meen-yesdak-poster-optimized.jpg",
       alt: "official poster for Meen Yesdak",
       width: 1600,
       height: 2139,

@@ -68,7 +68,7 @@ export const team = [
         source: "ElCinema",
         url: "https://elcinema.com/work/2090320/",
         artwork: {
-          src: "/posters/meen-yesdak-poster.png",
+          src: "/posters/meen-yesdak-poster-optimized.jpg",
           alt: "Official Poster for meen yesadak",
         },
       },
@@ -99,7 +99,7 @@ export const team = [
         source: "IMDb",
         url: "https://www.imdb.com/title/tt27720812/",
         artwork: {
-          src: "/posters/1+1-poster.png",
+          src: "/posters/1+1-poster-optimized.jpg",
           alt: "Official poster for 1+1",
         },
       },
@@ -298,7 +298,7 @@ export const team = [
         year: "2021",
         role: "Line Producer",
         artwork: {
-          src: "/posters/1+1-poster.png",
+          src: "/posters/1+1-poster-optimized.jpg",
           alt: "Official poster for 1+1",
         },
         source: "IMDb",
