@@ -10,6 +10,8 @@ import {
 import { seoCopy } from "@/config/seo";
 import { ProjectDetail } from "../_components/ProjectDetail";
 import { createSocialMetadata } from "@/lib/social-metadata";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getWorkStructuredData } from "@/lib/structured-data";
 
 export const instant = false;
 
@@ -86,5 +88,10 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
       ? projects[(currentIndex + 1) % projects.length]
       : undefined;
 
-  return <ProjectDetail project={project} nextProject={nextProject} />;
+  return (
+    <>
+      <JsonLd data={getWorkStructuredData(project)} />
+      <ProjectDetail project={project} nextProject={nextProject} />
+    </>
+  );
 }

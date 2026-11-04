@@ -35,6 +35,8 @@ const siteDescription =
 
 const openGraphImage = "/og/company";
 
+const isIndexable = process.env.SITE_INDEXABLE === "true";
+
 //! 03. SEO METADATA
 
 export const metadata: Metadata = {
@@ -86,12 +88,12 @@ export const metadata: Metadata = {
   //! SEARCH ENGINE INDEXING
 
   robots: {
-    index: true,
-    follow: true,
+    index: isIndexable,
+    follow: isIndexable,
 
     googleBot: {
-      index: true,
-      follow: true,
+      index: isIndexable,
+      follow: isIndexable,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,

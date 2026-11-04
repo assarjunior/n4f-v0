@@ -10,6 +10,8 @@ import {
 import { seoCopy } from "@/config/seo";
 import { TeamProfile } from "../../_components/TeamProfile";
 import { createSocialMetadata } from "@/lib/social-metadata";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getTeamStructuredData } from "@/lib/structured-data";
 
 export const instant = false;
 
@@ -82,5 +84,10 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
       ? members[(currentIndex + 1) % members.length]
       : undefined;
 
-  return <TeamProfile member={member} nextMember={nextMember} />;
+  return (
+    <>
+      <JsonLd data={getTeamStructuredData(member)} />
+      <TeamProfile member={member} nextMember={nextMember} />
+    </>
+  );
 }
