@@ -227,7 +227,6 @@ export function ProjectVideoPlayer({
                 loading="eager"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allow="autoplay; encrypted-media; picture-in-picture; fullscreen; web-share"
-                allowFullScreen
                 className="
                   absolute inset-0
                   h-full w-full border-0
