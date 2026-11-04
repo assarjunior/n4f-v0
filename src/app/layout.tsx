@@ -33,7 +33,7 @@ const siteTitle = "Ninety 4 Film | Film & Television Production";
 const siteDescription =
   "Ninety 4 Film is a full-service film and television production company based in Cairo, Egypt. Creative development, production, and post-production.";
 
-const openGraphImage = "/openGraph.png";
+const openGraphImage = "/og/company";
 
 //! 03. SEO METADATA
 
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: openGraphImage,
-        width: 1643,
-        height: 784,
+        width: 1200,
+        height: 630,
         alt: "Ninety 4 Film — Film & Television Production",
         type: "image/png",
       },

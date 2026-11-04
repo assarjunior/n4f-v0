@@ -6,6 +6,13 @@ type RouteContext = {
   params: Promise<{ slug: string }>;
 };
 
+// OG-specific image overrides.
+// Keep the regular WebP portraits for the website.
+const ogPortraits: Record<string, string> = {
+  "omar-assar": "/og-source/omar-assar.jpg",
+  "farris-hanafy": "/og-source/farris-hanafy.jpg",
+};
+
 export function generateStaticParams() {
   return getTeamSlugs().map((slug) => ({ slug }));
 }
@@ -16,13 +23,12 @@ export async function GET(_request: Request, { params }: RouteContext) {
   const member = getTeamMemberBySlug(slug);
 
   if (!member) {
-    return new Response("Not Found", { status: 404 });
+    return new Response("Not Found", {
+      status: 404,
+    });
   }
 
-  const imageSrc =
-    member.slug === "adham-hamed"
-      ? "/og-source/adham-hamed.jpg"
-      : member.portrait.src;
+  const imageSrc = ogPortraits[member.slug] ?? member.portrait.src;
 
   const role =
     member.slug === "omar-assar" ? "Director & Co-Founder" : member.role;

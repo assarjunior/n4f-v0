@@ -288,7 +288,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
                     leading-[1.08]
                   "
                 >
-                  WHAT THEY
+                  WHAT HE
                   <br />
                   BRING
                   <span className="text-brand-orange">.</span>

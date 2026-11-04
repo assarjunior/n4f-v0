@@ -41,7 +41,7 @@ export const team = [
     credits: [
       {
         title: "Meen Yesadaq",
-        role: "Executive Producer",
+        role: "Producer",
         year: "2024",
         source: "ElCinema",
         url: "https://elcinema.com/work/2090320/",
@@ -63,7 +63,7 @@ export const team = [
       },
       {
         title: "Ansaf Maganeen",
-        role: "Executive Producer",
+        role: "Producer Manager",
         year: "2021",
         source: "ElCinema",
         url: "https://elcinema.com/work/2067079/",
@@ -84,7 +84,7 @@ export const team = [
       {
         title: "74th Police Day Celebrations",
         year: "2026",
-        role: "Line Producer",
+        role: "Producer",
         source: "YouTube",
         url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
         artwork: {
@@ -95,7 +95,7 @@ export const team = [
       {
         title: "National Bank of Egypt — TVC",
         year: "2025",
-        role: "Line Producer",
+        role: "Producer",
         source: "YouTube",
         url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
         artwork: {
@@ -331,18 +331,46 @@ export const team = [
       {
         title: "Faat El Maad",
         year: "2025",
+        role: "In house Post Producer",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2093972/gallery/124623637/",
+        artwork: {
+          src: "/media/_640x_d7f970bed802cb38dd14fa8a592b3d7aab5ddd5d3d436a8f1de14015a63e4f00.webp",
+          alt: "faat el maad offcial poster",
+        },
       },
       {
         title: "El Captain",
         year: "2025",
+        role: "In house Post Producer",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2090081/",
+        artwork: {
+          src: "/media/elcaptain.webp",
+          alt: "el captain official poster",
+        },
       },
       {
         title: "Adel Mesh Adel",
         year: "2024",
+        role: "In house Post Producer",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2083197/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-1.webp",
+          alt: "adel mesh adel official poster",
+        },
       },
       {
         title: "El Batta El Safra",
         year: "2023",
+        role: "In house Post Producer",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2077794/",
+        artwork: {
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00.webp",
+          alt: "el batta el safra official poster",
+        },
       },
       {
         title: "Qabeel",
@@ -350,28 +378,45 @@ export const team = [
         role: "Focus Puller",
         source: "ElCinema",
         url: "https://elcinema.com/work/2056050/",
+        artwork: {
+          src: "/media/kabel.webp",
+          alt: "kabel official poster",
+        },
       },
       {
         title: "Kaeno Embareh",
         year: "2018",
+        role: "Focus Puller",
         source: "ElCinema",
         url: "https://elcinema.com/work/2048659/",
+        artwork: {
+          src: "/media/kaeno-embareh.webp",
+          alt: "Kaeeno embareh official poster",
+        },
       },
       {
         title: "Haza Al Masaa",
         year: "2017",
+        role: "Focus Puller",
         source: "ElCinema",
         url: "https://elcinema.com/work/2045613/",
+        artwork: {
+          src: "/media/haza-el-masaa.webp",
+          alt: "haza el masaa official poster",
+        },
       },
       {
         title: "Shahadat Melad",
         year: "2016",
-        role: "Camera Assistant",
+        role: "Focuser Puller",
         source: "ElCinema",
         url: "https://elcinema.com/work/2040991/",
+        artwork: {
+          src: "/media/shehdet-melad.webp",
+          alt: "shehadet melad official poster",
+        },
       },
     ],
-
     order: 4,
     published: true,
   },
@@ -405,6 +450,7 @@ export const team = [
         year: "2022",
         role: "Executive Producer",
         url: "https://elcinema.com/work/2076309/",
+        source: "ElCinema",
         artwork: {
           src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-3.webp",
           alt: "hashtag gawezny official poster",
@@ -415,6 +461,7 @@ export const team = [
         year: "2023",
         role: "Post-Production Supervisor",
         url: "https://elcinema.com/work/2077794/",
+        source: "ElCinema",
         artwork: {
           src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00.webp",
           alt: "el batta el safra official poster",
@@ -425,20 +472,26 @@ export const team = [
         year: "2024",
         role: "Post-Production Supervisor",
         url: "https://elcinema.com/work/2083197/",
+        source: "ElCinema",
         artwork: {
           src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-1.webp",
           alt: "adel mesh adel official poster",
         },
       },
       {
-        title: "Dhibat El Mahal",
+        title: "Dhibat Al Mahal",
         year: "2025",
         role: "VO & Post-Production Supervisor",
+        artwork: {
+          src: "/media/Screenshot-2026-11-03-at-10.38.22-PM.webp",
+          alt: "dhibet el mahal official poster",
+        },
       },
       {
         title: "Fat El Ma'ad",
         year: "2025",
         role: "Post-Production Supervisor",
+        source: "ElCinema",
         url: "https://elcinema.com/work/2093972/",
         artwork: {
           src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-2.webp",
