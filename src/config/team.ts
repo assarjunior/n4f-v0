@@ -40,48 +40,6 @@ export const team = [
 
     credits: [
       {
-        title: "Meen Yesadaq",
-        role: "Producer",
-        year: "2024",
-        source: "ElCinema",
-        url: "https://elcinema.com/work/2090320/",
-        artwork: {
-          src: "/posters/meen-yesdak-poster.png",
-          alt: "Official Poster for meen yesadak",
-        },
-      },
-      {
-        title: "1+1",
-        role: "Executive Producer",
-        year: "2021",
-        source: "IMDb",
-        url: "https://www.imdb.com/title/tt27720812/",
-        artwork: {
-          src: "/posters/1+1-poster.png",
-          alt: "Official poster for 1+1",
-        },
-      },
-      {
-        title: "Ansaf Maganeen",
-        role: "Producer Manager",
-        year: "2021",
-        source: "ElCinema",
-        url: "https://elcinema.com/work/2067079/",
-        artwork: {
-          src: "/posters/ansaf-maganen.jpg",
-          alt: "Official poster for ansaf maganen",
-        },
-      },
-      {
-        title: "44th Cairo International Film Festival",
-        role: "Media Coverage",
-        year: "2022",
-        artwork: {
-          src: "/posters/cairo-int-film.jpeg",
-          alt: "Official poster for cairo international film festival",
-        },
-      },
-      {
         title: "74th Police Day Celebrations",
         year: "2026",
         role: "Producer",
@@ -101,6 +59,59 @@ export const team = [
         artwork: {
           src: "/posters/bank-ahly.jpeg",
           alt: "Official poster for bank ahly Add",
+        },
+      },
+      {
+        title: "Meen Yesadaq",
+        role: "Producer",
+        year: "2024",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2090320/",
+        artwork: {
+          src: "/posters/meen-yesdak-poster.png",
+          alt: "Official Poster for meen yesadak",
+        },
+      },
+      {
+        title: "Love, Life & Everything in Between — Episode 5",
+        role: "Production Assistant",
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt18253682/?ref_=ext_shr_lnk",
+        year: "2022",
+        artwork: {
+          src: "/media/love,life.webp",
+          alt: "Love, Life & Everything in Between official poster",
+        },
+      },
+      {
+        title: "44th Cairo International Film Festival",
+        role: "Media Coverage",
+        year: "2022",
+        artwork: {
+          src: "/posters/cairo-int-film.jpeg",
+          alt: "Official poster for cairo international film festival",
+        },
+      },
+      {
+        title: "1+1",
+        role: "Executive Producer",
+        year: "2021",
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt27720812/",
+        artwork: {
+          src: "/posters/1+1-poster.png",
+          alt: "Official poster for 1+1",
+        },
+      },
+      {
+        title: "Ansaf Maganeen",
+        role: "Production Manager",
+        year: "2021",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2067079/",
+        artwork: {
+          src: "/posters/ansaf-maganen.jpg",
+          alt: "Official poster for ansaf maganen",
         },
       },
     ],
@@ -261,11 +272,26 @@ export const team = [
 
     credits: [
       {
-        title: "Ansaf Maganen — Parts 1 & 2",
-      },
-      {
         title: "Love, Life & Everything in Between — Episode 5",
         role: "Production Assistant",
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt18253682/?ref_=ext_shr_lnk",
+        year: "2022",
+        artwork: {
+          src: "/media/love,life.webp",
+          alt: "Love, Life & Everything in Between official poster",
+        },
+      },
+      {
+        title: "Ansaf Maganeen",
+        role: "Production Manager",
+        year: "2021",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2067079/",
+        artwork: {
+          src: "/posters/ansaf-maganen.jpg",
+          alt: "Official poster for ansaf maganen",
+        },
       },
       {
         title: "1+1",
@@ -275,11 +301,17 @@ export const team = [
           src: "/posters/1+1-poster.png",
           alt: "Official poster for 1+1",
         },
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt27720812/",
       },
       {
         title: "Cairo International Film Festival",
         year: "2020",
         role: "Unit Production Manager",
+        artwork: {
+          src: "/media/cairo international.webp",
+          alt: "Cairo International Film Festival official poster",
+        },
       },
     ],
 
@@ -446,25 +478,23 @@ export const team = [
     },
     credits: [
       {
-        title: "#Gawwezni",
-        year: "2022",
-        role: "Executive Producer",
-        url: "https://elcinema.com/work/2076309/",
+        title: "Fat El Ma'ad",
+        year: "2025",
+        role: "Post-Production Supervisor",
         source: "ElCinema",
+        url: "https://elcinema.com/work/2093972/",
         artwork: {
-          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-3.webp",
-          alt: "hashtag gawezny official poster",
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-2.webp",
+          alt: "fat el maad official poster",
         },
       },
       {
-        title: "El Bata El Safra",
-        year: "2023",
-        role: "Post-Production Supervisor",
-        url: "https://elcinema.com/work/2077794/",
-        source: "ElCinema",
+        title: "Dhibat Al Mahal",
+        year: "2025",
+        role: "VO & Post-Production Supervisor",
         artwork: {
-          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00.webp",
-          alt: "el batta el safra official poster",
+          src: "/media/Screenshot-2026-11-03-at-10.38.22-PM.webp",
+          alt: "dhibet el mahal official poster",
         },
       },
       {
@@ -479,23 +509,25 @@ export const team = [
         },
       },
       {
-        title: "Dhibat Al Mahal",
-        year: "2025",
-        role: "VO & Post-Production Supervisor",
+        title: "El Bata El Safra",
+        year: "2023",
+        role: "Post-Production Supervisor",
+        url: "https://elcinema.com/work/2077794/",
+        source: "ElCinema",
         artwork: {
-          src: "/media/Screenshot-2026-11-03-at-10.38.22-PM.webp",
-          alt: "dhibet el mahal official poster",
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00.webp",
+          alt: "el batta el safra official poster",
         },
       },
       {
-        title: "Fat El Ma'ad",
-        year: "2025",
-        role: "Post-Production Supervisor",
+        title: "#Gawwezni",
+        year: "2022",
+        role: "Executive Producer",
+        url: "https://elcinema.com/work/2076309/",
         source: "ElCinema",
-        url: "https://elcinema.com/work/2093972/",
         artwork: {
-          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-2.webp",
-          alt: "fat el maad official poster",
+          src: "/media/WhatsApp-Image-2026-11-03-at-22.14.00-3.webp",
+          alt: "hashtag gawezny official poster",
         },
       },
     ],
