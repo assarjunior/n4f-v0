@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowUpRight, Play } from "lucide-react";
 
 import type { WorkImage, WorkVideo } from "@/types/types-work";
@@ -70,6 +70,27 @@ export function ProjectVideoPlayer({
   const [isLoaded, setIsLoaded] = useState(false);
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Stop YouTube playback when the page is hidden,
+  // unmounted, or the active video is removed.
+  useLayoutEffect(() => {
+    if (!isLoaded) return;
+
+    // Capture the iframe that actually exists
+    // after the user clicks Play.
+    const iframe = iframeRef.current;
+
+    if (!iframe) return;
+
+    return () => {
+      // Terminate playback, including when Next.js
+      // preserves the page in its navigation cache.
+      iframe.src = "about:blank";
+
+      // Restore the poster preview for the next visit.
+      setIsLoaded(false);
+    };
+  }, [isLoaded]);
 
   // Keep only valid YouTube videos.
   const playableVideos = videos.flatMap((video) => {
