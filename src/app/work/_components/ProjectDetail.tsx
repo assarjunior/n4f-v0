@@ -269,6 +269,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
         <ProjectVideoPlayer
           key={project.slug}
           projectTitle={project.title}
+          poster={project.poster}
           videos={project.videos}
         />
       )}

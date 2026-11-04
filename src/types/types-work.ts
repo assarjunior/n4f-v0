@@ -55,7 +55,7 @@ export type WorkLink = {
 };
 
 export type WorkVideo = {
-  kind: "Trailer" | "Teaser";
+  kind: string;
   title: string;
   youtubeUrl: string;
 };

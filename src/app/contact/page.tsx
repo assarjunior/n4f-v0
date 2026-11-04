@@ -63,7 +63,7 @@ export default function ContactPage() {
           <div
             className="
               mt-12 grid items-center gap-14
-              lg:mt-20
+              lg:mt-12
               lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]
               lg:gap-12
               xl:gap-20

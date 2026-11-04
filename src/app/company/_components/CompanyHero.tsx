@@ -17,7 +17,7 @@ export function CompanyHero() {
         </div>
 
         {/* STATEMENT + BRAND ARTWORK */}
-        <div className="mt-14 grid items-center gap-8 lg:mt-20 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,0.5fr)] lg:gap-12">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,0.5fr)] lg:gap-12">
           {/* MAIN STATEMENT */}
           <div className="relative z-10 min-w-0">
             <h1
