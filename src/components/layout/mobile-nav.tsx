@@ -1,8 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import Logo from "../../../public/Logo-Vertical.svg";
+
+import type { MenuPhase } from "./Header";
 
 const navigation = [
   { label: "Work", href: "/work" },
@@ -12,156 +18,253 @@ const navigation = [
 ] as const;
 
 type MobileNavProps = {
-  isOpen: boolean;
+  phase: MenuPhase;
+  onRequestClose: () => void;
   onClose: () => void;
-  triggerRef: React.RefObject<HTMLButtonElement | null>;
 };
 
-export function MobileNav({ isOpen, onClose, triggerRef }: MobileNavProps) {
+export function MobileNav({ phase, onRequestClose, onClose }: MobileNavProps) {
   const pathname = usePathname();
-  const panelRef = useRef<HTMLDivElement>(null);
-  const firstLinkRef = useRef<HTMLAnchorElement>(null);
+
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previousPathname = useRef(pathname);
 
-  //! Close the mobile nav when the route changes
+  const [entered, setEntered] = useState(false);
+
+  // The first frame begins at 45 degrees.
+  // After the dialog is shown, rotate to 0 degrees.
+  useEffect(() => {
+    const dialog = dialogRef.current;
+
+    if (!dialog) return;
+
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+
+    closeButtonRef.current?.focus();
+
+    let secondFrame = 0;
+
+    const firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        setEntered(true);
+      });
+    });
+
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+
+      document.body.style.overflow = previousOverflow;
+
+      if (dialog.open) {
+        dialog.close();
+      }
+    };
+  }, []);
+
+  // Dismiss immediately if navigation changes.
   useEffect(() => {
     if (previousPathname.current !== pathname) {
       previousPathname.current = pathname;
-
-      if (isOpen) {
-        onClose();
-      }
+      onClose();
     }
-  }, [pathname, isOpen, onClose]);
+  }, [pathname, onClose]);
 
-  //!  Lock scrolling and manage keyboard interaction
-
+  // Avoid leaving a mobile modal open at desktop widths.
   useEffect(() => {
-    if (!isOpen) return;
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    const focusFrame = requestAnimationFrame(() => {
-      firstLinkRef.current?.focus();
-    });
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        event.preventDefault();
+    const handleBreakpointChange = () => {
+      if (mediaQuery.matches) {
         onClose();
-        triggerRef.current?.focus();
-        return;
       }
+    };
 
-      if (event.key !== "Tab") return;
+    mediaQuery.addEventListener("change", handleBreakpointChange);
 
-      const focusableElements = [
-        triggerRef.current,
-        ...Array.from(
-          panelRef.current?.querySelectorAll<HTMLElement>(
-            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-          ) ?? [],
-        ),
-      ].filter((element): element is HTMLElement => element !== null);
-
-      if (focusableElements.length === 0) return;
-
-      const first = focusableElements[0];
-      const last = focusableElements[focusableElements.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown);
+    handleBreakpointChange();
 
     return () => {
-      cancelAnimationFrame(focusFrame);
-      document.body.style.overflow = previousOverflow;
-      document.removeEventListener("keydown", handleKeyDown);
+      mediaQuery.removeEventListener("change", handleBreakpointChange);
     };
-  }, [isOpen, onClose, triggerRef]);
+  }, [onClose]);
 
-  if (!isOpen) return null;
+  // Fallback if the CSS transition is interrupted.
+  useEffect(() => {
+    if (phase !== "closing") return;
+
+    const timeout = window.setTimeout(() => {
+      onClose();
+    }, 550);
+
+    return () => window.clearTimeout(timeout);
+  }, [phase, onClose]);
+
+  function requestClose() {
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      onClose();
+      return;
+    }
+
+    onRequestClose();
+  }
+
+  const symbolIsOpen = phase === "open" && entered;
 
   return (
-    <div
+    <dialog
+      ref={dialogRef}
       id="mobile-navigation"
-      ref={panelRef}
-      role="dialog"
-      aria-modal="true"
       aria-label="Mobile navigation"
+      onCancel={(event) => {
+        event.preventDefault();
+        requestClose();
+      }}
       className="
-    fixed inset-0 z-40
-    flex flex-col
-    overflow-y-auto
-    bg-brand-maroon
-    text-brand-beige
-    md:hidden
-    motion-safe:animate-in
-    motion-safe:fade-in
-    motion-safe:duration-700"
+        fixed inset-0 z-50
+        m-0 h-dvh w-full
+        max-h-none max-w-none
+        overflow-y-auto
+        border-0 p-0
+        bg-brand-maroon text-brand-beige
+        backdrop:bg-transparent
+        md:hidden
+      "
     >
-      {/* This div is a space for the header logo and close button */}
-      <div className="h-24 shrink-0" aria-hidden="true"></div>
+      <div className="flex min-h-dvh flex-col">
+        {/* MOBILE HEADER */}
 
-      <nav
-        aria-label="Mobile-main navigation"
-        className="
-        container-editorial
-        flex flex-1 flex-col
-        justify-center
-        py-12"
-      >
-        <ul className="flex flex-col gap-5 sm:gap-7">
-          {navigation.map((item, index) => {
-            const isActive =
-              pathname === item.href || pathname.startsWith(`${item.href}/`);
+        <div
+          className="
+            container-editorial
+            flex h-24 shrink-0
+            items-center justify-between
+          "
+        >
+          <Link
+            href="/"
+            onClick={onClose}
+            aria-label="Ninety 4 Film - Home"
+            className="block shrink-0"
+          >
+            <Image
+              src={Logo}
+              alt=""
+              width={400}
+              height={400}
+              className="h-auto w-18"
+            />
+          </Link>
 
-            return (
-              <li key={item.href}>
-                <Link
-                  ref={index === 0 ? firstLinkRef : undefined}
-                  href={item.href}
-                  onClick={onClose}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`
-                            inline-block
-                            font-sans
-                            text-[clamp(2.75rem,10vw,5rem)]
-                            font-light
-                            uppercase
-                            leading-[1.1]
-                            tracking-[0.08em]
-                            transition-colors
-                            duration-200
-                            hover:text-brand-orange
-                            focus-visible:text-brand-orange
-                            motion-reduce:transition-none
-                            ${isActive ? "text-brand-orange" : "text-brand-beige"}
-                            `}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+          {/* ORIGINAL MENU SYMBOL — NOT AN X */}
 
-      {/* Editorial Footer */}
+          <button
+            ref={closeButtonRef}
+            type="button"
+            onClick={requestClose}
+            aria-label="Close navigation menu"
+            className="
+              inline-flex size-14 shrink-0
+              items-center justify-center
+              rounded-none bg-transparent p-1
+              focus-visible:outline-2
+              focus-visible:outline-offset-2
+              focus-visible:outline-brand-beige
+            "
+          >
+            <Image
+              src="/menu-symbol.png"
+              alt=""
+              aria-hidden="true"
+              width={32}
+              height={32}
+              onTransitionEnd={(event) => {
+                if (phase === "closing" && event.propertyName === "transform") {
+                  onClose();
+                }
+              }}
+              className={`
+                h-11 w-11 object-contain
+                transition-transform
+                duration-500 ease-in-out
+                motion-reduce:transition-none
+                ${symbolIsOpen ? "rotate-0" : "rotate-45"}
+              `}
+            />
+          </button>
+        </div>
 
-      <div className="container-editorial pb-8 pt-4">
-        <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-brand-beige/60">
-          Ninety 4 Film - Cairo, Egypt
-        </p>
+        {/* MOBILE NAVIGATION */}
+
+        <nav
+          aria-label="Mobile primary navigation"
+          className="
+            container-editorial
+            flex flex-1 flex-col
+            justify-center py-12
+          "
+        >
+          <ul className="flex flex-col gap-5 sm:gap-7">
+            {navigation.map((item) => {
+              const isActive =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={onClose}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`
+                      inline-block
+                      font-sans
+                      text-[clamp(2.75rem,10vw,5rem)]
+                      font-light uppercase
+                      leading-[1.1]
+                      tracking-[0.08em]
+                      transition-colors duration-200
+                      hover:text-[#DA8A4B]
+                      focus-visible:text-[#DA8A4B]
+                      focus-visible:outline-2
+                      focus-visible:outline-offset-4
+                      focus-visible:outline-brand-beige
+                      motion-reduce:transition-none
+                      ${isActive ? "text-[#DA8A4B]" : "text-brand-beige"}
+                    `}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* EDITORIAL FOOTER */}
+
+        <div className="container-editorial pb-8 pt-4">
+          <p
+            className="
+              font-sans text-[10px]
+              uppercase tracking-[0.2em]
+              text-brand-beige/80
+            "
+          >
+            Ninety 4 Film — Cairo, Egypt
+          </p>
+        </div>
       </div>
-    </div>
+    </dialog>
   );
 }

@@ -124,20 +124,32 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-screen flex-col antialiased">
         {/* Accessibility: Skip Navigation */}
+
         <a
           href="#main-content"
           className="
-            sr-only
-            focus:not-sr-only
-            focus:fixed
-            focus:top-4
-            focus:left-4
-            focus:z-50
-            focus:bg-primary
-            focus:px-4
-            focus:py-3
-            focus:text-primary-foreground
-          "
+                      sr-only
+                      focus:not-sr-only
+                      focus:fixed
+                      focus:left-4
+                      focus:top-4
+                      focus:z-100
+                      focus:inline-flex
+                      focus:min-h-11
+                      focus:items-center
+                      focus:border-2
+                      focus:border-brand-orange
+                      focus:bg-brand-beige
+                      focus:px-5
+                      focus:py-3
+                      focus:font-sans
+                      focus:text-sm
+                      focus:font-bold
+                      focus:text-brand-maroon
+                      focus:outline-2
+                      focus:outline-offset-2
+                      focus:outline-brand-beige
+  "
         >
           Skip to main content
         </a>
