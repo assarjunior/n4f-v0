@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { ScrollReveal } from "../motion/ScrollReveal";
 
 export function ContactSection() {
   return (
@@ -10,7 +11,7 @@ export function ContactSection() {
     >
       <div className="container-editorial">
         {/* BEIGE CONTACT PANEL */}
-        <div className="relative isolate overflow-hidden rounded-xl bg-brand-beige px-6 py-12 text-brand-maroon sm:px-9 md:px-12 md:py-16 lg:px-16 lg:py-20">
+        <ScrollReveal className="n4f-contact-panel relative isolate overflow-hidden rounded-xl bg-brand-beige px-6 py-12 text-brand-maroon sm:px-9 md:px-12 md:py-16 lg:px-16 lg:py-20">
           {/* SOFT DECORATIVE WARMTH */}
           <div
             aria-hidden="true"
@@ -21,14 +22,14 @@ export function ContactSection() {
             }}
           />
 
-          <div className="relative z-10">
+          <div className="n4f-contact-content relative z-10">
             {/* EYEBROW */}
-            <p className="mb-7 font-sans text-xs font-bold uppercase tracking-[0.2em] text-brand-maroon/80 md:mb-10">
+            <p className="n4f-contact-eyebrow mb-7 font-sans text-xs font-bold uppercase tracking-[0.2em] text-brand-maroon/80 md:mb-10">
               Let&apos;s Make Something
             </p>
 
             {/* HEADLINE + CONTACT CARD */}
-            <div className="grid grid-cols-1 items-center gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(18rem,25rem)] xl:gap-14">
+            <div className="n4f-contact-message grid grid-cols-1 items-center gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(18rem,25rem)] xl:gap-14">
               {/* HEADLINE */}
               <h2
                 id="contact-section-heading"
@@ -100,7 +101,7 @@ export function ContactSection() {
             </div>
 
             {/* SUPPORTING TEXT & CTA */}
-            <div className="mt-9 flex flex-col items-start justify-between gap-8 border-t border-brand-maroon/20 pt-7 md:mt-12 lg:flex-row lg:items-end">
+            <div className="n4f-contact-supporting mt-9 flex flex-col items-start justify-between gap-8 border-t border-brand-maroon/20 pt-7 md:mt-12 lg:flex-row lg:items-end">
               <p className="font-sans text-base leading-relaxed text-brand-maroon/85 md:text-lg">
                 From films and series to commercials and international
                 productions in Egypt, we&apos;re ready to discuss your next
@@ -108,7 +109,7 @@ export function ContactSection() {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

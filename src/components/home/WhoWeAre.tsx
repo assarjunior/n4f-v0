@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { ScrollReveal } from "../motion/ScrollReveal";
 
 export function WhoWeAre() {
   return (
@@ -27,42 +28,45 @@ export function WhoWeAre() {
         "
       >
         {/* MANIFESTO HEADLINE */}
-        <h2
-          id="who-we-are-heading"
-          className="
+        <ScrollReveal>
+          <h2
+            id="who-we-are-heading"
+            className="
             font-display
             text-[clamp(2.15rem,5.1vw,6.75rem)]
             leading-[1.02]
             tracking-[-0.035em]
             text-brand-maroon
           "
-        >
-          <span className="block">IDEAS ARE</span>
+          >
+            <span className="block">IDEAS ARE</span>
 
-          <span className="block">ONLY THE</span>
+            <span className="block">ONLY THE</span>
 
-          <span className="block">
-            BEGINNING
-            <span aria-hidden="true" className="text-brand-orange">
-              .
+            <span className="block">
+              BEGINNING
+              <span aria-hidden="true" className="text-brand-orange">
+                .
+              </span>
             </span>
-          </span>
-        </h2>
+          </h2>
+        </ScrollReveal>
 
         {/* MANIFESTO CONTENT */}
-        <div className="max-w-172">
-          {/* BRAND ACCENT */}
-          <div
-            aria-hidden="true"
-            className="
+        <ScrollReveal className="max-w-172">
+          <div className="max-w-172">
+            {/* BRAND ACCENT */}
+            <div
+              aria-hidden="true"
+              className="
               mb-8 h-0.5 w-12
               bg-brand-orange
             "
-          />
+            />
 
-          {/* SUPPORTING STATEMENT */}
-          <p
-            className="
+            {/* SUPPORTING STATEMENT */}
+            <p
+              className="
               max-w-[32ch]
               text-[clamp(1.3rem,2.1vw,2rem)]
               font-semibold
@@ -70,29 +74,29 @@ export function WhoWeAre() {
               tracking-tight
               text-brand-maroon
             "
-          >
-            A vision is only as strong as the work that brings it to life.
-          </p>
+            >
+              A vision is only as strong as the work that brings it to life.
+            </p>
 
-          {/* APPROVED BODY COPY */}
-          <p
-            className="
+            {/* APPROVED BODY COPY */}
+            <p
+              className="
               mt-6 max-w-[62ch]
               text-base leading-[1.75]
               text-brand-maroon/90
               sm:mt-8 sm:text-lg
             "
-          >
-            Rooted in Egypt, Ninety 4 Film connects creative ambition with the
-            craft and discipline of production. We bring the right people
-            together, tackle the practical challenges, and carry each project
-            forward with purpose — from the first plan to the final frame.
-          </p>
+            >
+              Rooted in Egypt, Ninety 4 Film connects creative ambition with the
+              craft and discipline of production. We bring the right people
+              together, tackle the practical challenges, and carry each project
+              forward with purpose — from the first plan to the final frame.
+            </p>
 
-          {/* SINGLE COMPANY CTA */}
-          <Link
-            href="/company"
-            className="
+            {/* SINGLE COMPANY CTA */}
+            <Link
+              href="/company"
+              className="
               mt-10 inline-flex min-h-11
               items-center gap-3
               border-b border-brand-maroon
@@ -111,26 +115,29 @@ export function WhoWeAre() {
 
               sm:mt-12
             "
-          >
-            Discover Our Company
-            <ArrowUpRight aria-hidden="true" className="size-5 shrink-0" />
-          </Link>
-        </div>
+            >
+              Discover Our Company
+              <ArrowUpRight aria-hidden="true" className="size-5 shrink-0" />
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
 
       {/* RIGHT — FULL-HEIGHT ARTWORK */}
-      <div
+
+      {/* RIGHT — FULL-HEIGHT ARTWORK */}
+      <ScrollReveal
         className="
-          relative w-full
-          min-h-104
-          md:mt-20
-          md:mb-20
-          rounded-xl
-          overflow-hidden
-          bg-brand-maroon/10
-          sm:min-h-144
-          lg:min-h-0
-        "
+    n4f-image-reveal
+    relative w-full
+    min-h-104
+    sm:min-h-144
+    md:mt-20
+    md:mb-20
+    rounded-xl
+    overflow-hidden
+    bg-brand-maroon/10
+  "
       >
         <Image
           src="/who-we-are.webp"
@@ -138,11 +145,11 @@ export function WhoWeAre() {
           fill
           sizes="(min-width: 1024px) 46vw, 100vw"
           className="
-            object-cover
-            object-center
-          "
+      object-cover
+      object-center
+    "
         />
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

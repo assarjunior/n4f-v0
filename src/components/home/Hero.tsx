@@ -29,32 +29,43 @@ export function Hero() {
         <div className="flex max-w-3xl flex-col items-start">
           {/* Eyebrow */}
 
-          <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.25em] text-brand-orange md:mb-8">
+          <p
+            className="mb-6 font-sans text-xs font-semibold uppercase tracking-[0.25em] text-brand-orange md:mb-8 n4f-hero-reveal"
+            style={{ animationDelay: "200ms" }}
+          >
             Independent in spirit
           </p>
 
           {/* Main headline */}
           <h1
             id="hero-heading"
-            className="max-w-[11ch] font-display text-[clamp(3.5rem,8vw,8rem)] leading-[0.98] tracking-[-0.035em] text-brand-beige"
+            className="max-w-[11ch] font-display text-[clamp(3.5rem,8vw,8rem)] leading-[0.98] tracking-[-0.035em] text-brand-beige n4f-hero-reveal"
+            style={{ animationDelay: "400ms" }}
           >
             Stories deserve to be seen.
           </h1>
 
           {/* Orange accent */}
           <div
-            className="mt-8 h-1 w-16 bg-brand-orange md:mt-10 md:w-20"
+            className="mt-8 h-1 w-16 bg-brand-orange md:mt-10 md:w-20 n4f-hero-reveal"
+            style={{ animationDelay: "600ms" }}
             aria-hidden="true"
           />
 
           {/* Supporting statement */}
-          <p className="mt-8 max-w-md font-sans text-base leading-relaxed text-brand-beige/90 md:mt-10 md:text-xl">
+          <p
+            className="mt-8 max-w-md font-sans text-base leading-relaxed text-brand-beige/90 md:mt-10 md:text-xl n4f-hero-reveal"
+            style={{ animationDelay: "800ms" }}
+          >
             Creative development and full-service film and television
             production.
           </p>
 
           {/* Branded CTA */}
-          <div className="mt-8 pb-9 md:mt-2 md:pb-0">
+          <div
+            className="mt-8 pb-9 md:mt-2 md:pb-0 n4f-hero-reveal"
+            style={{ animationDelay: "1000ms" }}
+          >
             <TornPaperButton href="/work">Explore Our Work</TornPaperButton>
           </div>
         </div>

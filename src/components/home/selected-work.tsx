@@ -1,5 +1,6 @@
 import { getFeaturedWork } from "@/config/config-work";
 import { WorkCard } from "../layout/WorkCard";
+import { ScrollReveal } from "../motion/ScrollReveal";
 
 export function SelectedWorkSection() {
   const featuredFilms = getFeaturedWork();
@@ -16,7 +17,7 @@ export function SelectedWorkSection() {
     >
       <div className="container-editorial">
         {/* Section Heading */}
-        <div className="mb-10 md:mb-14">
+        <ScrollReveal className="mb-10 md:mb-14">
           <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-orange">
             Featured Productions
           </p>
@@ -26,7 +27,7 @@ export function SelectedWorkSection() {
           >
             Selected Work
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Featured Projects */}
         <div className="grid grid-cols-1 gap-y-10 lg:flex lg:flex-wrap lg:justify-center lg:gap-6 xl:gap-8">
@@ -35,7 +36,9 @@ export function SelectedWorkSection() {
               key={film.id}
               className="mx-auto w-full max-w-[320px] min-w-0 lg:mx-0 lg:w-[calc((100%-4.5rem)/4)] lg:max-w-none xl:w-[calc((100%-6rem)/4)]"
             >
-              <WorkCard film={film} />
+              <ScrollReveal>
+                <WorkCard film={film} />
+              </ScrollReveal>
 
               {/* Mobile Separator */}
               {index < featuredFilms.length - 1 && (

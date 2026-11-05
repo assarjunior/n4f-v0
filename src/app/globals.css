@@ -291,3 +291,154 @@
     border: 0;
   }
 }
+
+/* ============================================================
+   NINETY 4 FILM — HOMEPAGE HERO REVEAL
+   ============================================================ */
+
+@keyframes n4f-hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .n4f-hero-reveal {
+    animation: n4f-hero-reveal 1000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — SCROLL REVEAL SYSTEM
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .n4f-scroll-reveal {
+    transition:
+      opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .n4f-scroll-reveal[data-reveal-state="pending"] {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  .n4f-scroll-reveal[data-reveal-state="visible"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — CINEMATIC IMAGE REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .n4f-scroll-reveal.n4f-image-reveal {
+    transition: opacity 1000ms ease-out;
+  }
+
+  .n4f-image-reveal[data-reveal-state="pending"] {
+    opacity: 0;
+    transform: none;
+  }
+
+  .n4f-image-reveal[data-reveal-state="visible"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .n4f-image-reveal > img {
+    transition: transform 1400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .n4f-image-reveal[data-reveal-state="pending"] > img {
+    transform: scale(1.06);
+  }
+
+  .n4f-image-reveal[data-reveal-state="visible"] > img {
+    transform: scale(1);
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — CONTACT PANEL REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .n4f-contact-content {
+    transition:
+      opacity 750ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Hide content while the panel is awaiting reveal */
+  .n4f-contact-panel[data-reveal-state="pending"] .n4f-contact-content {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Let the beige surface establish itself first */
+  .n4f-contact-panel[data-reveal-state="visible"] .n4f-contact-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 750ms;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — CONTACT CINEMATIC REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 01 — Slow down the beige panel entrance */
+  .n4f-scroll-reveal.n4f-contact-panel {
+    transition:
+      opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Shared content animation */
+  .n4f-contact-panel
+    :is(.n4f-contact-eyebrow, .n4f-contact-message, .n4f-contact-supporting) {
+    transition:
+      opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Initial hidden state */
+  .n4f-contact-panel[data-reveal-state="pending"]
+    :is(.n4f-contact-eyebrow, .n4f-contact-message, .n4f-contact-supporting) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Visible state */
+  .n4f-contact-panel[data-reveal-state="visible"]
+    :is(.n4f-contact-eyebrow, .n4f-contact-message, .n4f-contact-supporting) {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 02 — Eyebrow */
+  .n4f-contact-panel[data-reveal-state="visible"] .n4f-contact-eyebrow {
+    transition-delay: 800ms;
+  }
+
+  /* 03 — Headline and LET'S TALK card */
+  .n4f-contact-panel[data-reveal-state="visible"] .n4f-contact-message {
+    transition-delay: 800ms;
+  }
+
+  /* 04 — Supporting description */
+  .n4f-contact-panel[data-reveal-state="visible"] .n4f-contact-supporting {
+    transition-delay: 1500ms;
+  }
+}
