@@ -5,6 +5,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ArrowUpRight, Play } from "lucide-react";
 
 import type { WorkImage, WorkVideo } from "@/types/types-work";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 // ============================================================
 // 01. TYPES
@@ -140,7 +141,7 @@ export function ProjectVideoPlayer({
             01 / SECTION INTRODUCTION
             ==================================================== */}
 
-        <div className="mb-10 border-t border-brand-beige/25 pt-12">
+        <ScrollReveal className="mb-10 border-t border-brand-beige/25 pt-12">
           <p
             className="
               mb-7 font-sans text-xs
@@ -150,7 +151,6 @@ export function ProjectVideoPlayer({
           >
             Official Video
           </p>
-
           <h2
             id="project-video-heading"
             className="
@@ -166,7 +166,6 @@ export function ProjectVideoPlayer({
               .
             </span>
           </h2>
-
           <div className="mt-8 flex justify-start lg:justify-end">
             <p
               className="
@@ -181,7 +180,7 @@ export function ProjectVideoPlayer({
               official video.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* ====================================================
             02 / VIDEO SELECTOR
@@ -221,13 +220,12 @@ export function ProjectVideoPlayer({
             ))}
           </div>
         )}
-
         {/* ====================================================
             03 / VIDEO FRAME
             ==================================================== */}
 
         <div className="mx-auto max-w-6xl">
-          <div
+          <ScrollReveal
             className="
               relative aspect-video w-full
               overflow-hidden bg-[#190A09]
@@ -357,7 +355,7 @@ export function ProjectVideoPlayer({
                 </button>
               </>
             )}
-          </div>
+          </ScrollReveal>
 
           {/* ==================================================
               04 / VIDEO INFORMATION

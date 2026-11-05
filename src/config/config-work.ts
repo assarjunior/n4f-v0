@@ -147,6 +147,10 @@ export const work = [
       { name: "Omar Assar", role: "Executive Director" },
     ],
 
+    festivals: [
+      "World Premiere — 45th Cairo International Film Festival (2024), Arab Cinema Horizons Competition",
+    ],
+
     languages: ["Arabic"],
 
     featured: true,
@@ -270,7 +274,7 @@ export const work = [
     genres: ["Feature Documentary"],
     countries: ["Egypt"],
     festivals: [
-      "World Premiere — 46th Cairo International Film Festival (2025), Special Screenings",
+      "46th Cairo International Film Festival (2025) — Special Screenings",
     ],
     featured: true,
     featuredOrder: 4,

@@ -442,3 +442,129 @@
     transition-delay: 1500ms;
   }
 }
+
+/* ============================================================
+   NINETY 4 FILM — PROJECT DETAILS INDEXED STAGGER
+   ============================================================ */
+
+@keyframes n4f-project-fact-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Parent acts only as the scroll trigger */
+  .n4f-scroll-reveal.n4f-project-facts {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Hide the facts while waiting for the trigger */
+  .n4f-project-facts[data-reveal-state="pending"] .n4f-project-fact {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Start the staggered sequence */
+  .n4f-project-facts[data-reveal-state="visible"] .n4f-project-fact {
+    animation: n4f-project-fact-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — PRODUCTION CREDITS STAGGERED REVEAL
+   ============================================================ */
+
+@keyframes n4f-credit-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* The parent acts only as the scroll trigger */
+  .n4f-scroll-reveal.n4f-credits-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Heading and credits initially hidden */
+  .n4f-credits-reveal[data-reveal-state="pending"]
+    :is(.n4f-credits-intro, .n4f-credit-item) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* One scroll trigger starts the entire sequence */
+  .n4f-credits-reveal[data-reveal-state="visible"]
+    :is(.n4f-credits-intro, .n4f-credit-item) {
+    animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — RECOGNITION STAGGERED REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Parent provides the scroll trigger only */
+  .n4f-scroll-reveal.n4f-recognition-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Initial hidden state */
+  .n4f-recognition-reveal[data-reveal-state="pending"]
+    :is(.n4f-recognition-intro, .n4f-recognition-item) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Trigger heading first, then indexed entries */
+  .n4f-recognition-reveal[data-reveal-state="visible"]
+    :is(.n4f-recognition-intro, .n4f-recognition-item) {
+    animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — EXTERNAL LINKS STAGGERED REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Parent is the scroll trigger, not the animation */
+  .n4f-scroll-reveal.n4f-links-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Hide heading and links before the trigger */
+  .n4f-links-reveal[data-reveal-state="pending"]
+    :is(.n4f-links-intro, .n4f-external-link-item) {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Reveal the heading first, followed by the links */
+  .n4f-links-reveal[data-reveal-state="visible"]
+    :is(.n4f-links-intro, .n4f-external-link-item) {
+    animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}

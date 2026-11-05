@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import type { WorkEntry } from "@/types/types-work";
 
 import { ProjectVideoPlayer } from "./ProjectVideoPlayer";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 type ProjectDetailProps = {
   project: WorkEntry;
@@ -78,7 +79,8 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
           {/* BACK TO WORK */}
           <Link
             href="/work#projects"
-            className="group inline-flex items-center gap-3 border-b border-brand-maroon/50 pb-2 font-sans text-xs font-bold uppercase tracking-[0.15em] transition-colors hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+            className="n4f-hero-reveal group inline-flex items-center gap-3 border-b border-brand-maroon/50 pb-2 font-sans text-xs font-bold uppercase tracking-[0.15em] transition-colors hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+            style={{ animationDelay: "150ms" }}
           >
             <ArrowLeft
               aria-hidden="true"
@@ -90,7 +92,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
 
           <div className="mt-12 grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-20">
             {/* PROJECT IDENTITY */}
-            <div className="min-w-0">
+            <div
+              className="n4f-hero-reveal min-w-0"
+              style={{ animationDelay: "350ms" }}
+            >
               <p className="mb-7 font-sans text-xs font-bold uppercase tracking-[0.2em]">
                 Ninety 4 Film / Selected Production
               </p>
@@ -102,7 +107,8 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
 
               <h1
                 id="project-heading"
-                className="font-display text-[clamp(2.8rem,5.4vw,7rem)] leading-[1.02] tracking-[-0.035em] wrap-break-word"
+                className="n4f-hero-reveal font-display text-[clamp(2.8rem,5.4vw,7rem)] leading-[1.02] tracking-[-0.035em] wrap-break-word"
+                style={{ animationDelay: "500ms" }}
               >
                 {project.title}
                 <span className="text-brand-orange">.</span>
@@ -112,7 +118,8 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 <p
                   lang="ar"
                   dir="rtl"
-                  className="mt-5 w-fit font-sans text-xl md:text-2xl"
+                  className="n4f-hero-reveal mt-5 w-fit font-sans text-xl md:text-2xl"
+                  style={{ animationDelay: "500ms" }}
                 >
                   {project.originalTitle}
                 </p>
@@ -120,16 +127,21 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
 
               <div
                 aria-hidden="true"
-                className="mt-8 h-1 w-16 bg-brand-orange"
+                className="mt-8 h-1 w-16 bg-brand-orange n4f-hero-reveal"
+                style={{ animationDelay: "500ms" }}
               />
 
-              <p className="mt-8 max-w-2xl font-sans text-base leading-[1.85] text-brand-maroon/85 md:text-lg">
+              <p
+                className="mt-8 max-w-2xl font-sans text-base leading-[1.85] text-brand-maroon/85 md:text-lg n4f-hero-reveal"
+                style={{ animationDelay: "500ms" }}
+              >
                 {project.shortSynopsis}
               </p>
 
               <Link
                 href="#story"
-                className="mt-9 inline-flex items-center gap-3 border-b border-brand-maroon pb-2 font-sans text-xs font-bold uppercase tracking-[0.15em] transition-colors hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange"
+                className="mt-9 inline-flex items-center gap-3 border-b border-brand-maroon pb-2 font-sans text-xs font-bold uppercase tracking-[0.15em] transition-colors hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange n4f-hero-reveal"
+                style={{ animationDelay: "500ms" }}
               >
                 Explore Project
                 <ArrowRight
@@ -141,7 +153,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
             </div>
 
             {/* OFFICIAL PROJECT POSTER */}
-            <figure className="relative mx-auto aspect-3/4 w-full max-w-110 overflow-hidden bg-[#32110E]">
+            <figure
+              className="n4f-hero-reveal relative mx-auto aspect-3/4 w-full max-w-110 overflow-hidden bg-[#32110E]"
+              style={{ animationDelay: "550ms" }}
+            >
               <Image
                 src={project.poster.src}
                 alt={project.poster.alt}
@@ -163,7 +178,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
       >
         <div className="container-editorial py-20 md:py-28 lg:py-32">
           {/* STORY */}
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+          <ScrollReveal className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
             <div>
               <p className="mb-7 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
                 01 / The Story
@@ -183,10 +198,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
             <p className="max-w-3xl font-sans text-lg leading-[1.9] text-brand-beige/85 md:text-xl">
               {project.synopsis}
             </p>
-          </div>
+          </ScrollReveal>
 
           {/* OUR INVOLVEMENT */}
-          <div className="mt-20 grid gap-10 border-t border-brand-beige/25 pt-12 md:mt-28 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+          <ScrollReveal className="mt-20 grid gap-10 border-t border-brand-beige/25 pt-12 md:mt-28 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
             <div>
               <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
                 02 / Our Involvement
@@ -221,7 +236,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 </p>
               )}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -231,40 +246,47 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
         className="bg-brand-beige text-brand-maroon"
       >
         <div className="container-editorial py-20 md:py-28 lg:py-32">
-          <p className="mb-7 font-sans text-xs font-bold uppercase tracking-[0.2em]">
-            03 / Production Information
-          </p>
+          <ScrollReveal>
+            <p className="mb-7 font-sans text-xs font-bold uppercase tracking-[0.2em]">
+              03 / Production Information
+            </p>
 
-          <h2
-            id="project-info-heading"
-            className="font-display text-[clamp(2.5rem,4.8vw,5.7rem)] leading-[1.05]"
-          >
-            PROJECT
-            <br />
-            DETAILS
-            <span className="text-brand-orange">.</span>
-          </h2>
+            <h2
+              id="project-info-heading"
+              className="font-display text-[clamp(2.5rem,4.8vw,5.7rem)] leading-[1.05]"
+            >
+              PROJECT
+              <br />
+              DETAILS
+              <span className="text-brand-orange">.</span>
+            </h2>
+          </ScrollReveal>
 
-          <dl className="mt-12 grid gap-x-12 border-t border-brand-maroon/30 sm:grid-cols-2 lg:grid-cols-3">
-            {projectFacts.map((fact) => (
-              <div
-                key={fact.label}
-                className="border-b border-brand-maroon/25 py-7"
-              >
-                <dt className="font-sans text-xs font-bold uppercase tracking-[0.16em] text-brand-maroon/70">
-                  {fact.label}
-                </dt>
+          <ScrollReveal className="n4f-project-facts mt-12">
+            <dl className="grid gap-x-12 border-t border-brand-maroon/30 sm:grid-cols-2 lg:grid-cols-3">
+              {projectFacts.map((fact, index) => (
+                <div
+                  key={fact.label}
+                  className="n4f-project-fact border-b border-brand-maroon/25 py-7"
+                  style={{
+                    animationDelay: `${index * 180}ms`,
+                  }}
+                >
+                  <dt className="font-sans text-xs font-bold uppercase tracking-[0.16em] text-brand-maroon/70">
+                    {fact.label}
+                  </dt>
 
-                <dd className="mt-3 font-sans text-base font-semibold leading-relaxed md:text-lg">
-                  {fact.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
+                  <dd className="mt-3 font-sans text-base font-semibold leading-relaxed md:text-lg">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* 04 / PROJECT GALLERY CAROUSEL */}
+      {/* 04 / Project Video  */}
       {project.videos && project.videos.length > 0 && (
         <ProjectVideoPlayer
           key={project.slug}
@@ -281,8 +303,8 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
           className="bg-brand-maroon text-brand-beige"
         >
           <div className="container-editorial py-16 md:py-24">
-            <div className="grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
-              <div>
+            <ScrollReveal className="n4f-credits-reveal grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+              <div className="n4f-credits-intro">
                 <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
                   The People Behind the Production
                 </p>
@@ -302,7 +324,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 {project.credits.map((credit, index) => (
                   <div
                     key={`${credit.name}-${index}`}
-                    className="border-b border-brand-beige/25 py-5"
+                    className="n4f-credit-item border-b border-brand-beige/25 py-5"
+                    style={{
+                      animationDelay: `${450 + index * 180}ms`,
+                    }}
                   >
                     <dt className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-brand-orange">
                       {credit.role}
@@ -314,7 +339,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                   </div>
                 ))}
               </dl>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
@@ -326,9 +351,9 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
           className="bg-brand-maroon text-brand-beige"
         >
           <div className="container-editorial py-16 md:py-24">
-            <div className="grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+            <ScrollReveal className="n4f-recognition-reveal grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
               {/* LEFT — EDITORIAL HEADING */}
-              <div>
+              <div className="n4f-recognition-intro">
                 <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
                   Festivals & Awards
                 </p>
@@ -347,7 +372,10 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 {project.awards?.map((award, index) => (
                   <div
                     key={`award-${index}`}
-                    className="border-b border-brand-beige/25 py-6"
+                    className="n4f-recognition-item border-b border-brand-beige/25 py-6"
+                    style={{
+                      animationDelay: `${450 + index * 180}ms`,
+                    }}
                   >
                     <dt className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">
                       Award
@@ -362,7 +390,12 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 {project.festivals?.map((festival, index) => (
                   <div
                     key={`festival-${index}`}
-                    className="border-b border-brand-beige/25 py-6"
+                    className="n4f-recognition-item border-b border-brand-beige/25 py-6"
+                    style={{
+                      animationDelay: `${
+                        450 + ((project.awards?.length ?? 0) + index) * 180
+                      }ms`,
+                    }}
                   >
                     <dt className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">
                       Festival Selection
@@ -374,7 +407,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                   </div>
                 ))}
               </dl>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
@@ -386,9 +419,9 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
           className="bg-brand-maroon text-brand-beige"
         >
           <div className="container-editorial py-16 md:py-24">
-            <div className="grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
+            <ScrollReveal className="grid gap-10 border-t border-brand-beige/25 pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-20">
               {/* HEADING */}
-              <div>
+              <div className="n4f-links-intro">
                 <p className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
                   External Project Links
                 </p>
@@ -407,8 +440,14 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                 aria-labelledby="project-links-heading"
                 className="flex flex-wrap items-center gap-x-8 gap-y-5"
               >
-                {project.links.map((link) => (
-                  <li key={`${link.label}-${link.url}`}>
+                {project.links.map((link, index) => (
+                  <li
+                    key={`${link.label}-${link.url}`}
+                    className="n4f-external-link-item"
+                    style={{
+                      animationDelay: `${450 + index * 180}ms`,
+                    }}
+                  >
                     <a
                       href={link.url}
                       target="_blank"
@@ -426,7 +465,7 @@ export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       )}

@@ -266,7 +266,7 @@ export const team = [
       "The strength of a production lies in the details no one sees, but everyone feels.",
 
     portrait: {
-      src: "/team/ahmed-ganzory.jpeg",
+      src: "/media/ahmed-ganzory.jpeg",
       alt: "Portrait of Ahmed El-Ganzory",
     },
 
@@ -303,6 +303,15 @@ export const team = [
         },
         source: "IMDb",
         url: "https://www.imdb.com/title/tt27720812/",
+      },
+      {
+        title: "44th Cairo International Film Festival",
+        role: "Media Coverage",
+        year: "2022",
+        artwork: {
+          src: "/posters/cairo-int-film.jpeg",
+          alt: "Official poster for cairo international film festival",
+        },
       },
       {
         title: "Cairo International Film Festival",
