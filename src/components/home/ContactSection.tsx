@@ -11,7 +11,10 @@ export function ContactSection() {
     >
       <div className="container-editorial">
         {/* BEIGE CONTACT PANEL */}
-        <ScrollReveal className="n4f-contact-panel relative isolate overflow-hidden rounded-xl bg-brand-beige px-6 py-12 text-brand-maroon sm:px-9 md:px-12 md:py-16 lg:px-16 lg:py-20">
+        <ScrollReveal
+          trigger="early"
+          className="n4f-contact-panel relative isolate overflow-hidden rounded-xl bg-brand-beige px-6 py-12 text-brand-maroon sm:px-9 md:px-12 md:py-16 lg:px-16 lg:py-20"
+        >
           {/* SOFT DECORATIVE WARMTH */}
           <div
             aria-hidden="true"

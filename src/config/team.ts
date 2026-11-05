@@ -355,8 +355,8 @@ export const team = [
       "A story doesn't end when the camera stops rolling. Every decision in post-production is another opportunity to shape what the audience feels.",
 
     portrait: {
-      src: "/team/adham-hamed.jpg",
-      alt: "Portrait of Adham Hamed",
+      src: "/media/WhatsApp-Image-2026-11-05-at-15.51.11.webp",
+      alt: "adham hamed posing in picutre",
     },
 
     credits: [
