@@ -1,3 +1,5 @@
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+
 export function OurStory() {
   return (
     <section
@@ -7,7 +9,7 @@ export function OurStory() {
     >
       <div className="container-editorial py-20 md:py-28 lg:py-32">
         {/* SECTION LABEL */}
-        <div className="flex items-center justify-between gap-4 border-b border-brand-beige/25 pb-6">
+        <ScrollReveal className="flex items-center justify-between gap-4 border-b border-brand-beige/25 pb-6">
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-brand-orange">
             01 / Our Story
           </p>
@@ -15,12 +17,12 @@ export function OurStory() {
           <p className="hidden font-sans text-xs font-semibold uppercase tracking-[0.15em] text-brand-beige/65 sm:block">
             The Thinking Behind Ninety 4 Film
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* EDITORIAL SPLIT */}
         <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-20">
           {/* LEFT — CREATIVE STATEMENT */}
-          <div className="min-w-0">
+          <ScrollReveal className="min-w-0">
             <h2
               id="our-story-heading"
               className="font-display text-[clamp(2.7rem,5vw,5.8rem)] leading-[1.05] tracking-[-0.035em]"
@@ -39,10 +41,10 @@ export function OurStory() {
               aria-hidden="true"
               className="mt-10 h-1 w-20 bg-brand-orange md:mt-14"
             />
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT — COMPANY STORY */}
-          <div className="flex max-w-2xl flex-col gap-6 font-sans">
+          <ScrollReveal className="flex max-w-2xl flex-col gap-6 font-sans">
             <p className="text-xl font-medium leading-relaxed text-brand-beige md:text-2xl">
               Ninety 4 Film was built around a simple belief: a strong creative
               idea deserves production that can carry it all the way through.
@@ -70,18 +72,18 @@ export function OurStory() {
               consistency of its execution. Rooted in Egypt, with an outlook
               that extends beyond its borders.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* CLOSING PHILOSOPHY STATEMENT */}
-        <div className="mt-20 border-t border-brand-beige/25 pt-8 md:mt-28 md:pt-10">
+        <ScrollReveal className="mt-20 border-t border-brand-beige/25 pt-8 md:mt-28 md:pt-10">
           <p className="max-w-7xl font-display text-[clamp(1.8rem,3.3vw,3.7rem)] leading-[1.15]">
             WE THINK LIKE STORYTELLERS.
             <br />
             <span className="text-brand-orange">WE WORK LIKE PRODUCERS</span>
             <span className="text-brand-orange">.</span>
           </p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

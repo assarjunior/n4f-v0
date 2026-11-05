@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { getPublishedTeam } from "@/config/team";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 export function MeetTheTeam() {
   const members = getPublishedTeam();
@@ -24,7 +25,7 @@ export function MeetTheTeam() {
             lg:items-end lg:gap-16
           "
         >
-          <div className="min-w-0">
+          <ScrollReveal className="min-w-0">
             <p
               className="
                 mb-7 font-sans text-xs font-semibold
@@ -47,9 +48,9 @@ export function MeetTheTeam() {
               <br />
               <span className="text-brand-orange">THE DIFFERENCE .</span>
             </h2>
-          </div>
+          </ScrollReveal>
 
-          <div className="max-w-xl lg:pb-2">
+          <ScrollReveal className="max-w-xl lg:pb-2">
             <div aria-hidden="true" className="mb-7 h-1 w-16 bg-brand-orange" />
 
             <p
@@ -62,7 +63,7 @@ export function MeetTheTeam() {
               people bringing creative understanding, production experience and
               technical expertise together at Ninety 4 Film.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* TEAM DIRECTORY */}
@@ -81,21 +82,22 @@ export function MeetTheTeam() {
 
             return (
               <li key={member.id} className="min-w-0">
-                <Link
-                  href={`/company/team/${member.slug}`}
-                  aria-labelledby={nameId}
-                  aria-describedby={roleId}
-                  className="
+                <ScrollReveal className="h-full">
+                  <Link
+                    href={`/company/team/${member.slug}`}
+                    aria-labelledby={nameId}
+                    aria-describedby={roleId}
+                    className="
                     group flex h-full min-w-0 flex-col
                     outline-none
                     focus-visible:outline-2
                     focus-visible:outline-offset-4
                     focus-visible:outline-brand-orange
                   "
-                >
-                  {/* PORTRAIT */}
-                  <div
-                    className="
+                  >
+                    {/* PORTRAIT */}
+                    <div
+                      className="
                       relative aspect-4/5
                       overflow-hidden
                       border border-brand-beige/20
@@ -105,21 +107,21 @@ export function MeetTheTeam() {
                       group-focus-visible:border-brand-orange
                       motion-reduce:transition-none
                     "
-                  >
-                    <Image
-                      src={member.portrait.src}
-                      alt={member.portrait.alt}
-                      fill
-                      sizes="
+                    >
+                      <Image
+                        src={member.portrait.src}
+                        alt={member.portrait.alt}
+                        fill
+                        sizes="
                         (max-width: 639px) 100vw,
                         (max-width: 1279px) 50vw,
                         25vw
                       "
-                      style={{
-                        objectPosition:
-                          member.portrait.objectPosition ?? "center",
-                      }}
-                      className="
+                        style={{
+                          objectPosition:
+                            member.portrait.objectPosition ?? "center",
+                        }}
+                        className="
                         object-cover
                         transition-transform duration-700
                         ease-out
@@ -128,12 +130,12 @@ export function MeetTheTeam() {
                         motion-reduce:transition-none
                         motion-reduce:transform-none
                       "
-                    />
+                      />
 
-                    {/* SUBTLE PHOTOGRAPHIC GRADIENT */}
-                    <div
-                      aria-hidden="true"
-                      className="
+                      {/* SUBTLE PHOTOGRAPHIC GRADIENT */}
+                      <div
+                        aria-hidden="true"
+                        className="
                         pointer-events-none
                         absolute inset-0
                         bg-linear-to-t
@@ -141,12 +143,12 @@ export function MeetTheTeam() {
                         via-transparent
                         to-black/15
                       "
-                    />
+                      />
 
-                    {/* INTERACTIVE ARROW */}
-                    <span
-                      aria-hidden="true"
-                      className="
+                      {/* INTERACTIVE ARROW */}
+                      <span
+                        aria-hidden="true"
+                        className="
                         absolute bottom-5 right-5
                         flex size-11 items-center
                         justify-center
@@ -162,10 +164,10 @@ export function MeetTheTeam() {
                         group-focus-visible:text-brand-maroon
                         motion-reduce:transition-none
                       "
-                    >
-                      <ArrowUpRight
-                        strokeWidth={1.5}
-                        className="
+                      >
+                        <ArrowUpRight
+                          strokeWidth={1.5}
+                          className="
                           size-6
                           transition-transform duration-300
                           group-hover:-translate-y-0.5
@@ -174,15 +176,15 @@ export function MeetTheTeam() {
                           group-focus-visible:translate-x-0.5
                           motion-reduce:transition-none
                         "
-                      />
-                    </span>
-                  </div>
+                        />
+                      </span>
+                    </div>
 
-                  {/* MEMBER INFORMATION */}
-                  <div className="flex flex-1 flex-col pt-6">
-                    <h3
-                      id={nameId}
-                      className="
+                    {/* MEMBER INFORMATION */}
+                    <div className="flex flex-1 flex-col pt-6">
+                      <h3
+                        id={nameId}
+                        className="
                         font-display
                         text-4xl
                         leading-[1.08]
@@ -193,45 +195,45 @@ export function MeetTheTeam() {
                         group-focus-visible:text-brand-orange
                         motion-reduce:transition-none
                       "
-                    >
-                      {member.name}
-                    </h3>
+                      >
+                        {member.name}
+                      </h3>
 
-                    <p
-                      id={roleId}
-                      className="
+                      <p
+                        id={roleId}
+                        className="
                         mt-3 min-h-0 font-sans
                         text-xs font-semibold
                         uppercase tracking-widest
                         text-brand-orange
                         xl:min-h-12
                       "
-                    >
-                      {member.role}
-                    </p>
+                      >
+                        {member.role}
+                      </p>
 
-                    <p
-                      className="
+                      <p
+                        className="
                         font-sans text-sm
                         leading-[1.8]
                         text-brand-beige/75
                       "
-                    >
-                      {member.shortBio}
-                    </p>
+                      >
+                        {member.shortBio}
+                      </p>
 
-                    {/* PROFILE LINK INDICATOR */}
-                    <div
-                      className="
+                      {/* PROFILE LINK INDICATOR */}
+                      <div
+                        className="
                         mt-auto flex items-center
                       gap-3 pt-3
                         font-sans text-xs font-semibold
                         uppercase tracking-[0.15em]
                         text-brand-beige
                       "
-                    >
-                      <span
-                        className="
+                      >
+                        <span
+                          className="
                           border-b border-brand-orange
                           pb-2
                           transition-colors duration-300
@@ -239,14 +241,14 @@ export function MeetTheTeam() {
                           group-focus-visible:text-brand-orange
                           motion-reduce:transition-none
                         "
-                      >
-                        View Profile
-                      </span>
+                        >
+                          View Profile
+                        </span>
 
-                      <ArrowUpRight
-                        aria-hidden="true"
-                        strokeWidth={1.5}
-                        className="
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          strokeWidth={1.5}
+                          className="
                           size-5 text-brand-orange
                           transition-transform duration-300
                           group-hover:-translate-y-0.5
@@ -255,10 +257,11 @@ export function MeetTheTeam() {
                           group-focus-visible:translate-x-0.5
                           motion-reduce:transition-none
                         "
-                      />
+                        />
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </ScrollReveal>
               </li>
             );
           })}

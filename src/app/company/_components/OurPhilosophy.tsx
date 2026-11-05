@@ -1,3 +1,5 @@
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+
 const principles = [
   {
     number: "01",
@@ -47,7 +49,7 @@ export function OurPhilosophy() {
           "
         >
           {/* HEADLINE */}
-          <div className="min-w-0">
+          <ScrollReveal className="min-w-0">
             <p
               className="
                 mb-7 font-sans text-xs font-bold
@@ -72,10 +74,10 @@ export function OurPhilosophy() {
               THE WORK
               <span className="text-brand-orange">.</span>
             </h2>
-          </div>
+          </ScrollReveal>
 
           {/* INTRODUCTION */}
-          <div className="max-w-xl lg:pb-2">
+          <ScrollReveal className="max-w-xl lg:pb-2">
             <div aria-hidden="true" className="mb-7 h-1 w-16 bg-brand-orange" />
 
             <p
@@ -100,15 +102,15 @@ export function OurPhilosophy() {
               These are the principles that shape how we approach every creative
               challenge.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* FOUR PHILOSOPHY PRINCIPLES */}
         <ol className="list-none">
           {principles.map((principle) => (
-            <li
-              key={principle.number}
-              className="
+            <li key={principle.number}>
+              <ScrollReveal
+                className="
                 grid min-w-0
                 grid-cols-[2.5rem_minmax(0,1fr)]
                 gap-x-4 gap-y-6
@@ -120,69 +122,70 @@ export function OurPhilosophy() {
                 lg:grid-cols-[4.5rem_minmax(0,1.15fr)_minmax(0,0.85fr)]
                 lg:gap-x-12 lg:py-16
               "
-            >
-              {/* NUMBER */}
-              <span
-                className="
+              >
+                {/* NUMBER */}
+                <span
+                  className="
                   pt-2 font-sans text-sm font-bold
                   tracking-[0.12em] text-brand-maroon
                 "
-              >
-                {principle.number}
-              </span>
+                >
+                  {principle.number}
+                </span>
 
-              {/* PRINCIPLE STATEMENT */}
-              <div className="min-w-0">
-                <h3
-                  className="
+                {/* PRINCIPLE STATEMENT */}
+                <div className="min-w-0">
+                  <h3
+                    className="
                     max-w-2xl font-display
                     text-[clamp(2rem,3.5vw,4.2rem)]
                     leading-[1.08]
                     tracking-tight
                   "
-                >
-                  {principle.title}
-                </h3>
+                  >
+                    {principle.title}
+                  </h3>
 
+                  <div
+                    aria-hidden="true"
+                    className="mt-7 h-1 w-12 bg-brand-orange"
+                  />
+                </div>
+
+                {/* DESCRIPTION */}
                 <div
-                  aria-hidden="true"
-                  className="mt-7 h-1 w-12 bg-brand-orange"
-                />
-              </div>
-
-              {/* DESCRIPTION */}
-              <div
-                className="
+                  className="
                   col-start-2 min-w-0
                   lg:col-start-3 lg:self-center
                 "
-              >
-                <p
-                  className="
+                >
+                  <p
+                    className="
                     mb-5 font-sans text-xs font-bold
                     uppercase tracking-[0.17em]
                     text-brand-maroon/75
                   "
-                >
-                  {principle.category}
-                </p>
+                  >
+                    {principle.category}
+                  </p>
 
-                <p
-                  className="
+                  <p
+                    className="
                     max-w-xl font-sans text-base
                     leading-[1.85] text-brand-maroon/85
                     md:text-lg
                   "
-                >
-                  {principle.description}
-                </p>
-              </div>
+                  >
+                    {principle.description}
+                  </p>
+                </div>
+              </ScrollReveal>
             </li>
           ))}
         </ol>
 
         {/* CLOSING SIGNATURE */}
-        <div
+        <ScrollReveal
           className="
             mt-12 flex flex-col gap-4
             md:mt-16 md:flex-row
@@ -207,7 +210,7 @@ export function OurPhilosophy() {
           >
             Independent in Spirit. Collaborative by Design.
           </p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
