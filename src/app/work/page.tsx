@@ -35,11 +35,20 @@ export const metadata: Metadata = {
   ),
 };
 
-function ArchiveProjectCard({ project }: { project: WorkEntry }) {
+function ArchiveProjectCard({
+  project,
+  index,
+}: {
+  project: WorkEntry;
+  index: number;
+}) {
   const href = `/work/${project.slug}`;
 
   return (
-    <li className="min-w-0">
+    <li
+      className="n4f-hero-reveal min-w-0"
+      style={{ animationDelay: `${850 + index * 150}ms` }}
+    >
       <article className="group flex h-full flex-col">
         {/* Project Poster */}
         <Link
@@ -52,9 +61,8 @@ function ArchiveProjectCard({ project }: { project: WorkEntry }) {
             alt={project.poster.alt}
             fill
             sizes="(max-width: 639px) 100vw,
-        (max-width: 1023px) 50vw,
-        440px
-        "
+                     (max-width: 1023px) 50vw,
+                     440px"
             className="object-contain transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transition-none"
           />
 
@@ -143,17 +151,20 @@ export default function WorkPage() {
         className="bg-brand-beige text-brand-maroon"
       >
         <div className="container-editorial py-20 md:py-28 lg:py-12">
-          <div className="mb-10 flex items-center gap-4 md:mb-14">
+          <div
+            className="n4f-hero-reveal mb-10 flex items-center gap-4 md:mb-14 lg:mb-8"
+            style={{ animationDelay: "150ms" }}
+          >
             <span aria-hidden="true" className="h-px w-10 bg-brand-maroon" />
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-maroon">
               Ninety 4 Film / Our Work
             </p>
           </div>
-
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end lg:gap-16">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-end lg:gap-12">
             <h1
-              className="font-display text-[clamp(3.5rem,8vw,9rem)] leading-[0.96] tracking-[-0.035em]"
               id="work-heading"
+              className="n4f-hero-reveal font-display text-[clamp(3.5rem,8vw,9rem)] leading-[0.96] tracking-[-0.035em] lg:text-[clamp(5rem,6.5vw,7rem)]"
+              style={{ animationDelay: "350ms" }}
             >
               OUR
               <br />
@@ -161,17 +172,32 @@ export default function WorkPage() {
               <span className="text-brand-orange">.</span>
             </h1>
 
-            <div className="max-w-xl">
+            <div
+              className="n4f-hero-reveal max-w-2xl"
+              style={{ animationDelay: "550ms" }}
+            >
               <div
                 className="mb-7 h-1 w-16 bg-brand-orange"
                 aria-hidden="true"
               />
 
-              <p className="font-sans text-base leading-[1.8] text-brand-maroon/85 md:text-lg">
-                Every production brings its own creative challenges,
-                collaborators, and possibilities. Explore a selection of
-                projects we have helped bring to screen.
-              </p>
+              <div className="space-y-5 font-sans text-base leading-[1.8] text-brand-maroon/85 md:text-lg lg:space-y-4 lg:text-base lg:leading-[1.65]">
+                <p>
+                  Our portfolio brings together feature films, short films,
+                  documentaries, and major film industry events. Each project
+                  represents a different creative ambition, production
+                  challenge, and collaboration.
+                </p>
+
+                <p>
+                  Our involvement spans production planning, on-set execution,
+                  media coverage, full post house services, and final delivery.
+                  Beyond production and post-production, we also support
+                  short-film distribution to festivals and digital platforms,
+                  helping filmmakers connect their stories with audiences beyond
+                  the screen.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -184,8 +210,11 @@ export default function WorkPage() {
         aria-labelledby="projects-heading"
         className="bg-brand-maroon text-brand-beige"
       >
-        <div className="container-editorial py-20 md:py-28 lg:py-32">
-          <div className="mb-12 flex flex-col justify-between gap-4 border-b border-brand-beige/25 pb-7 sm:flex-row sm:items-end md:mb-16">
+        <div className="container-editorial py-20 md:py-28 lg:pt-12 lg:pb-32">
+          <div
+            className="n4f-hero-reveal mb-12 flex flex-col justify-between gap-4 border-b border-brand-beige/25 pb-7 sm:flex-row sm:items-end md:mb-16"
+            style={{ animationDelay: "700ms" }}
+          >
             <div>
               <h2
                 id="projects-heading"
@@ -201,12 +230,15 @@ export default function WorkPage() {
               {projects.length === 1 ? "Project" : "Projects"}
             </span>
           </div>
-
           {/* Project Gallery */}
           {projects.length > 0 ? (
             <ul className="grid w-full list-none grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-4 xl:gap-x-7 xl:gap-y-16">
-              {projects.map((project) => (
-                <ArchiveProjectCard key={project.id} project={project} />
+              {projects.map((project, index) => (
+                <ArchiveProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index}
+                />
               ))}
             </ul>
           ) : (
@@ -214,7 +246,6 @@ export default function WorkPage() {
               Our Selected production archive is being prepared.
             </p>
           )}
-
           {/* Closing Editorial Rule */}
           <div className="mt-20 flex flex-col gap-3 border-t border-brand-beige/25 pt-7 md:mt-28 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">
