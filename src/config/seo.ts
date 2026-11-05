@@ -54,6 +54,18 @@ export const seoCopy: {
       description:
         "Explore Meen Yesdak (مين يصدق), directed by Zena Abd El-Baky, and Ninety 4 Film's work on production budgeting, on-set execution and delivery coordination.",
     },
+
+    "44th-cairo-international-film-festival": {
+      title:
+        "44th Cairo International Film Festival (2022) — Media Coverage | Ninety 4 Film",
+      description:
+        "Explore Ninety 4 Film's media coverage of the 44th Cairo International Film Festival in 2022, documenting the festival's events and closing ceremony.",
+    },
+    "triangle-of-love": {
+      title: "Triangle of Love (2025) — Documentary | Ninety 4 Film",
+      description:
+        "Explore Triangle of Love (مثلث الحب), a 2025 feature documentary directed by Alaa Mahmoud, with complete post-production by Ninety 4 Film.",
+    },
   },
 
   team: {
@@ -70,9 +82,9 @@ export const seoCopy: {
     },
 
     "ahmed-ganzory": {
-      title: "Ahmed El-Ganzory — Producer | Ninety 4 Film",
+      title: "Ahmed El-Ganzory — Co-Founder & Producer | Ninety 4 Film",
       description:
-        "Meet Ahmed El-Ganzory, Producer at Ninety 4 Film, with experience in line production, unit production management and production coordination.",
+        "Meet Ahmed El-Ganzory, co-founder and producer at Ninety 4 Film, with experience in line production, unit production management, and production coordination.",
     },
 
     "adham-hamed": {

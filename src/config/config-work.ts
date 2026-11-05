@@ -1,6 +1,7 @@
 import { WorkEntry } from "@/types/types-work";
 
 export const work = [
+  //? 1+1
   {
     id: "n4f-001",
     slug: "1-plus-1",
@@ -78,10 +79,11 @@ export const work = [
       },
     ],
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
     published: true,
   },
 
+  //? Meen Yesdak
   {
     id: "n4f-002",
     slug: "meen-yesdak",
@@ -137,7 +139,7 @@ export const work = [
     ],
 
     credits: [
-      { name: "Ahmed Ehab, Moustafa Bahgat", role: "Producer" },
+      { name: "Ahmed Ehab El-Saeed, Moustafa Bahgat", role: "Producer" },
       { name: "Abd El-Rahman ISO", role: "Cinematographer" },
       { name: "Nada Abd El-Hameed", role: "Production Designer" },
       { name: "Mohamed Soliman", role: "Editor" },
@@ -149,6 +151,129 @@ export const work = [
 
     featured: true,
     featuredOrder: 1,
+    published: true,
+  },
+
+  //? 44th Cairo International Film Festival
+  {
+    id: "n4f-61cb1da9",
+    slug: "44th-cairo-international-film-festival",
+    title: "44th Cairo International Film Festival",
+    type: "media-coverage",
+    status: "released",
+    releaseYear: 2022,
+    synopsis:
+      "The Cairo International Film Festival (CIFF) stands as one of the oldest, most prestigious cultural institutions in the Arab world and Africa, holding the distinct honor of being the only festival in the region accredited as an A-category competitive festival by FIAPF (International Federation of Film Producers Associations). Held at the historic Cairo Opera House, the 44th edition served as a vital bridge between heritage and modern cinematic innovation, drawing prominent filmmakers, industry leaders, critics, and global talent for ten days of screenings, panel discussions, and international industry exchanges.",
+    shortSynopsis:
+      "Media coverage of the 44th Cairo International Film Festival, capturing its ceremonies, screenings, and cinematic celebrations.",
+    companyRoles: ["Media Coverage"],
+    companyRoleDescription:
+      "Tasked with delivering full-spectrum media coverage for this landmark edition, our production company mobilized a multi-camera field unit and an agile post-production workflow to document the festival’s pulse in real time.",
+    poster: {
+      src: "/media/cairo-int-film.webp",
+      alt: "cairo international film festival",
+      width: 463,
+      height: 662,
+    },
+    videos: [
+      {
+        kind: "Recap",
+        title: "CIFFTV | CIFF44 | Glimpse of Closing Ceremony",
+        youtubeUrl: "https://youtu.be/fl513_tqpjA?si=g4CjAj6m4bXpMiny",
+      },
+    ],
+    credits: [
+      {
+        name: "Zena Abd El-Baky",
+        role: "Media Coverage Director",
+      },
+      {
+        name: "Youssef Ibrahim",
+        role: "Director Of Photography",
+      },
+      {
+        name: "Ahmed Badra",
+        role: "Location Sound Engineer",
+      },
+      {
+        name: "Habiba Khedr",
+        role: "Line Producer",
+      },
+    ],
+    executiveProducer: "Ahmed Ehab El-Saeed, Moustafa Bahgat",
+    languages: [],
+    countries: ["Egypt"],
+    featured: true,
+    featuredOrder: 2,
+    published: true,
+  },
+
+  //? Triangle Of Love
+  {
+    id: "n4f-b4594787",
+    slug: "triangle-of-love",
+    title: "Triangle Of Love",
+    originalTitle: "مثلث الحب",
+    type: "documentary",
+    status: "released",
+    releaseYear: 2025,
+    synopsis:
+      "Two years after the passing of Dr. Maha—the woman who brought Alaa and Mustafa together—the couple sits down to reminisce, rekindling their deep affection for her and confronting the lingering grief of her loss. Across this reflective journey spanning the entire film, Alaa and Mustafa exchange long-suppressed thoughts and feelings, with every shared moment carrying them back to a time when Dr. Maha was still by their side.",
+    shortSynopsis:
+      "Two years after the loss of the mentor who brought them together, a couple spends an intimate evening unearthing long-buried feelings and revisiting memories of the woman who shaped their lives.",
+    companyRoles: ["Post House"],
+    companyRoleDescription:
+      "Ninety 4 Film served as the complete post-production house, fulfilling the director's creative vision across editorial, color and final delivery.",
+    poster: {
+      src: "/media/triangle.webp",
+      alt: "triangle of love official poster",
+      width: 800,
+      height: 1200,
+    },
+    director: "Alaa Mahmoud",
+    writer: ["Alaa Mahmoud", "Moustafa Bahgat"],
+    cast: [
+      "Maha El-Shenawy",
+      "Khaled Bahgat",
+      "Moustafa Bahgat",
+      "Alaa Mahmoud",
+    ],
+    credits: [
+      {
+        name: "Alaa Mahmoud, Alia Ibrahim",
+        role: "Editor",
+      },
+      {
+        name: "Tamer Carawan",
+        role: "Musical Score",
+      },
+      {
+        name: "Ahmed Gabr",
+        role: "Sound Mix",
+      },
+      {
+        name: "Aya Abd El-Kafy",
+        role: "Colorist",
+      },
+      {
+        name: "Mai Badr",
+        role: "Post Producer",
+      },
+      {
+        name: "Philopater Hany",
+        role: "Graphics",
+      },
+    ],
+    executiveProducer: "Moustafa Bahgat",
+    runtimeMinutes: 84,
+    languages: ["Arabic"],
+    genres: ["Feature Documentary"],
+    countries: ["Egypt"],
+    festivals: [
+      "World Premiere — 46th Cairo International Film Festival (2025), Special Screenings",
+    ],
+    featured: true,
+    featuredOrder: 4,
     published: true,
   },
 ] as const satisfies readonly WorkEntry[];

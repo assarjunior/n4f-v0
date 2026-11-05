@@ -28,7 +28,7 @@ const serviceGroups = [
         id: "short-film",
         title: "Short Films",
         description:
-          "Focused filmmaking for distinctive voices and powerful ideas.",
+          "Short-form storytelling for festivals and digital platforms, from development through final delivery.",
         image: "/services/short-films.jpeg",
       },
       {

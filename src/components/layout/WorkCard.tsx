@@ -25,7 +25,7 @@ export function WorkCard({ film }: WorkCardProps) {
     <article className="flex h-full flex-col">
       {/* Project Metadata */}
       <div className="mb-3 flex items-center justify-between gap-3">
-        <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-orange">
+        <p className="font-sans text-sm font-semibold uppercase tracking-[0.15em] text-brand-orange">
           {workTypeLabels[film.type]}
         </p>
 
@@ -63,7 +63,7 @@ export function WorkCard({ film }: WorkCardProps) {
 
       {/* Synopsis */}
       <p className="mt-3 font-sans text-sm leading-relaxed text-brand-beige/85 md:text-base">
-        {film.synopsis}
+        {film.shortSynopsis}
       </p>
 
       {/* Company Role */}

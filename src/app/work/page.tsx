@@ -78,7 +78,7 @@ function ArchiveProjectCard({ project }: { project: WorkEntry }) {
         </div>
 
         {/* Title */}
-        <h2 className="mt-4 font-display text-[clamp(2rem,3vw,3.5rem)] leading-[1.08] text-brand-beige">
+        <h2 className="mt-4 font-display text-[clamp(1.6rem,2vw,2.25rem)] leading-[1.12] tracking-tight text-brand-beige wrap-break-word">
           <Link
             href={href}
             className="transition-colors duration-300 hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange motion-reduce:transition-none"
@@ -99,12 +99,12 @@ function ArchiveProjectCard({ project }: { project: WorkEntry }) {
         )}
 
         {/* Short Synopsis */}
-        <p className="mt-4 max-w-xl font-sans text-sm leading-[1.8] text-brand-beige/80 md:text-base">
+        <p className="mt-3 font-sans text-sm leading-[1.65] text-brand-beige/80">
           {project.shortSynopsis}
         </p>
 
         {/* Company Role and navigation */}
-        <div className="mt-auto flex flex-col gap-5 pt-7">
+        <div className="mt-auto flex flex-col gap-4 pt-5">
           <div className="border-t border-brand-beige/20 pt-5">
             <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-orange">
               Ninety 4 Film Involvement
@@ -114,7 +114,6 @@ function ArchiveProjectCard({ project }: { project: WorkEntry }) {
               {project.companyRoles.join(" / ")}
             </p>
           </div>
-
           <Link
             href={href}
             className="flex w-fit items-center gap-3 border-b border-brand-orange pb-2 font-sans text-xs font-semibold uppercase tracking-[0.15em] text-brand-beige transition-colors duration-300 hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange motion-reduce:transition-none"
@@ -188,10 +187,6 @@ export default function WorkPage() {
         <div className="container-editorial py-20 md:py-28 lg:py-32">
           <div className="mb-12 flex flex-col justify-between gap-4 border-b border-brand-beige/25 pb-7 sm:flex-row sm:items-end md:mb-16">
             <div>
-              <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange">
-                01 / Selected Productions
-              </p>
-
               <h2
                 id="projects-heading"
                 className="font-display text-[clamp(2.4rem,4.2vw,4.8rem)] leading-[1.06]"
@@ -209,7 +204,7 @@ export default function WorkPage() {
 
           {/* Project Gallery */}
           {projects.length > 0 ? (
-            <ul className="mx-auto grid max-w-5xl list-none grid-cols-1 gap-x-10 gap-y-16 sm:grid-cols-2 lg:gap-x-16 lg:gap-y-20">
+            <ul className="grid w-full list-none grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-4 xl:gap-x-7 xl:gap-y-16">
               {projects.map((project) => (
                 <ArchiveProjectCard key={project.id} project={project} />
               ))}

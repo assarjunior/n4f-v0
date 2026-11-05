@@ -47,11 +47,15 @@ export function getHomeStructuredData() {
 // Do not imply Ninety 4 Film was the sole producer.
 export function getWorkStructuredData(project: WorkEntry) {
   const url = absoluteUrl(`/work/${project.slug}`);
+  const isMovie =
+    project.type === "feature-film" ||
+    project.type === "short-film" ||
+    project.type === "documentary";
 
   return {
     "@context": "https://schema.org",
-    "@type": "Movie",
-    "@id": `${url}#movie`,
+    "@type": isMovie ? "Movie" : "CreativeWork",
+    "@id": `${url}#${isMovie ? "movie" : "work"}`,
     url,
     name: project.title,
     ...(project.originalTitle ? { alternateName: project.originalTitle } : {}),

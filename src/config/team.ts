@@ -128,9 +128,9 @@ export const team = [
     name: "Omar Assar",
     role: "Director",
     shortBio:
-      "Omar Assar is an Egyptian film director and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
+      "Omar Assar is an Egyptian film director, producer and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
     biography: [
-      "Omar Assar is an Egyptian film director and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, he has developed a career spanning feature films, television series, commercials, music videos, and theatrical productions.",
+      "Omar Assar is an Egyptian film director, Producer and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, he has developed a career spanning feature films, television series, commercials, music videos, and theatrical productions.",
       "His experience as a First Assistant Director includes Al Frensawy (2026), Walad Bent Shayeb (2025), Ala Nesbet Moshahda (2024), and Wesh W Dahr (2022). He also served as Executive Director on the feature film Meen Yesadaq (2024). These experiences have strengthened his understanding of the relationship between creative direction, performance, and the practical demands of production.",
       "Alongside his work on larger productions, Omar has directed independent short films, music videos, and theatrical performances, including Louder Than Shame (2026).",
       "His approach to filmmaking brings together visual storytelling, performance-driven direction, and an understanding of both the artistic and technical sides of the filmmaking process. Through Ninety 4 Film, he contributes to the company's creative development, directing approach, and the process of translating ideas into screen productions.",
@@ -240,10 +240,10 @@ export const team = [
     role: "Producer",
 
     shortBio:
-      "Ahmed El-Ganzory is a film and television production professional with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on the operational side of storytelling.",
+      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film, with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on production operations.",
 
     biography: [
-      "Ahmed El-Ganzory is a film and television production professional whose experience spans scripted series, short-form cinema, and major film industry events.",
+      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film whose experience spans scripted television, short films, and major film industry events.",
 
       "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
 
@@ -335,7 +335,7 @@ export const team = [
     biography: [
       "Adham Ehab Hamed is Head of Post-Production at Ninety 4 Film, with 14 years of experience in cinematography across television series, feature films, commercials, and digital media.",
 
-      "Beginning his career at a young age as a production coordinator at Vibration Studios, Adham developed his understanding of production workflows before progressing into post-production leadership.",
+      "Beginning his career at a young age as a production coordinator, Adham developed his understanding of production workflows before progressing into post-production leadership.",
 
       "His expertise spans cinematography, editing, color grading, HDR and Dolby Vision workflows, and post-production supervision. Drawing on his experience both on set and in post-production, he brings an understanding of how decisions made during filming shape the creative and technical possibilities of the finished work.",
 
@@ -462,7 +462,8 @@ export const team = [
     shortBio:
       "Farris Hanafy is a production coordinator and public relations professional whose work brings together project management, client relations, and creative production.",
     biography: [
-      "Farris Hanafy is a production coordinator and public relations professional whose work brings together project management, client relations, and creative production. He coordinates production schedules, supports collaboration across teams, and manages communication with clients and partners. Alongside this work, Farris is a creative writer, voice actor, and voice-over artist working in English and Arabic. His experience on both the creative and operational sides of media gives him a well-rounded understanding of how to bring a production from concept to completion.",
+      "Farris Hanafy is a production coordinator and public relations professional whose work brings together project management, client relations, and creative production.",
+      "He coordinates production schedules, supports collaboration across teams, and manages communication with clients and partners. Alongside this work, Farris is a creative writer, voice actor, and voice-over artist working in English and Arabic. His experience on both the creative and operational sides of media gives him a well-rounded understanding of how to bring a production from concept to completion.",
     ],
     expertise: [
       "Production Coordination between departments.",

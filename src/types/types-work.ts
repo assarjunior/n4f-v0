@@ -32,6 +32,8 @@ export const PRODUCTION_ROLES = [
   "Creative Development",
   "Production Execution",
   "On-Set Production Execution",
+  "Media Coverage",
+  "Post House",
   "Other",
 ] as const;
 
