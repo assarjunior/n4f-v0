@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowLeft, ArrowRight } from "lucide-react";
 
 import type { TeamMember } from "@/types/types-team";
 import { TeamCreditsGrid } from "./TeamCreditsGrid";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 type TeamProfileProps = {
   member: TeamMember;
@@ -25,6 +26,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
           <Link
             href="/company#team"
             className="
+              n4f-hero-reveal
               group inline-flex items-center gap-3
               border-b border-brand-maroon/50 pb-2
               font-sans text-xs font-bold
@@ -36,6 +38,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               focus-visible:outline-brand-orange
               motion-reduce:transition-none
             "
+            style={{ animationDelay: "150ms" }}
           >
             <ArrowLeft
               aria-hidden="true"
@@ -62,9 +65,10 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
             <div className="flex min-w-0 flex-col items-start">
               <p
                 className="
-                  mb-7 font-sans text-xs font-bold
+                  n4f-hero-reveal mb-7 font-sans text-xs font-bold
                   uppercase tracking-[0.2em]
                 "
+                style={{ animationDelay: "250ms" }}
               >
                 Ninety 4 Film / The People
               </p>
@@ -72,19 +76,24 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               <h1
                 id="member-name"
                 className="
+                  n4f-hero-reveal
                   max-w-4xl font-display
                   text-[clamp(2.8rem,5.3vw,7rem)]
                   uppercase leading-[1.02]
                   tracking-[-0.035em]
                   wrap-break-word
                 "
+                style={{ animationDelay: "350ms" }}
               >
                 {member.name}
                 <span className="text-brand-orange">.</span>
               </h1>
 
               {/* POSITION */}
-              <div className="mt-8 border-l-2 border-brand-orange pl-5">
+              <div
+                className="n4f-hero-reveal mt-8 border-l-2 border-brand-orange pl-5"
+                style={{ animationDelay: "550ms" }}
+              >
                 <p
                   className="
                     max-w-xl font-sans text-base
@@ -100,11 +109,13 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               {/* SHORT BIOGRAPHY */}
               <p
                 className="
+                n4f-hero-reveal
                   mt-10 max-w-2xl font-sans
                   text-base leading-[1.85]
                   text-brand-maroon/85
                   md:text-lg
                 "
+                style={{ animationDelay: "700ms" }}
               >
                 {member.shortBio}
               </p>
@@ -112,7 +123,9 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               {/* BIOGRAPHY SCROLL LINK */}
               <Link
                 href="#biography"
+                style={{ animationDelay: "850ms" }}
                 className="
+                  n4f-hero-reveal
                   group mt-10 inline-flex items-center
                   gap-3 border-b border-brand-maroon
                   pb-2 font-sans text-xs font-bold
@@ -142,11 +155,13 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
             {/* RIGHT — CINEMATIC PORTRAIT */}
             <figure
               className="
-                relative mx-auto aspect-4/5
-                w-full max-w-140
-                overflow-hidden
-                bg-brand-maroon
-              "
+                          n4f-hero-reveal
+                          relative mx-auto aspect-4/5
+                          w-full max-w-140
+                          overflow-hidden
+                          bg-brand-maroon
+                        "
+              style={{ animationDelay: "500ms" }}
             >
               <Image
                 src={image.src}
@@ -208,7 +223,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               lg:gap-20
             "
           >
-            <div className="min-w-0">
+            <ScrollReveal className="min-w-0">
               <p
                 className="
                   mb-7 font-sans text-xs
@@ -238,10 +253,10 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
                 aria-hidden="true"
                 className="mt-9 h-1 w-20 bg-brand-orange"
               />
-            </div>
+            </ScrollReveal>
 
             {/* FULL BIOGRAPHY FROM TEAM DATA */}
-            <div className="max-w-3xl space-y-6">
+            <ScrollReveal className="max-w-3xl space-y-6">
               {member.biography.map((paragraph, index) => (
                 <p
                   key={index}
@@ -254,7 +269,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
                   {paragraph}
                 </p>
               ))}
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* EXPERTISE */}
@@ -268,7 +283,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
                 lg:gap-20
               "
             >
-              <div>
+              <ScrollReveal>
                 <p
                   className="
                     mb-5 font-sans text-xs
@@ -282,55 +297,40 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
 
                 <h2
                   id="expertise-heading"
-                  className="
-                    font-display
-                    text-[clamp(2rem,3.6vw,4.2rem)]
-                    leading-[1.08]
-                  "
+                  className="font-display text-[clamp(2rem,3.6vw,4.2rem)] leading-[1.08]"
                 >
-                  WHAT HE
+                  WHAT THEY
                   <br />
                   BRING
                   <span className="text-brand-orange">.</span>
                 </h2>
-              </div>
+              </ScrollReveal>
 
-              <ul
-                aria-labelledby="expertise-heading"
-                className="
-                  grid list-none gap-x-8
-                  sm:grid-cols-2
-                "
-              >
-                {member.expertise.map((expertise) => (
-                  <li
-                    key={expertise}
-                    className="
-                      flex items-center
-                      border-b border-brand-beige/20
-                      py-5
-                    "
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="
-                        mr-4 h-1.5 w-1.5
-                        shrink-0 bg-brand-orange
-                      "
-                    />
-
-                    <span
-                      className="
-                        font-sans text-sm font-semibold
-                        leading-relaxed
-                        text-brand-beige md:text-base
-                      "
+              <ScrollReveal className="n4f-expertise-reveal">
+                <ul
+                  aria-labelledby="expertise-heading"
+                  className="grid list-none gap-x-8 sm:grid-cols-2"
+                >
+                  {member.expertise.map((expertise, index) => (
+                    <li
+                      key={expertise}
+                      className="n4f-expertise-item flex items-center border-b border-brand-beige/20 py-5"
+                      style={{
+                        animationDelay: `${index * 160}ms`,
+                      }}
                     >
-                      {expertise}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                      <span
+                        aria-hidden="true"
+                        className="mr-4 h-1.5 w-1.5 shrink-0 bg-brand-orange"
+                      />
+
+                      <span className="font-sans text-sm font-semibold leading-relaxed text-brand-beige md:text-base">
+                        {expertise}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </ScrollReveal>
             </div>
           )}
         </div>
@@ -342,45 +342,49 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
         className="bg-brand-beige text-brand-maroon"
       >
         <div className="container-editorial py-20 md:py-28 lg:py-32">
-          <p
-            id="philosophy-heading"
-            className="
+          <ScrollReveal trigger="early">
+            <p
+              id="philosophy-heading"
+              className="
               font-sans text-xs font-bold uppercase
               tracking-[0.22em]
             "
-          >
-            03 / Personal Philosophy
-          </p>
+            >
+              03 / Personal Philosophy
+            </p>
+          </ScrollReveal>
 
-          <blockquote
-            className="
+          <ScrollReveal>
+            <blockquote
+              className="
               mt-12 max-w-6xl
               border-l-4 border-brand-orange
               pl-6 md:mt-16 md:pl-10
               lg:pl-14
             "
-          >
-            <p
-              className="
+            >
+              <p
+                className="
                 font-display
                 text-[clamp(2rem,4vw,4.9rem)]
                 leading-[1.14]
                 tracking-tight
               "
-            >
-              &ldquo;{member.quote}&rdquo;
-            </p>
+              >
+                &ldquo;{member.quote}&rdquo;
+              </p>
 
-            <footer
-              className="
+              <footer
+                className="
                 mt-10 font-sans text-sm
                 font-bold uppercase
                 tracking-[0.15em] md:mt-14
               "
-            >
-              — {member.name}
-            </footer>
-          </blockquote>
+              >
+                — {member.name}
+              </footer>
+            </blockquote>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -403,7 +407,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
               lg:items-end lg:gap-16
             "
           >
-            <div>
+            <ScrollReveal>
               <p
                 className="
                   mb-7 font-sans text-xs
@@ -428,20 +432,22 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
                 WORK
                 <span className="text-brand-orange">.</span>
               </h2>
-            </div>
+            </ScrollReveal>
 
-            <p
-              className="
+            <ScrollReveal>
+              <p
+                className="
                 max-w-xl font-sans text-sm
                 leading-relaxed text-brand-beige/75
                 md:text-base
               "
-            >
-              A selection of individual professional experience across film,
-              television, and production. Credits reflect the member&apos;s own
-              contribution, independently of Ninety 4 Film&apos;s company
-              portfolio.
-            </p>
+              >
+                A selection of individual professional experience across film,
+                television, and production. Credits reflect the member&apos;s
+                own contribution, independently of Ninety 4 Film&apos;s company
+                portfolio.
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* EDITORIAL PROJECT GALLERY */}

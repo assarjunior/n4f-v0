@@ -568,3 +568,51 @@
     animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
+
+/* ============================================================
+   NINETY 4 FILM — TEAM EXPERTISE STAGGERED REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Parent controls the trigger without animating itself */
+  .n4f-scroll-reveal.n4f-expertise-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Hide individual entries until the trigger fires */
+  .n4f-expertise-reveal[data-reveal-state="pending"] .n4f-expertise-item {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Reveal each entry using its indexed delay */
+  .n4f-expertise-reveal[data-reveal-state="visible"] .n4f-expertise-item {
+    animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ============================================================
+   NINETY 4 FILM — TEAM CREDITS GRID STAGGERED REVEAL
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Shared trigger only — no parent animation */
+  .n4f-scroll-reveal.n4f-team-credits-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* All cards start hidden */
+  .n4f-team-credits-reveal[data-reveal-state="pending"] .n4f-team-credit-item {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  /* One trigger starts the complete staggered sequence */
+  .n4f-team-credits-reveal[data-reveal-state="visible"] .n4f-team-credit-item {
+    animation: n4f-credit-enter 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
