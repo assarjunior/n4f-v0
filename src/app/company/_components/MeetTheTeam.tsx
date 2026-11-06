@@ -12,7 +12,7 @@ export function MeetTheTeam() {
     <section
       id="team"
       aria-labelledby="team-heading"
-      className="scroll-mt-24 bg-brand-maroon text-brand-beige"
+      className="bg-brand-maroon text-brand-beige"
     >
       <div className="container-editorial py-20 md:py-28 lg:py-32">
         {/* SECTION INTRODUCTION */}
@@ -79,6 +79,8 @@ export function MeetTheTeam() {
           {members.map((member) => {
             const nameId = `team-name-${member.slug}`;
             const roleId = `team-role-${member.slug}`;
+            const directoryPortrait =
+              member.directoryPortrait ?? member.portrait;
 
             return (
               <li key={member.id} className="min-w-0">
@@ -109,27 +111,27 @@ export function MeetTheTeam() {
                     "
                     >
                       <Image
-                        src={member.portrait.src}
-                        alt={member.portrait.alt}
+                        src={directoryPortrait.src}
+                        alt={directoryPortrait.alt}
                         fill
                         sizes="
-                        (max-width: 639px) 100vw,
-                        (max-width: 1279px) 50vw,
-                        25vw
-                      "
+                                (max-width: 639px) 100vw,
+                                (max-width: 1279px) 50vw,
+                                25vw
+                              "
                         style={{
                           objectPosition:
-                            member.portrait.objectPosition ?? "center",
+                            directoryPortrait.objectPosition ?? "center",
                         }}
                         className="
-                        object-cover
-                        transition-transform duration-700
-                        ease-out
-                        group-hover:scale-[1.045]
-                        group-focus-visible:scale-[1.045]
-                        motion-reduce:transition-none
-                        motion-reduce:transform-none
-                      "
+                                    object-cover
+                                    transition-transform duration-700
+                                    ease-out
+                                    group-hover:scale-[1.045]
+                                    group-focus-visible:scale-[1.045]
+                                    motion-reduce:transition-none
+                                    motion-reduce:transform-none
+                                  "
                       />
 
                       {/* SUBTLE PHOTOGRAPHIC GRADIENT */}

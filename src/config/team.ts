@@ -36,6 +36,7 @@ export const team = [
     portrait: {
       src: "/team/ahmed-ehab.jpeg",
       alt: "Portrait of Ahmed Ehab Elsaeed",
+      objectPosition: "center 10%",
     },
 
     credits: [
@@ -145,10 +146,18 @@ export const team = [
     ],
     quote:
       "Every frame should make you feel something. Every decision behind it should help make that feeling possible.",
+
     portrait: {
       src: "/media/497714934_10232050351896485_4138977675105830512_n.webp",
-      alt: "Omar Assar profile picture",
+      alt: "Omar Assar on a film production set",
     },
+
+    directoryPortrait: {
+      src: "/team/omar-assar-directory.webp",
+      alt: "Omar Assar on a film production set",
+      objectPosition: "center",
+    },
+
     credits: [
       {
         title: "Al Frensawy",
@@ -366,6 +375,7 @@ export const team = [
     portrait: {
       src: "/media/WhatsApp-Image-2026-11-05-at-15.51.11.webp",
       alt: "adham hamed posing in picutre",
+      objectPosition: "center 5%",
     },
 
     credits: [

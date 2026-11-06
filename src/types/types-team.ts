@@ -49,6 +49,9 @@ export type TeamMember = {
 
   //? Photography
   portrait: TeamImage;
+  //! Optional image specifically cropped for the team directory.
+  //! Falls back to portrait when omitted.
+  directoryPortrait?: TeamImage;
 
   //? Professional Career
   credits: readonly TeamCredit[];

@@ -177,14 +177,15 @@ export default function ContactPage() {
 
                 <div
                   className="
-                    relative isolate
-                    aspect-7/4
-                    min-h-80 w-full
-                    overflow-hidden
-                    border border-brand-orange/70
-                    bg-brand-maroon
-                    text-brand-beige
-                    sm:min-h-72
+                   relative isolate
+                   aspect-4/3
+                   min-h-64 w-full
+                   overflow-hidden
+                   border border-brand-orange/70
+                   bg-brand-maroon
+                   text-brand-beige
+                   sm:aspect-7/4
+                   sm:min-h-0
                   "
                 >
                   {/* INNER EDITORIAL BORDER */}
@@ -205,10 +206,10 @@ export default function ContactPage() {
                     aria-hidden="true"
                     className="
                       pointer-events-none
-                      absolute -right-16 -top-16
-                      size-64 opacity-20
+                      absolute -right-8 -top-8
+                      size-40 opacity-15
                       sm:-right-20 sm:-top-20
-                      sm:size-80
+                      sm:size-80 sm:opacity-20
                     "
                   >
                     <Image
@@ -224,11 +225,11 @@ export default function ContactPage() {
 
                   <div
                     className="
-                      relative z-10
-                      flex h-full flex-col
-                      justify-between
-                      gap-6 p-6
-                      sm:gap-8 sm:p-9
+                     relative z-10
+                     flex h-full flex-col
+                     justify-between
+                     gap-5 p-5
+                     sm:gap-8 sm:p-9
                     "
                   >
                     {/* CARD HEADER — BRAND LOGO */}
@@ -244,7 +245,7 @@ export default function ContactPage() {
                         alt="Ninety 4 Film"
                         width={280}
                         height={70}
-                        className="h-auto w-36 sm:w-52"
+                        className="h-auto w-32 sm:w-52"
                       />
 
                       <p
