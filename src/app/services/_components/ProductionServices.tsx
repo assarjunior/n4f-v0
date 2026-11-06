@@ -1,3 +1,4 @@
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import Image from "next/image";
 
 const productionCapabilities = [
@@ -50,7 +51,7 @@ export function ProductionServices() {
         {/* INTRODUCTION + PHOTOGRAPH */}
         <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14 xl:gap-20">
           {/* EDITORIAL INTRODUCTION */}
-          <div className="flex min-w-0 flex-col justify-center">
+          <ScrollReveal className="flex min-w-0 flex-col justify-center">
             <p className="mb-8 font-sans text-xs font-bold uppercase tracking-[0.22em] text-brand-maroon/75">
               02 / Production Services
             </p>
@@ -93,36 +94,38 @@ export function ProductionServices() {
                 the project&apos;s creative and production requirements in mind.
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* CINEMATIC PRODUCTION PHOTOGRAPH */}
-          <figure className="relative isolate min-h-80 overflow-hidden bg-brand-maroon sm:min-h-105 lg:min-h-145">
-            <Image
-              src="/capabilities/production-services.png"
-              alt="Film production crew working on location"
-              fill
-              sizes="(max-width: 1023px) 100vw, 45vw"
-              className="object-cover object-center"
-            />
+          <ScrollReveal className="h-full">
+            <figure className="relative isolate h-full min-h-80 overflow-hidden bg-brand-maroon sm:min-h-105 lg:min-h-145">
+              <Image
+                src="/capabilities/production-services.png"
+                alt="Film production crew working on location"
+                fill
+                sizes="(max-width: 1023px) 100vw, 45vw"
+                className="object-cover object-center"
+              />
 
-            {/* PHOTOGRAPHIC OVERLAY */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/65 via-transparent to-transparent"
-            />
+              {/* PHOTOGRAPHIC OVERLAY */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/65 via-transparent to-transparent"
+              />
 
-            {/* EDITORIAL PHOTO CAPTION */}
-            <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-3 p-6 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-beige md:p-8">
-              <span>Production On The Ground</span>
-              <span className="shrink-0 text-brand-orange">Egypt</span>
-            </figcaption>
-          </figure>
+              {/* EDITORIAL PHOTO CAPTION */}
+              <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-3 p-6 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-beige md:p-8">
+                <span>Production On The Ground</span>
+                <span className="shrink-0 text-brand-orange">Egypt</span>
+              </figcaption>
+            </figure>
+          </ScrollReveal>
         </div>
 
         {/* CAPABILITIES INTRODUCTION */}
         <div className="mt-20 border-t border-brand-maroon/25 pt-10 md:mt-28 md:pt-12">
           <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-end md:gap-12">
-            <div>
+            <ScrollReveal>
               <p className="mb-4 font-sans text-xs font-bold uppercase tracking-[0.2em] text-brand-maroon/70">
                 Production Support
               </p>
@@ -130,33 +133,34 @@ export function ProductionServices() {
               <h3 className="font-display text-[clamp(2rem,3.7vw,4rem)] leading-[1.05]">
                 WHAT WE HANDLE.
               </h3>
-            </div>
+            </ScrollReveal>
 
-            <p className="max-w-md font-sans text-sm leading-relaxed text-brand-maroon/80 md:text-base">
-              The production infrastructure and coordination each project needs,
-              built around its specific scope, creative direction and
-              challenges.
-            </p>
+            <ScrollReveal className="max-w-md">
+              <p className="max-w-md font-sans text-sm leading-relaxed text-brand-maroon/80 md:text-base">
+                The production infrastructure and coordination each project
+                needs, built around its specific scope, creative direction and
+                challenges.
+              </p>
+            </ScrollReveal>
           </div>
 
           {/* SIX CORE PRODUCTION CAPABILITIES */}
           <ul className="mt-10 grid list-none grid-cols-1 gap-x-8 gap-y-9 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-12">
             {productionCapabilities.map((capability) => (
-              <li
-                key={capability.number}
-                className="flex flex-col border-t border-brand-maroon/30 pt-6"
-              >
-                <span className="mb-5 font-sans text-xs font-semibold tracking-[0.15em] text-brand-orange">
-                  {capability.number} / 06
-                </span>
+              <li key={capability.number} className="min-w-0">
+                <ScrollReveal className="flex h-full flex-col border-t border-brand-maroon/30 pt-6">
+                  <span className="mb-5 font-sans text-xs font-semibold tracking-[0.15em] text-brand-orange">
+                    {capability.number} / 06
+                  </span>
 
-                <h4 className="max-w-lg font-sans text-lg font-bold leading-snug md:text-xl">
-                  {capability.title}
-                </h4>
+                  <h4 className="max-w-lg font-sans text-lg font-bold leading-snug md:text-xl">
+                    {capability.title}
+                  </h4>
 
-                <p className="mt-4 max-w-sm font-sans text-sm leading-relaxed text-brand-maroon/80 md:text-base">
-                  {capability.description}
-                </p>
+                  <p className="mt-4 max-w-sm font-sans text-sm leading-relaxed text-brand-maroon/80 md:text-base">
+                    {capability.description}
+                  </p>
+                </ScrollReveal>
               </li>
             ))}
           </ul>

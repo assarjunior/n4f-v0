@@ -1,5 +1,6 @@
 "use client";
 
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -39,7 +40,7 @@ const productionStages = [
     title: "Physical Production",
     statement: "Where planning meets the frame.",
     description:
-      "This is where the creative vision becomes a working production. We coordinate crews, departments, equipment and daily operations while keeping communication clear decisions focused on the story, the schedule and the production's priorities.",
+      "This is where the creative vision becomes a working production. We coordinate crews, departments, equipment and daily operations while keeping communication clear and decisions focused on the story, the schedule and the production's priorities.",
     capabilities: [
       "On-Set Production Management",
       "Department Coordination",
@@ -54,7 +55,7 @@ const productionStages = [
     title: "Post-Production",
     statement: "The story takes its final shape.",
     description:
-      "Once filming ends, we help guide the work through editorial and finishing. By coordinating post-production teams and workflows, we aim to preserve the creative direction while bringing picture, sound and technical requirements together",
+      "Once filming ends, we help guide the work through editorial and finishing. By coordinating post-production teams and workflows, we aim to preserve the creative direction while bringing picture, sound and technical requirements together.",
     capabilities: [
       "Editing Supervision",
       "Sound & Color",
@@ -97,7 +98,7 @@ export function ProductionProcess() {
       <div className="container-editorial py-20 md:py-28 lg:py-32">
         {/* Section Intro */}
         <div className="mb-12 grid gap-8 md:mb-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-16">
-          <div>
+          <ScrollReveal>
             <p className="mb-7 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-brand-orange">
               03 / Our Process
             </p>
@@ -110,14 +111,15 @@ export function ProductionProcess() {
               <br />A WAY FORWARD
               <span className="text-brand-orange">.</span>
             </h2>
-          </div>
-
-          <p className="max-w-xl font-sans text-base leading-relaxed text-brand-beige/80 md:text-lg">
-            From the first brief to final delivery, we approach production as
-            one connected process. Every stage brings creative decisions,
-            technical requirements and operational realities together to keep
-            the project moving forward.
-          </p>
+          </ScrollReveal>
+          <ScrollReveal className="max-w-xl">
+            <p className="font-sans text-base leading-relaxed text-brand-beige/80 md:text-lg">
+              From the first brief to final delivery, we approach production as
+              one connected process. Every stage brings creative decisions,
+              technical requirements and operational realities together to keep
+              the project moving forward.
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Accordion */}
@@ -178,7 +180,11 @@ export function ProductionProcess() {
                         aria-hidden="true"
                         size={22}
                         strokeWidth={1.5}
-                        className={`    ${isOpen ? "rotate-0" : "rotate-270"}`}
+                        className={`
+                                      transition-transform duration-300 ease-in-out
+                                      motion-reduce:transition-none
+                                      ${isOpen ? "rotate-0" : "rotate-270"}
+                                    `}
                       />
                     </span>
                   </button>
@@ -206,11 +212,11 @@ export function ProductionProcess() {
                   <div className="min-h-0 overflow-hidden">
                     <div
                       className="
-        grid gap-8 pb-10
-        md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]
-        md:gap-12 md:pb-14
-        lg:pl-24
-      "
+                                    grid gap-8 pb-10
+                                    md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]
+                                    md:gap-12 md:pb-14
+                                    lg:pl-24
+                                  "
                     >
                       {/* DESCRIPTION */}
                       <div className="max-w-2xl">

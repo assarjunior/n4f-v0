@@ -9,7 +9,10 @@ export function ServicesHero() {
     >
       <div className="container-editorial w-full py-20 md:py-28 lg:py-12">
         {/* EYEBROW */}
-        <div className="mb-10 flex items-center gap-4 md:mb-14">
+        <div
+          className="n4f-hero-reveal mb-10 flex items-center gap-4 md:mb-14"
+          style={{ animationDelay: "150ms" }}
+        >
           <span aria-hidden="true" className="h-px w-10 bg-brand-orange" />
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-orange">
             Ninety 4 Film / Our Services
@@ -19,7 +22,8 @@ export function ServicesHero() {
         {/* MAIN HEADLINE */}
         <h1
           id="services-hero-heading"
-          className="max-w-[30ch] font-display text-[clamp(3rem,6.4vw,7.8rem)] leading-[0.98] tracking-[-0.04em]"
+          className="n4f-hero-reveal max-w-[30ch] font-display text-[clamp(3rem,6.4vw,7.8rem)] leading-[0.98] tracking-[-0.04em]"
+          style={{ animationDelay: "350ms" }}
         >
           <span className="block">THE VISION MATTERS.</span>
           <span className="mt-3 block text-brand-orange md:mt-4">
@@ -30,7 +34,10 @@ export function ServicesHero() {
         {/* EDITORIAL INTRODUCTION */}
         <div className="mt-12 grid gap-10 border-t border-brand-beige/25 pt-10 md:mt-16 md:pt-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(15rem,0.6fr)] lg:gap-20">
           {/* DESCRIPTION */}
-          <div className="max-w-3xl space-y-6 font-sans">
+          <div
+            className="n4f-hero-reveal max-w-3xl space-y-6 font-sans"
+            style={{ animationDelay: "600ms" }}
+          >
             <p className="text-lg leading-relaxed text-brand-beige md:text-xl">
               Every production starts with a vision. A story worth telling, an
               idea worth exploring, or a moment worth capturing. Bringing that
@@ -38,7 +45,6 @@ export function ServicesHero() {
               experience, collaboration, careful planning, and the ability to
               deliver when it matters.
             </p>
-
             <p className="text-base leading-relaxed text-brand-beige/85 md:text-lg">
               At Ninety 4 Film, we bring creative understanding and hands-on
               production expertise together. From narrative and documentary, and
@@ -47,7 +53,6 @@ export function ServicesHero() {
               while building the right people, resources and production process
               around it.
             </p>
-
             <p className="text-base leading-relaxed text-brand-beige/75 md:text-lg">
               Behind every production is a team that understands both sides of
               filmmaking — the creative decisions that shape the story and the
@@ -56,7 +61,10 @@ export function ServicesHero() {
           </div>
 
           {/* CTA AREA */}
-          <div className="flex flex-col items-start justify-end gap-7">
+          <div
+            className="n4f-hero-reveal flex flex-col items-start justify-end gap-7"
+            style={{ animationDelay: "850ms" }}
+          >
             {/* MEET THE TEAM */}
             <Link
               href="/company#team"
@@ -78,7 +86,6 @@ export function ServicesHero() {
                 MEET THE TEAM.
               </span>
             </Link>
-
             {/* SCROLL TO SERVICES */}
             <Link
               href="#what-we-produce"

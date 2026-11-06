@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { TornPaperButton } from "@/components/layout/torn-paper-button";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 export function ServicesCTA() {
   return (
@@ -9,7 +10,10 @@ export function ServicesCTA() {
     >
       <div className="container-editorial">
         {/* OUTER EDITORIAL FRAME */}
-        <div className="border border-brand-beige/50 p-2 sm:p-3">
+        <ScrollReveal
+          className="border border-brand-beige/50 p-2 sm:p-3"
+          trigger="early"
+        >
           {/* TWO-TONE STATEMENT PANEL */}
           <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
             {/* LEFT — STATEMENT */}
@@ -133,7 +137,7 @@ export function ServicesCTA() {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
