@@ -20,7 +20,7 @@ export function ScrollReveal({
     const element = elementRef.current;
     if (!element) return;
 
-    const earlyTrigger = trigger == "early";
+    const earlyTrigger = trigger === "early";
     const triggerPosition = earlyTrigger ? 0.8 : 0.55;
 
     const reducedMotion = window.matchMedia(
@@ -28,26 +28,62 @@ export function ScrollReveal({
     ).matches;
 
     if (reducedMotion || !("IntersectionObserver" in window)) {
+      element.dataset.revealState = "visible";
       return;
     }
 
-    //! Only animate elements that start below
-    //! the viewport. Avoid hiding visible content
-    //! during hydration or browser restoration.
-    const rect = element.getBoundingClientRect();
+    // Elements already at or above the trigger
+    // must never be hidden.
+    const hasPassedTrigger = () =>
+      element.getBoundingClientRect().top <
+      window.innerHeight * triggerPosition;
 
-    if (rect.top < window.innerHeight * triggerPosition) {
+    if (hasPassedTrigger()) {
+      element.dataset.revealState = "visible";
       return;
     }
 
     element.dataset.revealState = "pending";
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry?.isIntersecting) return;
+    let revealed = false;
+    let frameId = 0;
+    let observer: IntersectionObserver | null = null;
 
-        element.dataset.revealState = "visible";
-        observer.disconnect();
+    function reveal() {
+      if (revealed) return;
+
+      revealed = true;
+      element!.dataset.revealState = "visible";
+
+      observer?.disconnect();
+
+      window.removeEventListener("scroll", scheduleCheck);
+      window.removeEventListener("resize", scheduleCheck);
+      window.removeEventListener("hashchange", scheduleCheck);
+    }
+
+    // Fallback for anchor navigation, browser restoration,
+    // and scroll jumps that bypass the observer threshold.
+    function checkPosition() {
+      frameId = 0;
+
+      if (hasPassedTrigger()) {
+        reveal();
+      }
+    }
+
+    // Limit position checks to one per animation frame.
+    function scheduleCheck() {
+      if (revealed || frameId !== 0) return;
+
+      frameId = window.requestAnimationFrame(checkPosition);
+    }
+
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting || (entry && hasPassedTrigger())) {
+          reveal();
+        }
       },
       {
         threshold: 0.1,
@@ -59,7 +95,28 @@ export function ScrollReveal({
 
     observer.observe(element);
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", scheduleCheck, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", scheduleCheck);
+    window.addEventListener("hashchange", scheduleCheck);
+
+    // Recheck after mounting in case the browser
+    // restores its scroll position immediately.
+    scheduleCheck();
+
+    return () => {
+      observer?.disconnect();
+
+      window.removeEventListener("scroll", scheduleCheck);
+      window.removeEventListener("resize", scheduleCheck);
+      window.removeEventListener("hashchange", scheduleCheck);
+
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
   }, [trigger]);
 
   return (

@@ -131,7 +131,7 @@ export function WhatWeProduce() {
                     id={service.id}
                     className="scroll-mt-28 target:outline-2 target:outline-offset-4 target:outline-brand-orange"
                   >
-                    <ScrollReveal className="h-full">
+                    <ScrollReveal trigger="early" className="h-full">
                       <Link
                         href={"/contact"}
                         aria-label={`Discuss ${service.title} with Ninety 4 Film`}

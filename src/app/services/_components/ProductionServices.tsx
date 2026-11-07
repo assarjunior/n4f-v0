@@ -45,7 +45,7 @@ export function ProductionServices() {
     <section
       id="production-service"
       aria-labelledby="production-services-heading"
-      className="scroll-mt-28 bg-brand-beige text-brand-maroon"
+      className="bg-brand-beige text-brand-maroon"
     >
       <div className="container-editorial py-20 md:py-28 lg:py-32">
         {/* INTRODUCTION + PHOTOGRAPH */}
