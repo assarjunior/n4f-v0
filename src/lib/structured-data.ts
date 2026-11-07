@@ -21,6 +21,7 @@ export function getHomeStructuredData() {
         "@id": ORGANIZATION_ID,
         name: company.name,
         url: SITE_ORIGIN,
+        logo: absoluteUrl("/brand/logo-maroon.png"),
         description: seoCopy.pages.home.description,
         email: company.email,
         contactPoint: {
