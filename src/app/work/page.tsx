@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ViewTransition } from "react";
 
 const workTypeLabels: Record<WorkType, string> = {
   "feature-film": "Feature Film",
@@ -144,120 +145,122 @@ export default function WorkPage() {
     (a, b) => (b.releaseYear ?? 0) - (a.releaseYear ?? 0),
   );
   return (
-    <main id="main-content" className="flex-1 bg-brand-maroon">
-      {/* Work Hero */}
-      <section
-        aria-labelledby="work-heading"
-        className="bg-brand-beige text-brand-maroon"
-      >
-        <div className="container-editorial py-20 md:py-28 lg:py-12">
-          <div
-            className="n4f-hero-reveal mb-10 flex items-center gap-4 md:mb-14 lg:mb-8"
-            style={{ animationDelay: "150ms" }}
-          >
-            <span aria-hidden="true" className="h-px w-10 bg-brand-maroon" />
-            <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-maroon">
-              Ninety 4 Film / Our Work
-            </p>
-          </div>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-end lg:gap-12">
-            <h1
-              id="work-heading"
-              className="n4f-hero-reveal font-display text-[clamp(3.5rem,8vw,9rem)] leading-[0.96] tracking-[-0.035em] lg:text-[clamp(5rem,6.5vw,7rem)]"
-              style={{ animationDelay: "350ms" }}
-            >
-              OUR
-              <br />
-              WORK
-              <span className="text-brand-orange">.</span>
-            </h1>
-
+    <ViewTransition enter="n4f-page-enter" exit="n4f-page-exit" default="none">
+      <main id="main-content" className="flex-1 bg-brand-maroon">
+        {/* Work Hero */}
+        <section
+          aria-labelledby="work-heading"
+          className="bg-brand-beige text-brand-maroon"
+        >
+          <div className="container-editorial py-20 md:py-28 lg:py-12">
             <div
-              className="n4f-hero-reveal max-w-2xl"
-              style={{ animationDelay: "550ms" }}
+              className="n4f-hero-reveal mb-10 flex items-center gap-4 md:mb-14 lg:mb-8"
+              style={{ animationDelay: "150ms" }}
             >
+              <span aria-hidden="true" className="h-px w-10 bg-brand-maroon" />
+              <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-brand-maroon">
+                Ninety 4 Film / Our Work
+              </p>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-end lg:gap-12">
+              <h1
+                id="work-heading"
+                className="n4f-hero-reveal font-display text-[clamp(3.5rem,8vw,9rem)] leading-[0.96] tracking-[-0.035em] lg:text-[clamp(5rem,6.5vw,7rem)]"
+                style={{ animationDelay: "350ms" }}
+              >
+                OUR
+                <br />
+                WORK
+                <span className="text-brand-orange">.</span>
+              </h1>
+
               <div
-                className="mb-7 h-1 w-16 bg-brand-orange"
-                aria-hidden="true"
-              />
+                className="n4f-hero-reveal max-w-2xl"
+                style={{ animationDelay: "550ms" }}
+              >
+                <div
+                  className="mb-7 h-1 w-16 bg-brand-orange"
+                  aria-hidden="true"
+                />
 
-              <div className="space-y-5 font-sans text-base leading-[1.8] text-brand-maroon/85 md:text-lg lg:space-y-4 lg:text-base lg:leading-[1.65]">
-                <p>
-                  Our portfolio brings together feature films, short films,
-                  documentaries, and major film industry events. Each project
-                  represents a different creative ambition, production
-                  challenge, and collaboration.
-                </p>
+                <div className="space-y-5 font-sans text-base leading-[1.8] text-brand-maroon/85 md:text-lg lg:space-y-4 lg:text-base lg:leading-[1.65]">
+                  <p>
+                    Our portfolio brings together feature films, short films,
+                    documentaries, and major film industry events. Each project
+                    represents a different creative ambition, production
+                    challenge, and collaboration.
+                  </p>
 
-                <p>
-                  Our involvement spans production planning, on-set execution,
-                  media coverage, full post house services, and final delivery.
-                  Beyond production and post-production, we also support
-                  short-film distribution to festivals and digital platforms,
-                  helping filmmakers connect their stories with audiences beyond
-                  the screen.
-                </p>
+                  <p>
+                    Our involvement spans production planning, on-set execution,
+                    media coverage, full post house services, and final
+                    delivery. Beyond production and post-production, we also
+                    support short-film distribution to festivals and digital
+                    platforms, helping filmmakers connect their stories with
+                    audiences beyond the screen.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Project Archive */}
+        {/* Project Archive */}
 
-      <section
-        id="projects"
-        aria-labelledby="projects-heading"
-        className="bg-brand-maroon text-brand-beige"
-      >
-        <div className="container-editorial py-20 md:py-28 lg:pt-12 lg:pb-32">
-          <div
-            className="n4f-hero-reveal mb-12 flex flex-col justify-between gap-4 border-b border-brand-beige/25 pb-7 sm:flex-row sm:items-end md:mb-16"
-            style={{ animationDelay: "700ms" }}
-          >
-            <div>
-              <h2
-                id="projects-heading"
-                className="font-display text-[clamp(2.4rem,4.2vw,4.8rem)] leading-[1.06]"
-              >
-                THE PRODUCTIONS
-                <span className="text-brand-orange">.</span>
-              </h2>
+        <section
+          id="projects"
+          aria-labelledby="projects-heading"
+          className="bg-brand-maroon text-brand-beige"
+        >
+          <div className="container-editorial py-20 md:py-28 lg:pt-12 lg:pb-32">
+            <div
+              className="n4f-hero-reveal mb-12 flex flex-col justify-between gap-4 border-b border-brand-beige/25 pb-7 sm:flex-row sm:items-end md:mb-16"
+              style={{ animationDelay: "700ms" }}
+            >
+              <div>
+                <h2
+                  id="projects-heading"
+                  className="font-display text-[clamp(2.4rem,4.2vw,4.8rem)] leading-[1.06]"
+                >
+                  THE PRODUCTIONS
+                  <span className="text-brand-orange">.</span>
+                </h2>
+              </div>
+
+              <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-brand-beige/70">
+                {String(projects.length).padStart(2, "0")}{" "}
+                {projects.length === 1 ? "Project" : "Projects"}
+              </span>
             </div>
+            {/* Project Gallery */}
+            {projects.length > 0 ? (
+              <ul className="grid w-full list-none grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-4 xl:gap-x-7 xl:gap-y-16">
+                {projects.map((project, index) => (
+                  <ArchiveProjectCard
+                    key={project.id}
+                    project={project}
+                    index={index}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <p className="font-sans text-base text-brand-beige/75">
+                Our Selected production archive is being prepared.
+              </p>
+            )}
+            {/* Closing Editorial Rule */}
+            <div className="mt-20 flex flex-col gap-3 border-t border-brand-beige/25 pt-7 md:mt-28 sm:flex-row sm:items-center sm:justify-between">
+              <p className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">
+                Ninety 4 Film / Work
+              </p>
 
-            <span className="font-sans text-xs font-semibold uppercase tracking-[0.15em] text-brand-beige/70">
-              {String(projects.length).padStart(2, "0")}{" "}
-              {projects.length === 1 ? "Project" : "Projects"}
-            </span>
+              <p className="font-sans text-xs uppercase tracking-[0.15em] text-brand-beige/65">
+                Stories worth telling
+              </p>
+            </div>
           </div>
-          {/* Project Gallery */}
-          {projects.length > 0 ? (
-            <ul className="grid w-full list-none grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-4 xl:gap-x-7 xl:gap-y-16">
-              {projects.map((project, index) => (
-                <ArchiveProjectCard
-                  key={project.id}
-                  project={project}
-                  index={index}
-                />
-              ))}
-            </ul>
-          ) : (
-            <p className="font-sans text-base text-brand-beige/75">
-              Our Selected production archive is being prepared.
-            </p>
-          )}
-          {/* Closing Editorial Rule */}
-          <div className="mt-20 flex flex-col gap-3 border-t border-brand-beige/25 pt-7 md:mt-28 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-brand-orange">
-              Ninety 4 Film / Work
-            </p>
-
-            <p className="font-sans text-xs uppercase tracking-[0.15em] text-brand-beige/65">
-              Stories worth telling
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </ViewTransition>
   );
 }

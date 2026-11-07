@@ -6,6 +6,7 @@ import { ServicesCTA } from "./_components/ServicesCTA";
 import { WhatWeProduce } from "./_components/WhatWeProduce";
 import { seoCopy } from "@/config/seo";
 import { createSocialMetadata } from "@/lib/social-metadata";
+import { ViewTransition } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -25,12 +26,14 @@ export const metadata: Metadata = {
 
 export default function ServicePage() {
   return (
-    <main id="main-content" className="flex-1">
-      <ServicesHero />
-      <WhatWeProduce />
-      <ProductionServices />
-      <ProductionProcess />
-      <ServicesCTA />
-    </main>
+    <ViewTransition enter="n4f-page-enter" exit="n4f-page-exit" default="none">
+      <main id="main-content" className="flex-1">
+        <ServicesHero />
+        <WhatWeProduce />
+        <ProductionServices />
+        <ProductionProcess />
+        <ServicesCTA />
+      </main>
+    </ViewTransition>
   );
 }

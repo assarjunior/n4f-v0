@@ -12,6 +12,7 @@ import { TeamProfile } from "../../_components/TeamProfile";
 import { createSocialMetadata } from "@/lib/social-metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getTeamStructuredData } from "@/lib/structured-data";
+import { ViewTransition } from "react";
 
 export const instant = false;
 
@@ -87,7 +88,14 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
   return (
     <>
       <JsonLd data={getTeamStructuredData(member)} />
-      <TeamProfile member={member} nextMember={nextMember} />
+
+      <ViewTransition
+        enter="n4f-page-enter"
+        exit="n4f-page-exit"
+        default="none"
+      >
+        <TeamProfile member={member} nextMember={nextMember} />
+      </ViewTransition>
     </>
   );
 }

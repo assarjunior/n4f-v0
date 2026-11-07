@@ -8,6 +8,7 @@ import { seoCopy } from "@/config/seo";
 import { createSocialMetadata } from "@/lib/social-metadata";
 import { getHomeStructuredData } from "@/lib/structured-data";
 import { Metadata } from "next";
+import { ViewTransition } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -27,13 +28,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main id="main-content" className="flex-1">
-      <JsonLd data={getHomeStructuredData()} />
-      <Hero />
-      <SelectedWorkSection />
-      <WhoWeAre />
-      <WhatWeDo />
-      <ContactSection />
-    </main>
+    <ViewTransition enter="n4f-page-enter" exit="n4f-page-exit" default="none">
+      <main id="main-content" className="flex-1">
+        <JsonLd data={getHomeStructuredData()} />
+        <Hero />
+        <SelectedWorkSection />
+        <WhoWeAre />
+        <WhatWeDo />
+        <ContactSection />
+      </main>
+    </ViewTransition>
   );
 }

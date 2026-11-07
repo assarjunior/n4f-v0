@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-
+import { ViewTransition } from "react";
 import {
   getPublishedWork,
   getWorkBySlug,
@@ -91,7 +91,14 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
   return (
     <>
       <JsonLd data={getWorkStructuredData(project)} />
-      <ProjectDetail project={project} nextProject={nextProject} />
+
+      <ViewTransition
+        enter="n4f-page-enter"
+        exit="n4f-page-exit"
+        default="none"
+      >
+        <ProjectDetail project={project} nextProject={nextProject} />
+      </ViewTransition>
     </>
   );
 }
