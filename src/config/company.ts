@@ -1,8 +1,8 @@
 import {
   FaFacebookF,
-  FaImdb,
+  // FaImdb,
   FaInstagram,
-  FaLinkedin,
+  // FaLinkedin,
   FaTiktok,
   FaVimeo,
   FaYoutube,
@@ -44,16 +44,17 @@ export const company = {
       href: "https://www.youtube.com/@ninety4film",
       icon: FaYoutube,
     },
-    {
-      label: "IMDb",
-      href: "https://www.imdb.com/name/nm7120668/",
-      icon: FaImdb,
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/ninety4film",
-      icon: FaLinkedin,
-    },
+    // TODO: Restore when official company profiles are verified.
+    // {
+    //   label: "IMDb",
+    //   href: "https://www.imdb.com/name/nm7120668/",
+    //   icon: FaImdb,
+    // },
+    // {
+    //   label: "LinkedIn",
+    //   href: "https://www.linkedin.com/in/ninety4film",
+    //   icon: FaLinkedin,
+    // },
     {
       label: "Tiktok",
       href: "https://www.tiktok.com/@ninety4film",
