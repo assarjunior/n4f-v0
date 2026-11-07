@@ -83,14 +83,34 @@ export function Header() {
                     href={item.href}
                     aria-current={isActive ? "page" : undefined}
                     className={`
-                      relative inline-flex py-3
-                      font-sans text-xs font-semibold
-                      uppercase tracking-[0.2em]
-                      transition-colors duration-300
-                      hover:text-[#DA8A4B]
-                      focus-visible:text-[#DA8A4B]
-                      ${isActive ? "text-[#DA8A4B]" : "text-brand-beige"}
-                    `}
+  relative inline-flex py-3
+  font-sans text-xs font-semibold
+  uppercase tracking-[0.2em]
+  transition-colors duration-300
+  hover:text-[#DA8A4B]
+  focus-visible:text-[#DA8A4B]
+
+  after:absolute
+  after:inset-x-0
+  after:bottom-1
+  after:h-px
+  after:origin-left
+  after:bg-brand-orange
+  after:content-['']
+  after:transition-transform
+  after:duration-300
+  after:ease-out
+
+  hover:after:scale-x-100
+  focus-visible:after:scale-x-100
+  motion-reduce:after:transition-none
+
+  ${
+    isActive
+      ? "text-[#DA8A4B] after:scale-x-100"
+      : "text-brand-beige after:scale-x-0"
+  }
+`}
                   >
                     {item.label}
                   </Link>

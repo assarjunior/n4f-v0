@@ -216,12 +216,26 @@ export function MobileNav({ phase, onRequestClose, onClose }: MobileNavProps) {
           "
         >
           <ul className="flex flex-col gap-5 sm:gap-7">
-            {navigation.map((item) => {
+            {navigation.map((item, index) => {
               const isActive =
                 pathname === item.href || pathname.startsWith(`${item.href}/`);
 
               return (
-                <li key={item.href}>
+                <li
+                  key={item.href}
+                  className={`
+    transition-[opacity,transform]
+    duration-500
+    ease-[cubic-bezier(0.22,1,0.36,1)]
+    ${entered ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
+    motion-reduce:translate-y-0
+    motion-reduce:opacity-100
+    motion-reduce:transition-none
+  `}
+                  style={{
+                    transitionDelay: `${index * 70}ms`,
+                  }}
+                >
                   <Link
                     href={item.href}
                     onClick={onClose}
