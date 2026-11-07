@@ -36,7 +36,7 @@ export const seoCopy: {
     },
 
     contact: {
-      title: "Contact Ninety 4 Film | Ninety 4 Film",
+      title: "Contact Us | Ninety 4 Film",
       description:
         "Discuss your next film, series, commercial or production in Egypt with Ninety 4 Film. Contact our team directly by email or WhatsApp.",
     },
@@ -82,9 +82,9 @@ export const seoCopy: {
     },
 
     "ahmed-ganzory": {
-      title: "Ahmed El-Ganzory — Co-Founder & Producer | Ninety 4 Film",
+      title: "Ahmed El-Ganzory — Producer | Ninety 4 Film",
       description:
-        "Meet Ahmed El-Ganzory, co-founder and producer at Ninety 4 Film, with experience in line production, unit production management, and production coordination.",
+        "Meet Ahmed El-Ganzory, producer at Ninety 4 Film, with experience in line production, unit production management, and production coordination.",
     },
 
     "adham-hamed": {
