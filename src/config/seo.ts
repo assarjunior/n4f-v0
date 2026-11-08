@@ -92,6 +92,11 @@ export const seoCopy: {
       description:
         "Meet Adham Hamed, Head of Post-Production at Ninety 4 Film, specializing in editing, color grading, finishing and production-to-post workflows.",
     },
+    "edward-nabil": {
+      title: "Edward Nabil — Head of Production | Ninety 4 Film",
+      description:
+        "Meet Edward Nabil, Head of Production at Ninety 4 Film, with over 20 years of experience in film, television, commercials, production management and budgeting.",
+    },
     "farris-hanafy": {
       title: "Farris Hanafy — Production Coordinator | Ninety 4 Film",
       description:

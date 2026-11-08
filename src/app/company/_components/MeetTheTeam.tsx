@@ -67,24 +67,16 @@ export function MeetTheTeam() {
         </div>
 
         {/* TEAM DIRECTORY */}
-        <ul
-          className="
-            grid list-none grid-cols-1
-            gap-x-5 gap-y-12
-            sm:grid-cols-2
-            lg:gap-x-6 lg:gap-y-16
-            xl:grid-cols-4
-          "
-        >
-          {members.map((member) => {
-            const nameId = `team-name-${member.slug}`;
-            const roleId = `team-role-${member.slug}`;
-            const directoryPortrait =
-              member.directoryPortrait ?? member.portrait;
+        <ScrollReveal trigger="early" className="n4f-team-directory-reveal">
+          <ul className="grid list-none grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 lg:gap-x-6 lg:gap-y-16 xl:grid-cols-4">
+            {members.map((member) => {
+              const nameId = `team-name-${member.slug}`;
+              const roleId = `team-role-${member.slug}`;
+              const directoryPortrait =
+                member.directoryPortrait ?? member.portrait;
 
-            return (
-              <li key={member.id} className="min-w-0">
-                <ScrollReveal className="h-full">
+              return (
+                <li key={member.id} className="n4f-team-directory-item min-w-0">
                   <Link
                     href={`/company/team/${member.slug}`}
                     aria-labelledby={nameId}
@@ -263,11 +255,11 @@ export function MeetTheTeam() {
                       </div>
                     </div>
                   </Link>
-                </ScrollReveal>
-              </li>
-            );
-          })}
-        </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </ScrollReveal>
 
         {/* CLOSING EDITORIAL RULE */}
         <div

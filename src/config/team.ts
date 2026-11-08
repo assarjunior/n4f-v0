@@ -472,6 +472,94 @@ export const team = [
     published: true,
   },
 
+  //! 05 - Edward Nabil
+  {
+    id: "n4f-team-b9d66376",
+    slug: "edward-nabil",
+    name: "Edward Nabil",
+    role: "Head of Production",
+    shortBio:
+      "Edward Nabil is the Head of Production at Ninety 4 Film, with over 20 years of experience in the film and entertainment industry. Since 2005, he has worked across feature films, television series, commercials, TV programs, and music videos, specializing in production management, budgeting, crew coordination, and production execution.",
+    biography: [
+      "Edward Nabil is the Head of Production at Ninety 4 Film, bringing over two decades of experience in the film and entertainment industry. Since beginning his career in 2005, he has worked across a wide range of productions, including feature films, television series, commercials, television programs, and music videos.",
+      "Throughout his career, Edward has contributed to several notable productions, including the television series Lams Aktaf (2019) and Hadouta Morra (2019), as well as the feature films El Diesel (2018) and Alb Omo (2018). His production credits also include the National Bank of Egypt’s Ramadan 2025 advertising campaign.",
+      "With extensive hands-on experience, Edward specializes in production management, production supervision, budget management, crew coordination, and production execution. His approach focuses on turning creative concepts into successful productions through effective planning, strong teamwork, problem-solving, and attention to detail.",
+    ],
+    expertise: [
+      "Production Management",
+      "Production Supervision",
+      "Production Execution",
+      "Budget Management",
+      "Crew Management",
+      "Production Planning",
+    ],
+    quote:
+      "Successful production is about turning creative vision into reality through smart planning, strong teamwork, and the ability to overcome every challenge. Every detail matters when delivering excellence.",
+    portrait: {
+      src: "/media/edward-nabil.webp",
+      alt: "edward nabil profile picture",
+    },
+    credits: [
+      {
+        title: "Lams Aktaf",
+        year: "2019",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2054313/",
+        artwork: {
+          src: "/media/lams-aktaf.webp",
+          alt: "lams aktaf official poster",
+        },
+      },
+      {
+        title: "Hadouta Morra",
+        year: "2019",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2055958/",
+        artwork: {
+          src: "/media/hadota-morra.webp",
+          alt: "Hadouta Morra official poster",
+        },
+      },
+      {
+        title: "El Diesel",
+        year: "2018",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2047852/",
+        artwork: {
+          src: "/media/eldiesel.webp",
+          alt: "El deisel official poster",
+        },
+      },
+      {
+        title: "Alb Omo",
+        year: "2018",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2051036/",
+        artwork: {
+          src: "/media/alb-omo.webp",
+          alt: "Alb omo official poster",
+        },
+      },
+      {
+        title: "National Bank of Egypt — TVC",
+        year: "2025",
+        role: "Head of Production",
+        source: "YouTube",
+        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
+        artwork: {
+          src: "/media/bank-ahly.webp",
+          alt: "bank ahly official poster",
+        },
+      },
+    ],
+    order: 5,
+    published: true,
+  },
+
   //! 05 - Farris Hanafy
   {
     id: "n4f-team-bf28585f",
@@ -551,7 +639,7 @@ export const team = [
         },
       },
     ],
-    order: 5,
+    order: 6,
     published: true,
   },
 ] as const satisfies readonly TeamMember[];
