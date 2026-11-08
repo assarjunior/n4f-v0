@@ -8,10 +8,12 @@ type RouteContext = {
 
 // OG-specific image overrides.
 // Keep the regular WebP portraits for the website.
+
 const ogPortraits: Record<string, string> = {
   "omar-assar": "/og-source/omar-assar.jpg",
   "adham-hamed": "/og-source/adham-hamed.jpg",
   "farris-hanafy": "/og-source/farris-hanafy.jpg",
+  "edward-nabil": "/og-source/edward-nabil.jpg",
 };
 
 export function generateStaticParams() {
