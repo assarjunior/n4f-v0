@@ -7,6 +7,7 @@ const footerNavigation = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "Company", href: "/company" },
+  { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
 ] as const;
 

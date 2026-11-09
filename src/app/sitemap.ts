@@ -5,7 +5,14 @@ import { getPublishedTeam } from "@/config/team";
 import { SITE_ORIGIN } from "@/lib/social-metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainPaths = ["/", "/company", "/services", "/work", "/contact"];
+  const mainPaths = [
+    "/",
+    "/company",
+    "/services",
+    "/work",
+    "/team",
+    "/contact",
+  ];
 
   const mainPages: MetadataRoute.Sitemap = mainPaths.map((path) => ({
     url: new URL(path, SITE_ORIGIN).toString(),
@@ -18,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const teamPages: MetadataRoute.Sitemap = getPublishedTeam().map((member) => ({
-    url: new URL(`/company/team/${member.slug}`, SITE_ORIGIN).toString(),
+    url: new URL(`/team/${member.slug}`, SITE_ORIGIN).toString(),
   }));
 
   return [...mainPages, ...workPages, ...teamPages];

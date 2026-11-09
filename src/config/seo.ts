@@ -3,7 +3,7 @@ export type SeoEntry = {
   description: string;
 };
 
-type MainPage = "home" | "company" | "services" | "work" | "contact";
+type MainPage = "home" | "company" | "services" | "work" | "team" | "contact";
 
 export const seoCopy: {
   pages: Record<MainPage, SeoEntry>;
@@ -39,6 +39,11 @@ export const seoCopy: {
       title: "Contact Us | Ninety 4 Film",
       description:
         "Discuss your next film, series, commercial or production in Egypt with Ninety 4 Film. Contact our team directly by email or WhatsApp.",
+    },
+    team: {
+      title: "Our Team | Ninety 4 Film",
+      description:
+        "Meet the people behind Ninety 4 Film, including our directors, producers, and production specialists working across film, television and post-production in Egypt.",
     },
   },
 

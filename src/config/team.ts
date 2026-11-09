@@ -52,6 +52,17 @@ export const team = [
         },
       },
       {
+        title: "73th Police Day Celebrations",
+        year: "2026",
+        role: "Producer",
+        source: "YouTube",
+        url: "https://youtu.be/2S2NXd3S6BM?si=qGXNW4V8oL0w4sYW",
+        artwork: {
+          src: "/media/shorta-73.webp",
+          alt: "police event official poster",
+        },
+      },
+      {
         title: "National Bank of Egypt — TVC",
         year: "2025",
         role: "Producer",
@@ -501,6 +512,39 @@ export const team = [
     },
     credits: [
       {
+        title: "74th Police Day Celebrations",
+        year: "2026",
+        role: "Producer",
+        source: "YouTube",
+        url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
+        artwork: {
+          src: "/posters/polica-event.webp",
+          alt: "police event official poster",
+        },
+      },
+      {
+        title: "73th Police Day Celebrations",
+        year: "2026",
+        role: "Head of Production",
+        source: "YouTube",
+        url: "https://youtu.be/2S2NXd3S6BM?si=qGXNW4V8oL0w4sYW",
+        artwork: {
+          src: "/media/shorta-73.webp",
+          alt: "police event official poster",
+        },
+      },
+      {
+        title: "National Bank of Egypt — TVC",
+        year: "2025",
+        role: "Producer",
+        source: "YouTube",
+        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
+        artwork: {
+          src: "/posters/bank-ahly.jpeg",
+          alt: "Official poster for bank ahly Add",
+        },
+      },
+      {
         title: "Lams Aktaf",
         year: "2019",
         role: "Head of Production",
@@ -542,17 +586,6 @@ export const team = [
         artwork: {
           src: "/media/alb-omo.webp",
           alt: "Alb omo official poster",
-        },
-      },
-      {
-        title: "National Bank of Egypt — TVC",
-        year: "2025",
-        role: "Head of Production",
-        source: "YouTube",
-        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
-        artwork: {
-          src: "/media/bank-ahly.webp",
-          alt: "bank ahly official poster",
         },
       },
     ],

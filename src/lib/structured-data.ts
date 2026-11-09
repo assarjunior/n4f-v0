@@ -75,7 +75,7 @@ export function getWorkStructuredData(project: WorkEntry) {
 
 // Individual team profile.
 export function getTeamStructuredData(member: TeamMember) {
-  const url = absoluteUrl(`/company/team/${member.slug}`);
+  const url = absoluteUrl(`/team/${member.slug}`);
 
   return {
     "@context": "https://schema.org",

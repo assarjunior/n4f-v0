@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { getPublishedTeam } from "@/config/team";
-import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 export function MeetTheTeam() {
   const members = getPublishedTeam();
@@ -11,89 +10,52 @@ export function MeetTheTeam() {
   return (
     <section
       id="team"
-      aria-labelledby="team-heading"
+      aria-label="Ninety 4 Film team directory"
       className="bg-brand-maroon text-brand-beige"
     >
-      <div className="container-editorial py-20 md:py-28 lg:py-32">
-        {/* SECTION INTRODUCTION */}
-        <div
+      <div className="container-editorial py-12 md:py-16 lg:pt-6 lg:pb-24">
+        {/* TEAM DIRECTORY */}
+        <ul
           className="
-            mb-12 grid gap-8
-            border-b border-brand-beige/25 pb-10
-            md:mb-16 md:pb-14
-            lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]
-            lg:items-end lg:gap-16
+            grid list-none grid-cols-1
+            gap-x-5 gap-y-12
+            sm:grid-cols-2
+            lg:gap-x-6 lg:gap-y-16
+            xl:grid-cols-4
           "
         >
-          <ScrollReveal className="min-w-0">
-            <p
-              className="
-                mb-7 font-sans text-xs font-semibold
-                uppercase tracking-[0.22em]
-                text-brand-orange
-              "
-            >
-              03 / The People Behind the Work
-            </p>
+          {members.map((member, index) => {
+            const nameId = `team-name-${member.slug}`;
+            const roleId = `team-role-${member.slug}`;
 
-            <h2
-              id="team-heading"
-              className="
-                max-w-5xl font-display
-                text-[clamp(2.8rem,5.3vw,6.2rem)]
-                leading-[1.03] tracking-[-0.035em]
-              "
-            >
-              PEOPLE MAKE
-              <br />
-              <span className="text-brand-orange">THE DIFFERENCE .</span>
-            </h2>
-          </ScrollReveal>
+            const directoryPortrait =
+              member.directoryPortrait ?? member.portrait;
 
-          <ScrollReveal className="max-w-xl lg:pb-2">
-            <div aria-hidden="true" className="mb-7 h-1 w-16 bg-brand-orange" />
-
-            <p
-              className="
-                font-sans text-base leading-relaxed
-                text-brand-beige/85 md:text-lg
-              "
-            >
-              Different disciplines. A shared commitment to the work. Meet the
-              people bringing creative understanding, production experience and
-              technical expertise together at Ninety 4 Film.
-            </p>
-          </ScrollReveal>
-        </div>
-
-        {/* TEAM DIRECTORY */}
-        <ScrollReveal trigger="early" className="n4f-team-directory-reveal">
-          <ul className="grid list-none grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 lg:gap-x-6 lg:gap-y-16 xl:grid-cols-4">
-            {members.map((member) => {
-              const nameId = `team-name-${member.slug}`;
-              const roleId = `team-role-${member.slug}`;
-              const directoryPortrait =
-                member.directoryPortrait ?? member.portrait;
-
-              return (
-                <li key={member.id} className="n4f-team-directory-item min-w-0">
-                  <Link
-                    href={`/company/team/${member.slug}`}
-                    aria-labelledby={nameId}
-                    aria-describedby={roleId}
-                    className="
+            return (
+              <li
+                key={member.id}
+                className="n4f-hero-reveal min-w-0"
+                style={{
+                  animationDelay: `${750 + index * 150}ms`,
+                }}
+              >
+                <Link
+                  href={`/team/${member.slug}`}
+                  aria-labelledby={nameId}
+                  aria-describedby={roleId}
+                  className="
                     group flex h-full min-w-0 flex-col
                     outline-none
                     focus-visible:outline-2
                     focus-visible:outline-offset-4
                     focus-visible:outline-brand-orange
                   "
-                  >
-                    {/* PORTRAIT */}
-                    <div
-                      className="
+                >
+                  {/* PORTRAIT */}
+                  <div
+                    className="
                       relative aspect-4/5
-                      overflow-hidden
+                      overflow-hidden rounded-lg
                       border border-brand-beige/20
                       bg-[#37110E]
                       transition-colors duration-500
@@ -101,35 +63,35 @@ export function MeetTheTeam() {
                       group-focus-visible:border-brand-orange
                       motion-reduce:transition-none
                     "
-                    >
-                      <Image
-                        src={directoryPortrait.src}
-                        alt={directoryPortrait.alt}
-                        fill
-                        sizes="
-                                (max-width: 639px) 100vw,
-                                (max-width: 1279px) 50vw,
-                                25vw
-                              "
-                        style={{
-                          objectPosition:
-                            directoryPortrait.objectPosition ?? "center",
-                        }}
-                        className="
-                                    object-cover
-                                    transition-transform duration-700
-                                    ease-out
-                                    group-hover:scale-[1.045]
-                                    group-focus-visible:scale-[1.045]
-                                    motion-reduce:transition-none
-                                    motion-reduce:transform-none
-                                  "
-                      />
+                  >
+                    <Image
+                      src={directoryPortrait.src}
+                      alt={directoryPortrait.alt}
+                      fill
+                      sizes="
+                        (max-width: 639px) 100vw,
+                        (max-width: 1279px) 50vw,
+                        25vw
+                      "
+                      style={{
+                        objectPosition:
+                          directoryPortrait.objectPosition ?? "center",
+                      }}
+                      className="
+                        object-cover
+                        transition-transform duration-700
+                        ease-out
+                        group-hover:scale-[1.045]
+                        group-focus-visible:scale-[1.045]
+                        motion-reduce:transition-none
+                        motion-reduce:transform-none
+                      "
+                    />
 
-                      {/* SUBTLE PHOTOGRAPHIC GRADIENT */}
-                      <div
-                        aria-hidden="true"
-                        className="
+                    {/* SUBTLE PHOTOGRAPHIC GRADIENT */}
+                    <div
+                      aria-hidden="true"
+                      className="
                         pointer-events-none
                         absolute inset-0
                         bg-linear-to-t
@@ -137,15 +99,15 @@ export function MeetTheTeam() {
                         via-transparent
                         to-black/15
                       "
-                      />
+                    />
 
-                      {/* INTERACTIVE ARROW */}
-                      <span
-                        aria-hidden="true"
-                        className="
+                    {/* INTERACTIVE ARROW */}
+                    <span
+                      aria-hidden="true"
+                      className="
                         absolute bottom-5 right-5
                         flex size-11 items-center
-                        justify-center
+                        justify-center rounded-md
                         border border-brand-beige/70
                         text-brand-beige
                         transition-[background-color,color,border-color]
@@ -158,10 +120,10 @@ export function MeetTheTeam() {
                         group-focus-visible:text-brand-maroon
                         motion-reduce:transition-none
                       "
-                      >
-                        <ArrowUpRight
-                          strokeWidth={1.5}
-                          className="
+                    >
+                      <ArrowUpRight
+                        strokeWidth={1.5}
+                        className="
                           size-6
                           transition-transform duration-300
                           group-hover:-translate-y-0.5
@@ -170,15 +132,15 @@ export function MeetTheTeam() {
                           group-focus-visible:translate-x-0.5
                           motion-reduce:transition-none
                         "
-                        />
-                      </span>
-                    </div>
+                      />
+                    </span>
+                  </div>
 
-                    {/* MEMBER INFORMATION */}
-                    <div className="flex flex-1 flex-col pt-6">
-                      <h3
-                        id={nameId}
-                        className="
+                  {/* MEMBER INFORMATION */}
+                  <div className="flex flex-1 flex-col pt-6">
+                    <h3
+                      id={nameId}
+                      className="
                         font-display
                         text-4xl
                         leading-[1.08]
@@ -189,45 +151,47 @@ export function MeetTheTeam() {
                         group-focus-visible:text-brand-orange
                         motion-reduce:transition-none
                       "
-                      >
-                        {member.name}
-                      </h3>
+                    >
+                      {member.name}
+                    </h3>
 
-                      <p
-                        id={roleId}
-                        className="
+                    {/* MEMBER ROLE */}
+                    <p
+                      id={roleId}
+                      className="
                         mt-3 min-h-0 font-sans
                         text-xs font-semibold
                         uppercase tracking-widest
                         text-brand-orange
                         xl:min-h-12
                       "
-                      >
-                        {member.role}
-                      </p>
+                    >
+                      {member.role}
+                    </p>
 
-                      <p
-                        className="
+                    {/* SHORT BIOGRAPHY */}
+                    <p
+                      className="
                         font-sans text-sm
                         leading-[1.8]
                         text-brand-beige/75
                       "
-                      >
-                        {member.shortBio}
-                      </p>
+                    >
+                      {member.shortBio}
+                    </p>
 
-                      {/* PROFILE LINK INDICATOR */}
-                      <div
-                        className="
+                    {/* PROFILE LINK INDICATOR */}
+                    <div
+                      className="
                         mt-auto flex items-center
-                      gap-3 pt-3
+                        gap-3 pt-5
                         font-sans text-xs font-semibold
                         uppercase tracking-[0.15em]
                         text-brand-beige
                       "
-                      >
-                        <span
-                          className="
+                    >
+                      <span
+                        className="
                           border-b border-brand-orange
                           pb-2
                           transition-colors duration-300
@@ -235,14 +199,14 @@ export function MeetTheTeam() {
                           group-focus-visible:text-brand-orange
                           motion-reduce:transition-none
                         "
-                        >
-                          View Profile
-                        </span>
+                      >
+                        View Profile
+                      </span>
 
-                        <ArrowUpRight
-                          aria-hidden="true"
-                          strokeWidth={1.5}
-                          className="
+                      <ArrowUpRight
+                        aria-hidden="true"
+                        strokeWidth={1.5}
+                        className="
                           size-5 text-brand-orange
                           transition-transform duration-300
                           group-hover:-translate-y-0.5
@@ -251,15 +215,14 @@ export function MeetTheTeam() {
                           group-focus-visible:translate-x-0.5
                           motion-reduce:transition-none
                         "
-                        />
-                      </div>
+                      />
                     </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </ScrollReveal>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
         {/* CLOSING EDITORIAL RULE */}
         <div

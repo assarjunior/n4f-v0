@@ -13,7 +13,7 @@ const ogPortraits: Record<string, string> = {
   "omar-assar": "/og-source/omar-assar.jpg",
   "adham-hamed": "/og-source/adham-hamed.jpg",
   "farris-hanafy": "/og-source/farris-hanafy.jpg",
-  "edward-nabil": "/og-source/edward-nabil.jpg",
+  "edward-nabil": "/og-source/edward-nabil-fixed.jpg",
 };
 
 export function generateStaticParams() {

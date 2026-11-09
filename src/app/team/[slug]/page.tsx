@@ -8,7 +8,7 @@ import {
 } from "@/config/team";
 
 import { seoCopy } from "@/config/seo";
-import { TeamProfile } from "../../_components/TeamProfile";
+import { TeamProfile } from "../../company/_components/TeamProfile";
 import { createSocialMetadata } from "@/lib/social-metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getTeamStructuredData } from "@/lib/structured-data";
@@ -56,10 +56,10 @@ export async function generateMetadata({
 
     // Canonical URL from the verified published team slug.
     alternates: {
-      canonical: `/company/team/${member.slug}`,
+      canonical: `/team/${member.slug}`,
     },
     ...createSocialMetadata(
-      `/company/team/${member.slug}`,
+      `/team/${member.slug}`,
       approvedSeo,
       `/og/team/${member.slug}`,
       `${member.name} — ${member.role} at Ninety 4 Film`,

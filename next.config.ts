@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
   // Redirect the non-www domain to the canonical www domain.
   async redirects() {
     return [
+      // Legacy team profiles -> standalone team routes
+      {
+        source: "/company/team/:slug",
+        destination: "/team/:slug",
+        permanent: true,
+      },
+
+      // Non-www -> canonical www domain
       {
         source: "/:path*",
         has: [

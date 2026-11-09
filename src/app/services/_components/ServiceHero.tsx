@@ -67,7 +67,7 @@ export function ServicesHero() {
           >
             {/* MEET THE TEAM */}
             <Link
-              href="/company#team"
+              href="/team"
               className="group flex w-full max-w-sm flex-col justify-between gap-12 border border-brand-beige/35 p-6 transition-[background-color,border-color] duration-500 hover:border-brand-beige hover:bg-brand-beige focus-visible:bg-brand-beige focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-orange md:p-8 motion-reduce:transition-none"
             >
               <span className="flex items-start justify-between gap-4">

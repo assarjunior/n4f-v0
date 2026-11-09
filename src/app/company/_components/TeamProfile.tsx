@@ -24,7 +24,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
         <div className="container-editorial py-12 md:py-20 lg:py-24">
           {/* BACK NAVIGATION */}
           <Link
-            href="/company#team"
+            href="/team#team"
             className="
               n4f-hero-reveal
               group inline-flex items-center gap-3
@@ -470,7 +470,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
             "
           >
             <Link
-              href="/company#team"
+              href="/team#team"
               className="
                 group inline-flex w-fit items-center
                 gap-3 border-b border-brand-orange
@@ -498,7 +498,7 @@ export function TeamProfile({ member, nextMember }: TeamProfileProps) {
 
             {nextMember && (
               <Link
-                href={`/company/team/${nextMember.slug}`}
+                href={`/team/${nextMember.slug}`}
                 className="
                   group flex w-fit flex-col
                   items-start gap-3
