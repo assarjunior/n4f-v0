@@ -7,7 +7,7 @@ export const team = [
     id: "n4f-team-001",
     slug: "ahmed-ehab",
 
-    name: "Ahmed Ehab EL-Saeed",
+    name: "Ahmed Ehab El-Saeed",
     role: "CEO / Executive Producer",
 
     shortBio:
@@ -142,7 +142,7 @@ export const team = [
     shortBio:
       "Omar Assar is an Egyptian film director, producer and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
     biography: [
-      "Omar Assar is an Egyptian film director, Producer and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, he has developed a career spanning feature films, television series, commercials, music videos, and theatrical productions.",
+      "Omar Assar is an Egyptian film director, producer, and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, he has developed a career spanning feature films, television series, commercials, music videos, and theatrical productions.",
       "His experience as a First Assistant Director includes Al Frensawy (2026), Walad Bent Shayeb (2025), Ala Nesbet Moshahda (2024), and Wesh W Dahr (2022). He also served as Executive Director on the feature film Meen Yesadaq (2024). These experiences have strengthened his understanding of the relationship between creative direction, performance, and the practical demands of production.",
       "Alongside his work on larger productions, Omar has directed independent short films, music videos, and theatrical performances, including Louder Than Shame (2026).",
       "His approach to filmmaking brings together visual storytelling, performance-driven direction, and an understanding of both the artistic and technical sides of the filmmaking process. Through Ninety 4 Film, he contributes to the company's creative development, directing approach, and the process of translating ideas into screen productions.",
@@ -178,7 +178,7 @@ export const team = [
         url: "https://elcinema.com/work/2098504",
         artwork: {
           src: "/media/671975295_122125721517170344_8371973076470749313_n.webp",
-          alt: "el faransawy offical poster",
+          alt: "el faransawy official poster",
         },
       },
       {
@@ -341,7 +341,7 @@ export const team = [
         url: "https://elcinema.com/work/2047852/",
         artwork: {
           src: "/media/eldiesel.webp",
-          alt: "El deisel official poster",
+          alt: "El Diesel official poster",
         },
       },
       {
@@ -368,7 +368,7 @@ export const team = [
 
     name: "Adham Hamed",
 
-    role: "Head of Post- roduction",
+    role: "Head of Post Production",
 
     shortBio:
       "Adham Hamed is Head of Post Production at Ninety 4 Film, bringing 14 years of cinematography experience across television, feature films, commercials, and digital media. His expertise spans editing, color grading, HDR and Dolby Vision workflows, and post-production supervision, connecting creative storytelling with the technical demands of finishing.",
@@ -397,7 +397,7 @@ export const team = [
 
     portrait: {
       src: "/media/WhatsApp-Image-2026-11-05-at-15.51.11.webp",
-      alt: "adham hamed posing in picutre",
+      alt: "adham hamed posing in picture",
       objectPosition: "center 5%",
     },
 
@@ -405,18 +405,18 @@ export const team = [
       {
         title: "Faat El Maad",
         year: "2025",
-        role: "In house Post Producer",
+        role: "In-house Post Producer",
         source: "ElCinema",
         url: "https://elcinema.com/work/2093972/gallery/124623637/",
         artwork: {
           src: "/media/_640x_d7f970bed802cb38dd14fa8a592b3d7aab5ddd5d3d436a8f1de14015a63e4f00.webp",
-          alt: "faat el maad offcial poster",
+          alt: "faat el maad official poster",
         },
       },
       {
         title: "El Captain",
         year: "2025",
-        role: "In house Post Producer",
+        role: "In-house Post Producer",
         source: "ElCinema",
         url: "https://elcinema.com/work/2090081/",
         artwork: {
@@ -427,7 +427,7 @@ export const team = [
       {
         title: "Adel Mesh Adel",
         year: "2024",
-        role: "In house Post Producer",
+        role: "In-house Post Producer",
         source: "ElCinema",
         url: "https://elcinema.com/work/2083197/",
         artwork: {
@@ -438,7 +438,7 @@ export const team = [
       {
         title: "El Batta El Safra",
         year: "2023",
-        role: "In house Post Producer",
+        role: "In-house Post Producer",
         source: "ElCinema",
         url: "https://elcinema.com/work/2077794/",
         artwork: {
@@ -482,7 +482,7 @@ export const team = [
       {
         title: "Shahadat Melad",
         year: "2016",
-        role: "Focuser Puller",
+        role: "Focus Puller",
         source: "ElCinema",
         url: "https://elcinema.com/work/2040991/",
         artwork: {
@@ -505,10 +505,10 @@ export const team = [
     role: "Line Producer",
 
     shortBio:
-      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film, with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on production operations.",
+      "Ahmed El-Ganzory is a co-founder and line producer at Ninety 4 Film, with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on production operations.",
 
     biography: [
-      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film whose experience spans scripted television, short films, and major film industry events.",
+      "Ahmed El-Ganzory is a co-founder and line producer at Ninety 4 Film whose experience spans scripted television, short films, and major film industry events.",
 
       "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
 
@@ -593,7 +593,7 @@ export const team = [
     published: true,
   },
 
-  //! 05 - Farris Hanafy
+  //! 06 - Farris Hanafy
   {
     id: "n4f-team-bf28585f",
     slug: "farris-hanafy",

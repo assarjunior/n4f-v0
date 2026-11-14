@@ -75,7 +75,7 @@ export const seoCopy: {
 
   team: {
     "ahmed-ehab": {
-      title: "Ahmed Ehab EL-Saeed — CEO & Executive Producer | Ninety 4 Film",
+      title: "Ahmed Ehab El-Saeed — CEO & Executive Producer | Ninety 4 Film",
       description:
         "Meet Ahmed Ehab EL-Saeed, CEO and Executive Producer at Ninety 4 Film, specializing in film and television production execution and project management.",
     },
