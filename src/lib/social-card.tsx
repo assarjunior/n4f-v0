@@ -11,6 +11,48 @@ const COLORS = {
   dark: "#310D0B",
 };
 
+// Custom typography for team members whose names
+// need controlled sizing or line breaks in OG images.
+const TEAM_NAME_LAYOUTS: Record<
+  string,
+  {
+    lines: string[];
+    fontSize: number;
+  }
+> = {
+  "Ahmed Ehab El-Saeed": {
+    lines: ["AHMED EHAB", "EL-SAEED"],
+    fontSize: 64,
+  },
+
+  // Supports the existing capitalization in team.ts.
+  "Ahmed Ehab EL-Saeed": {
+    lines: ["AHMED EHAB", "EL-SAEED"],
+    fontSize: 64,
+  },
+
+  "Omar Assar": {
+    lines: ["OMAR ASSAR"],
+    fontSize: 72,
+  },
+
+  "Adham Hamed": {
+    lines: ["ADHAM HAMED"],
+    fontSize: 68,
+  },
+
+  "Ahmed N. El-Ganzory": {
+    lines: ["AHMED N.", "EL-GANZORY"],
+    fontSize: 62,
+  },
+
+  // Supports the previous spelling until team.ts is updated.
+  "Ahmed El-Ganzory": {
+    lines: ["AHMED", "EL-GANZORY"],
+    fontSize: 62,
+  },
+};
+
 type SocialCard =
   | {
       kind: "company";
@@ -28,6 +70,7 @@ type SocialCard =
       imageSrc: string;
     };
 
+// Load images from the public directory.
 async function loadLocalImage(publicPath: string): Promise<string> {
   if (
     !publicPath.startsWith("/") ||
@@ -60,6 +103,7 @@ async function loadLocalImage(publicPath: string): Promise<string> {
 }
 
 export async function renderSocialCard(card: SocialCard) {
+  // Brand display font.
   const aquifer = await readFile(join(process.cwd(), "src/fonts/Aquifer.ttf"));
 
   // Optional local Manrope font.
@@ -88,6 +132,7 @@ export async function renderSocialCard(card: SocialCard) {
 
   const bodyFont = manrope ? "Manrope" : "sans-serif";
 
+  // Company cards don't have a portrait.
   const image =
     card.kind === "company" ? null : await loadLocalImage(card.imageSrc);
 
@@ -97,9 +142,16 @@ export async function renderSocialCard(card: SocialCard) {
 
   const foreground = isTeam ? COLORS.maroon : COLORS.beige;
 
+  // Only team cards may use custom name typography.
+  // Film titles retain their existing presentation.
+  const teamNameLayout =
+    card.kind === "team" ? TEAM_NAME_LAYOUTS[card.title] : undefined;
+
   return new ImageResponse(
     card.kind === "company" ? (
+      // ======================================
       // COMPANY CARD
+      // ======================================
       <div
         style={{
           display: "flex",
@@ -112,6 +164,7 @@ export async function renderSocialCard(card: SocialCard) {
           color: COLORS.beige,
         }}
       >
+        {/* HEADER */}
         <div
           style={{
             display: "flex",
@@ -123,9 +176,11 @@ export async function renderSocialCard(card: SocialCard) {
           }}
         >
           <span>NINETY 4 FILM</span>
+
           <span style={{ color: COLORS.orange }}>CAIRO / EGYPT</span>
         </div>
 
+        {/* COMPANY SLOGAN */}
         <div
           style={{
             display: "flex",
@@ -137,13 +192,16 @@ export async function renderSocialCard(card: SocialCard) {
           }}
         >
           <span>IDEAS ARE</span>
+
           <span>ONLY THE</span>
+
           <span>
             BEGINNING
             <span style={{ color: COLORS.orange }}>.</span>
           </span>
         </div>
 
+        {/* FOOTER */}
         <div
           style={{
             display: "flex",
@@ -167,7 +225,9 @@ export async function renderSocialCard(card: SocialCard) {
         </div>
       </div>
     ) : (
+      // ======================================
       // FILM / TEAM CARD
+      // ======================================
       <div
         style={{
           display: "flex",
@@ -188,6 +248,7 @@ export async function renderSocialCard(card: SocialCard) {
             padding: 55,
           }}
         >
+          {/* BRAND LABEL */}
           <div
             style={{
               display: "flex",
@@ -210,6 +271,7 @@ export async function renderSocialCard(card: SocialCard) {
             </span>
           </div>
 
+          {/* TITLE AREA */}
           <div
             style={{
               display: "flex",
@@ -217,25 +279,81 @@ export async function renderSocialCard(card: SocialCard) {
               maxWidth: 645,
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                fontFamily: "Aquifer",
-                fontSize:
-                  card.title.length > 19
-                    ? 61
-                    : card.title.length > 11
-                      ? 75
-                      : 104,
-                lineHeight: 1.07,
-                letterSpacing: -1.5,
-                overflowWrap: "break-word",
-              }}
-            >
-              {card.title.toUpperCase()}
-              <span style={{ color: COLORS.orange }}>.</span>
-            </div>
+            {teamNameLayout ? (
+              // ==================================
+              // CUSTOM TEAM NAME LAYOUT
+              // ==================================
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  fontFamily: "Aquifer",
+                  fontSize: teamNameLayout.fontSize,
+                  lineHeight: 1.07,
+                  letterSpacing: -1.5,
+                }}
+              >
+                {teamNameLayout.lines.map((line, index) => {
+                  const isLastLine = index === teamNameLayout.lines.length - 1;
 
+                  return (
+                    <div
+                      key={`${card.title}-${index}`}
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "baseline",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      <span>{line}</span>
+
+                      {isLastLine && (
+                        <span
+                          style={{
+                            color: COLORS.orange,
+                          }}
+                        >
+                          {"."}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              // ==================================
+              // DEFAULT FILM / TEAM TITLE
+              // ==================================
+              <div
+                style={{
+                  display: "flex",
+                  fontFamily: "Aquifer",
+                  fontSize:
+                    card.title.length > 19
+                      ? 61
+                      : card.title.length > 11
+                        ? 75
+                        : 104,
+                  lineHeight: 1.07,
+                  letterSpacing: -1.5,
+                  overflowWrap: "break-word",
+                }}
+              >
+                {card.title.toUpperCase()}
+
+                <span
+                  style={{
+                    color: COLORS.orange,
+                  }}
+                >
+                  {"."}
+                </span>
+              </div>
+            )}
+
+            {/* ORANGE EDITORIAL RULE */}
             <div
               style={{
                 display: "flex",
@@ -247,6 +365,7 @@ export async function renderSocialCard(card: SocialCard) {
             />
           </div>
 
+          {/* ROLE AND WEBSITE */}
           <div
             style={{
               display: "flex",
@@ -258,6 +377,7 @@ export async function renderSocialCard(card: SocialCard) {
             }}
           >
             <span>{card.role.toUpperCase()}</span>
+
             <span
               style={{
                 marginTop: 12,

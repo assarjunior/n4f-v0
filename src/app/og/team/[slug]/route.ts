@@ -33,8 +33,7 @@ export async function GET(_request: Request, { params }: RouteContext) {
 
   const imageSrc = ogPortraits[member.slug] ?? member.portrait.src;
 
-  const role =
-    member.slug === "omar-assar" ? "Director & Co-Founder" : member.role;
+  const role = member.role;
 
   return renderSocialCard({
     kind: "team",

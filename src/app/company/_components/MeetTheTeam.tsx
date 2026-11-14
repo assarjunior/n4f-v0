@@ -140,17 +140,22 @@ export function MeetTheTeam() {
                   <div className="flex flex-1 flex-col pt-6">
                     <h3
                       id={nameId}
-                      className="
-                        font-display
-                        text-4xl
-                        leading-[1.08]
-                        tracking-[-0.02em]
-                        text-brand-beige
-                        transition-colors duration-300
-                        group-hover:text-brand-orange
-                        group-focus-visible:text-brand-orange
-                        motion-reduce:transition-none
-                      "
+                      className={`
+                                  font-display
+                                  leading-[1.08]
+                                  tracking-[-0.02em]
+                                  text-brand-beige
+                                  transition-colors duration-300
+                                  group-hover:text-brand-orange
+                                  group-focus-visible:text-brand-orange
+                                  motion-reduce:transition-none
+                                  ${
+                                    member.slug === "ahmed-ehab" ||
+                                    member.slug === "ahmed-ganzory"
+                                      ? "text-3xl xl:whitespace-nowrap xl:text-[clamp(1.15rem,2vw,3rem)]"
+                                      : "text-4xl"
+                                  }
+                                `}
                     >
                       {member.name}
                     </h3>

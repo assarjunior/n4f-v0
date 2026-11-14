@@ -52,8 +52,8 @@ export const team = [
         },
       },
       {
-        title: "73th Police Day Celebrations",
-        year: "2026",
+        title: "73rd Police Day Celebrations",
+        year: "2025",
         role: "Producer",
         source: "YouTube",
         url: "https://youtu.be/2S2NXd3S6BM?si=qGXNW4V8oL0w4sYW",
@@ -138,7 +138,7 @@ export const team = [
     id: "n4f-team-002",
     slug: "omar-assar",
     name: "Omar Assar",
-    role: "Director",
+    role: "Director / Producer",
     shortBio:
       "Omar Assar is an Egyptian film director, producer and co-founder of Ninety 4 Film. A graduate of the Higher Institute of Cinema's Directing Department, his experience spans film, television, commercials, music videos, and theatre, combining visual storytelling with an understanding of production and performance.",
     biography: [
@@ -250,100 +250,112 @@ export const team = [
     published: true,
   },
 
-  //! 03 — AHMED EL-GANZORY
-
+  //! 03 - Edward Nabil
   {
-    id: "n4f-team-003",
-    slug: "ahmed-ganzory",
-
-    name: "Ahmed El-Ganzory",
+    id: "n4f-team-b9d66376",
+    slug: "edward-nabil",
+    name: "Edward Nabil",
     role: "Producer",
-
     shortBio:
-      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film, with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on production operations.",
-
+      "Edward Nabil is a producer at Ninety 4 Film, with over 20 years of experience in the film and entertainment industry. Since 2005, he has worked across feature films, television series, commercials, TV programs, and music videos, specializing in production management, budgeting, crew coordination, and production execution.",
     biography: [
-      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film whose experience spans scripted television, short films, and major film industry events.",
-
-      "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
-
-      "His professional credits include Ansaf Maganen (Parts 1 and 2), produced for VIU, and the Netflix production Love, Life & Everything in Between, where he worked as a Production Assistant on Episode 5, National Day of Mourning in Mexico.",
-
-      "He also served as Line Producer on the short film 1+1 and Unit Production Manager for the 2020 Cairo International Film Festival.",
-
-      "Through his work, Ahmed brings experience in coordinating production requirements across different formats, supporting the relationship between creative objectives and practical execution.",
+      "Edward Nabil is a producer at Ninety 4 Film, bringing over two decades of experience in the film and entertainment industry. Since beginning his career in 2005, he has worked across a wide range of productions, including feature films, television series, commercials, television programs, and music videos.",
+      "Throughout his career, Edward has contributed to several notable productions, including the television series Lams Aktaf (2019) and Hadouta Morra (2019), as well as the feature films El Diesel (2018) and Alb Omo (2018). His production credits also include the National Bank of Egypt’s Ramadan 2025 advertising campaign.",
+      "With extensive hands-on experience, Edward specializes in production management, production supervision, budget management, crew coordination, and production execution. His approach focuses on turning creative concepts into successful productions through effective planning, strong teamwork, problem-solving, and attention to detail.",
     ],
-
     expertise: [
-      "Film & Television Production",
-      "Line Production",
-      "Unit Production Management",
-      "Production Coordination",
-      "Production Logistics",
+      "Production Management",
+      "Production Supervision",
+      "Production Execution",
+      "Budget Management",
+      "Crew Management",
+      "Production Planning",
     ],
-
     quote:
-      "The strength of a production lies in the details no one sees, but everyone feels.",
-
+      "Successful production is about turning creative vision into reality through smart planning, strong teamwork, and the ability to overcome every challenge. Every detail matters when delivering excellence.",
     portrait: {
-      src: "/media/ahmed-ganzory.jpeg",
-      alt: "Portrait of Ahmed El-Ganzory",
+      src: "/media/edward-nabil.webp",
+      alt: "edward nabil profile picture",
     },
-
     credits: [
       {
-        title: "Love, Life & Everything in Between — Episode 5",
-        role: "Production Assistant",
-        source: "IMDb",
-        url: "https://www.imdb.com/title/tt18253682/?ref_=ext_shr_lnk",
-        year: "2022",
+        title: "74th Police Day Celebrations",
+        year: "2026",
+        role: "Producer",
+        source: "YouTube",
+        url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
         artwork: {
-          src: "/media/love,life.webp",
-          alt: "Love, Life & Everything in Between official poster",
+          src: "/posters/polica-event.webp",
+          alt: "police event official poster",
         },
       },
       {
-        title: "Ansaf Maganeen",
-        role: "Production Manager",
-        year: "2021",
+        title: "73rd Police Day Celebrations",
+        year: "2025",
+        role: "Head of Production",
+        source: "YouTube",
+        url: "https://youtu.be/2S2NXd3S6BM?si=qGXNW4V8oL0w4sYW",
+        artwork: {
+          src: "/media/shorta-73.webp",
+          alt: "police event official poster",
+        },
+      },
+      {
+        title: "National Bank of Egypt — TVC",
+        year: "2025",
+        role: "Producer",
+        source: "YouTube",
+        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
+        artwork: {
+          src: "/posters/bank-ahly.jpeg",
+          alt: "Official poster for bank ahly Add",
+        },
+      },
+      {
+        title: "Lams Aktaf",
+        year: "2019",
+        role: "Head of Production",
         source: "ElCinema",
-        url: "https://elcinema.com/work/2067079/",
+        url: "https://elcinema.com/work/2054313/",
         artwork: {
-          src: "/posters/ansaf-maganen.jpg",
-          alt: "Official poster for ansaf maganen",
+          src: "/media/lams-aktaf.webp",
+          alt: "lams aktaf official poster",
         },
       },
       {
-        title: "1+1",
-        year: "2021",
-        role: "Line Producer",
+        title: "Hadouta Morra",
+        year: "2019",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2055958/",
         artwork: {
-          src: "/posters/1+1-poster-optimized.jpg",
-          alt: "Official poster for 1+1",
-        },
-        source: "IMDb",
-        url: "https://www.imdb.com/title/tt27720812/",
-      },
-      {
-        title: "44th Cairo International Film Festival",
-        role: "Media Coverage",
-        year: "2022",
-        artwork: {
-          src: "/posters/cairo-int-film.jpeg",
-          alt: "Official poster for cairo international film festival",
+          src: "/media/hadota-morra.webp",
+          alt: "Hadouta Morra official poster",
         },
       },
       {
-        title: "Cairo International Film Festival",
-        year: "2020",
-        role: "Unit Production Manager",
+        title: "El Diesel",
+        year: "2018",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2047852/",
         artwork: {
-          src: "/media/cairo international.webp",
-          alt: "Cairo International Film Festival official poster",
+          src: "/media/eldiesel.webp",
+          alt: "El deisel official poster",
+        },
+      },
+      {
+        title: "Alb Omo",
+        year: "2018",
+        role: "Head of Production",
+        source: "ElCinema",
+        url: "https://elcinema.com/work/2051036/",
+        artwork: {
+          src: "/media/alb-omo.webp",
+          alt: "Alb omo official poster",
         },
       },
     ],
-
     order: 3,
     published: true,
   },
@@ -483,112 +495,100 @@ export const team = [
     published: true,
   },
 
-  //! 05 - Edward Nabil
+  //! 05 — AHMED EL-GANZORY
+
   {
-    id: "n4f-team-b9d66376",
-    slug: "edward-nabil",
-    name: "Edward Nabil",
-    role: "Head of Production",
+    id: "n4f-team-003",
+    slug: "ahmed-ganzory",
+
+    name: "Ahmed N. El-Ganzory",
+    role: "Line Producer",
+
     shortBio:
-      "Edward Nabil is the Head of Production at Ninety 4 Film, with over 20 years of experience in the film and entertainment industry. Since 2005, he has worked across feature films, television series, commercials, TV programs, and music videos, specializing in production management, budgeting, crew coordination, and production execution.",
+      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film, with experience in production coordination, line production, and unit production management. His work spans scripted television, short films, and major film industry events, with a focus on production operations.",
+
     biography: [
-      "Edward Nabil is the Head of Production at Ninety 4 Film, bringing over two decades of experience in the film and entertainment industry. Since beginning his career in 2005, he has worked across a wide range of productions, including feature films, television series, commercials, television programs, and music videos.",
-      "Throughout his career, Edward has contributed to several notable productions, including the television series Lams Aktaf (2019) and Hadouta Morra (2019), as well as the feature films El Diesel (2018) and Alb Omo (2018). His production credits also include the National Bank of Egypt’s Ramadan 2025 advertising campaign.",
-      "With extensive hands-on experience, Edward specializes in production management, production supervision, budget management, crew coordination, and production execution. His approach focuses on turning creative concepts into successful productions through effective planning, strong teamwork, problem-solving, and attention to detail.",
+      "Ahmed El-Ganzory is a co-founder and producer at Ninety 4 Film whose experience spans scripted television, short films, and major film industry events.",
+
+      "Working across production coordination, line production, and unit production management, Ahmed has developed a practical understanding of the workflows, personnel, and logistical requirements involved in bringing audiovisual projects to life.",
+
+      "His professional credits include Ansaf Maganen (Parts 1 and 2), produced for VIU, and the Netflix production Love, Life & Everything in Between, where he worked as a Production Assistant on Episode 5, National Day of Mourning in Mexico.",
+
+      "He also served as Line Producer on the short film 1+1 and Unit Production Manager for the 2020 Cairo International Film Festival.",
+
+      "Through his work, Ahmed brings experience in coordinating production requirements across different formats, supporting the relationship between creative objectives and practical execution.",
     ],
+
     expertise: [
-      "Production Management",
-      "Production Supervision",
-      "Production Execution",
-      "Budget Management",
-      "Crew Management",
-      "Production Planning",
+      "Film & Television Production",
+      "Line Production",
+      "Unit Production Management",
+      "Production Coordination",
+      "Production Logistics",
     ],
+
     quote:
-      "Successful production is about turning creative vision into reality through smart planning, strong teamwork, and the ability to overcome every challenge. Every detail matters when delivering excellence.",
+      "The strength of a production lies in the details no one sees, but everyone feels.",
+
     portrait: {
-      src: "/media/edward-nabil.webp",
-      alt: "edward nabil profile picture",
+      src: "/media/ahmed-ganzory.jpeg",
+      alt: "Portrait of Ahmed El-Ganzory",
     },
+
     credits: [
       {
-        title: "74th Police Day Celebrations",
-        year: "2026",
-        role: "Producer",
-        source: "YouTube",
-        url: "https://youtu.be/b6nj_0XatW0?si=tItJVtFHUQoVcVx3",
+        title: "Love, Life & Everything in Between — Episode 5",
+        role: "Production Assistant",
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt18253682/?ref_=ext_shr_lnk",
+        year: "2022",
         artwork: {
-          src: "/posters/polica-event.webp",
-          alt: "police event official poster",
+          src: "/media/love,life.webp",
+          alt: "Love, Life & Everything in Between official poster",
         },
       },
       {
-        title: "73th Police Day Celebrations",
-        year: "2026",
-        role: "Head of Production",
-        source: "YouTube",
-        url: "https://youtu.be/2S2NXd3S6BM?si=qGXNW4V8oL0w4sYW",
-        artwork: {
-          src: "/media/shorta-73.webp",
-          alt: "police event official poster",
-        },
-      },
-      {
-        title: "National Bank of Egypt — TVC",
-        year: "2025",
-        role: "Producer",
-        source: "YouTube",
-        url: "https://youtu.be/UzLPAWT-uaM?si=URB1cs_9QcP-iszc",
-        artwork: {
-          src: "/posters/bank-ahly.jpeg",
-          alt: "Official poster for bank ahly Add",
-        },
-      },
-      {
-        title: "Lams Aktaf",
-        year: "2019",
-        role: "Head of Production",
+        title: "Ansaf Maganeen",
+        role: "Production Manager",
+        year: "2021",
         source: "ElCinema",
-        url: "https://elcinema.com/work/2054313/",
+        url: "https://elcinema.com/work/2067079/",
         artwork: {
-          src: "/media/lams-aktaf.webp",
-          alt: "lams aktaf official poster",
+          src: "/posters/ansaf-maganen.jpg",
+          alt: "Official poster for ansaf maganen",
         },
       },
       {
-        title: "Hadouta Morra",
-        year: "2019",
-        role: "Head of Production",
-        source: "ElCinema",
-        url: "https://elcinema.com/work/2055958/",
+        title: "1+1",
+        year: "2021",
+        role: "Line Producer",
         artwork: {
-          src: "/media/hadota-morra.webp",
-          alt: "Hadouta Morra official poster",
+          src: "/posters/1+1-poster-optimized.jpg",
+          alt: "Official poster for 1+1",
+        },
+        source: "IMDb",
+        url: "https://www.imdb.com/title/tt27720812/",
+      },
+      {
+        title: "44th Cairo International Film Festival",
+        role: "Media Coverage",
+        year: "2022",
+        artwork: {
+          src: "/posters/cairo-int-film.jpeg",
+          alt: "Official poster for cairo international film festival",
         },
       },
       {
-        title: "El Diesel",
-        year: "2018",
-        role: "Head of Production",
-        source: "ElCinema",
-        url: "https://elcinema.com/work/2047852/",
+        title: "Cairo International Film Festival",
+        year: "2020",
+        role: "Unit Production Manager",
         artwork: {
-          src: "/media/eldiesel.webp",
-          alt: "El deisel official poster",
-        },
-      },
-      {
-        title: "Alb Omo",
-        year: "2018",
-        role: "Head of Production",
-        source: "ElCinema",
-        url: "https://elcinema.com/work/2051036/",
-        artwork: {
-          src: "/media/alb-omo.webp",
-          alt: "Alb omo official poster",
+          src: "/media/cairo international.webp",
+          alt: "Cairo International Film Festival official poster",
         },
       },
     ],
+
     order: 5,
     published: true,
   },

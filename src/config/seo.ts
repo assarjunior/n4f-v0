@@ -81,15 +81,15 @@ export const seoCopy: {
     },
 
     "omar-assar": {
-      title: "Omar Assar — Director & Co-Founder | Ninety 4 Film",
+      title: "Omar Assar — Director, Producer & Co-Founder | Ninety 4 Film",
       description:
         "Meet Omar Assar, Egyptian film director and co-founder of Ninety 4 Film, with experience in directing, visual storytelling and assistant directing.",
     },
 
     "ahmed-ganzory": {
-      title: "Ahmed El-Ganzory — Producer | Ninety 4 Film",
+      title: "Ahmed N. El-Ganzory — Line Producer | Ninety 4 Film",
       description:
-        "Meet Ahmed El-Ganzory, producer at Ninety 4 Film, with experience in line production, unit production management, and production coordination.",
+        "Meet Ahmed N. El-Ganzory, Line Producer at Ninety 4 Film, with experience in line production, unit production management and production coordination.",
     },
 
     "adham-hamed": {
@@ -98,9 +98,9 @@ export const seoCopy: {
         "Meet Adham Hamed, Head of Post-Production at Ninety 4 Film, specializing in editing, color grading, finishing and production-to-post workflows.",
     },
     "edward-nabil": {
-      title: "Edward Nabil — Head of Production | Ninety 4 Film",
+      title: "Edward Nabil — Producer | Ninety 4 Film",
       description:
-        "Meet Edward Nabil, Head of Production at Ninety 4 Film, with over 20 years of experience in film, television, commercials, production management and budgeting.",
+        "Meet Edward Nabil, Producer at Ninety 4 Film, with over 20 years of experience across film, television, commercials and production management.",
     },
     "farris-hanafy": {
       title: "Farris Hanafy — Production Coordinator | Ninety 4 Film",
