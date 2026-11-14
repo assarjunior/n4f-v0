@@ -368,13 +368,13 @@ export const team = [
 
     name: "Adham Hamed",
 
-    role: "Head of Post-Production",
+    role: "Head of Post- roduction",
 
     shortBio:
-      "Adham Hamed is Head of Post-Production at Ninety 4 Film, bringing 14 years of cinematography experience across television, feature films, commercials, and digital media. His expertise spans editing, color grading, HDR and Dolby Vision workflows, and post-production supervision, connecting creative storytelling with the technical demands of finishing.",
+      "Adham Hamed is Head of Post Production at Ninety 4 Film, bringing 14 years of cinematography experience across television, feature films, commercials, and digital media. His expertise spans editing, color grading, HDR and Dolby Vision workflows, and post-production supervision, connecting creative storytelling with the technical demands of finishing.",
 
     biography: [
-      "Adham Ehab Hamed is Head of Post-Production at Ninety 4 Film, with 14 years of experience in cinematography across television series, feature films, commercials, and digital media.",
+      "Adham Ehab Hamed is Head of Post Production at Ninety 4 Film, with 14 years of experience in cinematography across television series, feature films, commercials, and digital media.",
 
       "Beginning his career at a young age as a production coordinator, Adham developed his understanding of production workflows before progressing into post-production leadership.",
 
@@ -384,7 +384,7 @@ export const team = [
     ],
 
     expertise: [
-      "Post-Production Supervision",
+      "Post Production Supervision",
       "Cinematography",
       "Editing",
       "Color Grading",
